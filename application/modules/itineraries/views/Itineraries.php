@@ -1,0 +1,590 @@
+<style type="text/css">
+    .selectize-input {
+        height: auto !important;
+        line-height: 43px !important;
+
+    }
+
+    .selectize-dropdown,
+    .selectize-dropdown.form-control {
+        width: 100% !important;
+        top: 55px !important;
+        position: absolute;
+    }
+
+    .s-input {
+        height: 55px;
+    }
+
+    .selectize-input,
+    .selectize-input input {
+        color: inherit !important;
+    }
+
+    .description {
+        margin-left: 25px;
+        display: block;
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 6px;
+    }
+
+    .icon {
+        margin-right: 9px !important;
+        display: inline-block !important;
+    }
+
+    .name {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .selectize-dropdown {
+        padding: 0 !important;
+        overflow: hidden;
+    }
+
+    .by {
+        margin-left: 22px;
+        background: #008bec;
+        font-size: 12px;
+        padding: 4px 12px;
+        border-radius: 30px;
+        color: #fff;
+        display: inline-block;
+    }
+
+    .hc-bx p {
+        margin: 25px 0 0 0;
+        font-size: 20px;
+    }
+
+    .th-cms-section {
+        padding-bottom: 90px;
+    }
+
+    .sl-name p,
+    .sl-name p big {
+        margin: 0;
+        font-size: inherit;
+    }
+
+    .tr-price {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #424851;
+    }
+
+    .tr-price span {
+        text-align: center;
+        font-size: 18px;
+        border-radius: 100%;
+        vertical-align: middle;
+    }
+
+    .tr-price label,
+    .sl-days span {
+        vertical-align: middle;
+        margin-bottom: 0;
+    }
+
+    .sl-days img {
+        width: 17px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    .sl-itmn>div.tr-price {
+        margin-right: 10px;
+    }
+
+    .sl-itmn>div {
+        display: inline-block;
+    }
+
+    .selectize-input.focus {
+        box-shadow: none !important;
+        -moz-box-shadow: none !important;
+    }
+
+    .selectize-dropdown .active {
+        background-color: #f1f1f1 !important;
+    }
+
+    .selectize-control .icon.thingstodo,
+    .icon.stories,
+    .icon.itenaries {
+        background-image: url(../../../assets/images/sprite-image.png) !important;
+        display: inline-block !important;
+        vertical-align: middle;
+        width: 20px !important;
+        height: 20px !important;
+        background-position: -257px -312px;
+        background-size: auto;
+    }
+
+    .selectize-control .icon {
+        background-size: auto !important;
+    }
+
+    .h-plus {
+        margin: 0;
+        font-size: 42px;
+        font-weight: 800;
+        color: #4dc246;
+    }
+
+    @media(max-width: 767px) {
+        .selectize-input {
+            line-height: 33px !important;
+        }
+
+        .exp-itanaries:after {
+            background: rgb(255 255 255 / 75%);
+        }
+    }
+</style>
+<?php
+setlocale(LC_MONETARY, "en_IN");
+?>
+<section class="exp-itanaries">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="adv-title-sec">
+                    <h1 class="heading">Explore Destinations and<br>Itineraries</h1>
+                    <p class="para">Authentic itineraries planned by travel experts and local guides</p>
+                </div>
+                <div class="main-s-box mr0">
+                    <form method="post" id="itinerary-fileter-form" action="<?php echo base_url() ?>itinerary">
+                        <div class="advent-filter">
+                            <div class="advent-fl-box" id="filerItems">
+                                <div class="fl-bx">
+                                    <div class="fl-list">
+                                        <i class="sprite-icon destination-icon"></i><span title="Search destination or">Select destination</span><i class="sprite-icon caret"></i>
+                                    </div>
+                                    <div class="destination-list">
+                                       <!--  <input type="text" class="destSearch" placeholder="Enter Leh, Thailand etc" id="cityName" name="cityName">
+ -->
+
+                                        <ul class="m0 p0">
+                                            <li>
+                                                <label>
+                                                    <input type="text" class="destSearch" placeholder="Enter Leh, Thailand etc" id="cityName" name="cityName">
+                                                </label>
+                                            </li>
+                                            <li><label for="Kerala"><input type="checkbox" id="Kerala" name="Kerala">Kerala</label></li>
+                                            <li><label for="Himachal"><input type="checkbox" id="Himachal" name="Himachal">Himachal</label></li>
+                                            <li><label for="Andaman"><input type="checkbox" id="Andaman" name="Andaman">Andaman</label></li>
+                                            <li><label for="Thailand"><input type="checkbox" id="Thailand" name="Thailand">Thailand</label></li>
+                                            <li><label for="Sikkim"><input type="checkbox" id="Sikkim" name="Sikkim">Sikkim - Gangtok - Darjeeling</label></li>
+                                            <li><label for="Sikkim"><input type="checkbox" id="Sikkim" name="Sikkim">Maldives</label></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="fl-bx">
+                                    <div class="fl-list">
+                                        <i class="sprite-icon calendar-icon"></i><span title="Select travel month">Select travel month</span><i class="sprite-icon caret"></i>
+                                    </div>
+                                    <div class="destination-list">
+                                        <ul class="m0 p0">
+                                            <li><label for="January"><input type="checkbox" value="January" id="January" name="timevisit[]">January</label></li>
+                                            <li><label for="February"><input type="checkbox" id="February" value="February" name="timevisit[]">February</label></li>
+                                            <li><label for="March"><input type="checkbox" id="March" value="March" name="timevisit[]">March</label></li>
+                                            <li><label for="April"><input type="checkbox" id="April" value="April" name="timevisit[]">April</label></li>
+                                            <li><label for="May"><input type="checkbox" id="May" value="May" name="timevisit[]">May</label></li>
+                                            <li><label for="June"><input type="checkbox" id="June" value="June" name="timevisit[]">June</label></li>
+                                            <li><label for="July"><input type="checkbox" id="July" value="July" name="timevisit[]">July</label></li>
+                                            <li><label for="August"><input type="checkbox" id="August" value="August" name="timevisit[]">August</label></li>
+                                            <li><label for="September"><input type="checkbox" id="September" value="September" name="timevisit[]">September</label></li>
+                                            <li><label for="October"><input type="checkbox" id="October" value="October" name="timevisit[]">October</label></li>
+                                            <li><label for="November"><input type="checkbox" id="November" value="November" name="timevisit[]">November</label></li>
+                                            <li><label for="December"><input type="checkbox" id="December" value="December" name="timevisit[]">December</label></li>
+                                            <li><label for="All"><input type="checkbox" id="All" value="All" name="timevisit[]">Throughout the year</label></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="fl-bx">
+                                    <div class="fl-list">
+                                        <i class="sprite-icon family-icon"></i><span title="Travelling with">Travelling with</span><i class="sprite-icon caret"></i>
+                                    </div>
+                                    <div class="destination-list">
+                                        <ul class="m0 p0">
+                                            <li><label for="Family"><input type="checkbox" id="Family" value="Family" name="suitable[]">Family</label></li>
+                                            <li><label for="Friends"><input type="checkbox" id="Friends" value="Friends" name="suitable[]">Friends</label></li>
+                                            <li><label for="Honeymoon"><input type="checkbox" id="Honeymoon" value="Honeymoon" name="suitable[]">Honeymoon</label></li>
+                                            <li><label for="Solo"><input type="checkbox" id="Solo" value="Solo" name="suitable[]">Solo</label></li>
+                                            <li><label for="Weekend"><input type="checkbox" id="Weekend" value="Weekend" name="suitable[]">Weekend</label></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="fl-bx">
+                                    <div class="fl-list">
+                                        <i class="sprite-icon theme-icon"></i><span>Destination theme</span><i class="sprite-icon caret"></i>
+                                    </div>
+                                    <div class="destination-list">
+                                        <ul class="m0 p0">
+                                            <li><label for="Adventure"><input type="checkbox" id="Adventure" value="Adventure" name="theme[]">Adventure</label></li>
+                                            <li><label for="Beach"><input type="checkbox" id="Beach" value="Beach" name="theme[]">Beach</label></li>
+                                            <li><label for="Mountains"><input type="checkbox" id="Mountains" value="Mountains" name="theme[]">Mountains</label></li>
+                                            <li><label for="Nature"><input type="checkbox" id="Nature" value="Nature" name="theme[]">Nature</label></li>
+                                            <li><label for="Urban"><input type="checkbox" id="Urban" value="Urban" name="theme[]">Urban</label></li>
+                                            <li><label for="Rural"><input type="checkbox" id="Rural" value="Rural" name="theme[]">Rural</label></li>
+                                            <li><label for="Others"><input type="checkbox" id="Others" value="Others" name="theme[]">Others</label></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="fl-bx">
+                                    <button id="itinerari_submit" class="explore-btn br5">Explore</button>
+                                </div>
+                                <!-- <div class="fl-bx">
+                                    <input type="reset" class="explore-btn br5 btn-danger reset-form-iti">
+                                </div> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="Explore-itineraries">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="adv-title-sec">
+                    <h1 class="heading">Explore all itineraries</h1>
+                    <a class="btn brand-btn" href="<?php echo base_url() ?>itineraries/explore-itinerary">Explore all</a>
+                </div>
+                <?php if (is_array($itinerariesRecs)) { ?>
+
+                    <div class="sl-main-box itn-search-result-section">
+                        <div class="sl-boxes ">
+                            <?php
+                            foreach ($itinerariesRecs as $vals) { ?>
+
+                                <a class="sl-items" href="<?php echo base_url('itinerary/' . $vals->url); ?>">
+                                    <div class="sl-img">
+
+                                        <img src="<?= base_url(); ?>uploads/itinerariesthumb/<?php echo $vals->listthumbnail; ?>" alt="<?= $vals->headline; ?>">
+                                    </div>
+                                    <div class="sl-tag">
+                                        <label><?= $vals->destination; ?></label>
+                                    </div>
+                                    <div class="sl-name">
+                                        <?= $vals->headline; ?>
+                                    </div>
+                                    <div class="sl-itmn">
+
+                                        <div class="tr-price"><label> Starts at <?php echo money_format("%(#10n", $vals->budget); ?></label></div>
+                                        <div class="sl-days"><img src="<?php echo base_url(); ?>assets/images/clock-icon.svg" alt="clock icon"> <span><?= $vals->trip_days; ?> Days</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            <?php
+                            } ?>
+                        </div>
+                        <div class="sl-controller">
+                            <div class="left-btn">
+                                <i class="sprite-icon left-icon"></i>
+                            </div>
+                            <div class="right-btn">
+                                <i class="sprite-icon right-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                } else {
+                    echo "<h4>No results Found</h4>";
+                }  ?>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="treding-itanaries">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="adv-title-sec">
+                    <h1 class="heading">Explore itineraries by destination theme</h1>
+                </div>
+                <div class="sl-main-box">
+                    <div class="sl-boxes theme-boxes">
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?theme=Nature">
+                                    <img src="<?php echo base_url(); ?>assets/images/itineraries/img-6.jpg" alt="The Ski Resort Destination - Auli 5 Nights and 6 Days">
+                                </a>
+                            </div>
+
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?theme=Nature">Nature</a>
+                            </div>
+                            <div class="sl-days"><?= $Nature; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?theme=Beach">
+                                    <img src="<?php echo base_url(); ?>assets/images/itineraries/img-7.jpg" alt="The Ski Resort Destination - Auli 5 Nights and 6 Days">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?theme=Beach">Beach</a>
+                            </div>
+                            <div class="sl-days"><?= $Beach; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?theme=Mountain">
+                                    <img src="<?php echo base_url(); ?>assets/images/itineraries/img-8.jpg" alt="The Ski Resort Destination - Auli 5 Nights and 6 Days">
+                                </a>
+                            </div>
+
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?theme=Mountain">Mountain</a>
+                            </div>
+                            <div class="sl-days"><?= $Mountain; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?theme=Urban">
+                                    <img src="<?php echo base_url(); ?>assets/images/itineraries/img-9.jpg" alt="The Ski Resort Destination - Auli 5 Nights and 6 Days">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?theme=Urban">Urban</a>
+                            </div>
+                            <div class="sl-days"><?= $Urban; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?theme=Rural">
+                                    <img src="<?php echo base_url(); ?>assets/images/itineraries/img-10.jpg" alt="The Ski Resort Destination - Auli 5 Nights and 6 Days">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?theme=Rural">Rural</a>
+                            </div>
+                            <div class="sl-days"><?= $Rural; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?theme=Others">
+                                    <img src="<?php echo base_url(); ?>assets/images/itineraries/img-11.jpg" alt="The Ski Resort Destination - Auli 5 Nights and 6 Days">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?theme=Others">Others</a>
+                            </div>
+                            <div class="sl-days"><?= $Others; ?> + Destination</div>
+                        </div>
+                    </div>
+                    <div class="sl-controller">
+                        <div class="left-btn">
+                            <i class="sprite-icon left-icon"></i>
+                        </div>
+                        <div class="right-btn">
+                            <i class="sprite-icon right-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="best-time-to-visit">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="adv-title-sec">
+                    <h1 class="heading">Explore itineraries by best time to visit</h1>
+                </div>
+                <div class="sl-main-box">
+                    <div class="sl-boxes theme-boxes">
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=January">
+                                    <img src="<?php echo base_url(); ?>assets/images/month/january.jpg" alt="January">
+                                </a>
+                            </div>
+
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=January">January</a>
+                            </div>
+                            <div class="sl-days"><?= $January; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=February">
+                                    <img src="<?php echo base_url(); ?>assets/images/month/february.jpg" alt="February">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=February">February</a>
+                            </div>
+                            <div class="sl-days"><?= $February; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=March">
+                                    <img src="<?php echo base_url(); ?>assets/images/month/march.jpg" alt="march">
+                                </a>
+                            </div>
+
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=March">March</a>
+                            </div>
+                            <div class="sl-days"><?= $March; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=April">
+                                    <img src="<?php echo base_url(); ?>assets/images/month/april.jpg" alt="April">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=April">April</a>
+                            </div>
+                            <div class="sl-days"><?= $April; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=May">
+                                    <img src="<?php echo base_url(); ?>assets/images/month/may.jpg" alt="May">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=May">May</a>
+                            </div>
+                            <div class="sl-days"><?= $May; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=June">
+                                    <img src="<?php echo base_url(); ?>assets/images/month/june.jpg" alt="June">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=June">June</a>
+                            </div>
+                            <div class="sl-days"><?= $June; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=July">
+                                    <img src="<?php echo base_url(); ?>assets/images/month/july.jpg" alt="July">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=July">July</a>
+                            </div>
+                            <div class="sl-days"><?= $July; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=August">
+                                    <img src="<?php echo base_url(); ?>assets/images/month/august.jpg" alt="August">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=August">August</a>
+                            </div>
+                            <div class="sl-days"><?= $August; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=September">
+                                    <img src="<?php echo base_url(); ?>assets/images/month/september.jpg" alt="September">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=September">September</a>
+                            </div>
+                            <div class="sl-days"><?= $September; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=October">
+                                    <img src="<?php echo base_url(); ?>assets/images/month/october.jpg" alt="October">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=October">October</a>
+                            </div>
+                            <div class="sl-days"><?= $October; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=November">
+                                    <img src="<?php echo base_url(); ?>assets/images/month/november.jpg" alt="The Ski Resort Destination - Auli 5 Nights and 6 Days">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=November">November</a>
+                            </div>
+                            <div class="sl-days"><?= $November; ?> + Destination</div>
+                        </div>
+                        <div class="sl-items">
+                            <div class="sl-img">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=December">
+                                    <img src="<?php echo base_url(); ?>assets/images/month/december.jpg" alt="December">
+                                </a>
+                            </div>
+                            <div class="sl-name">
+                                <a href="<?php echo base_url() ?>itineraries/explore_itinerary?timevisit=December">December</a>
+                            </div>
+                            <div class="sl-days"><?= $December; ?> + Destination</div>
+                        </div>
+                    </div>
+                    <div class="sl-controller">
+                        <div class="left-btn">
+                            <i class="sprite-icon left-icon"></i>
+                        </div>
+                        <div class="right-btn">
+                            <i class="sprite-icon right-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    $('body').on('click', '#head_button', function() {
+        //console.log('ds')
+        $('#itinerary-fileter-form').trigger('reset');
+        $('#cityName').val($('#searchititext').val())
+        $('#itinerari_submit').trigger('click')
+    });
+    $('body').on('click', '#itinerari_submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: base_url + 'itineraries/getFilter',
+            data: $('#itinerary-fileter-form').serialize(),
+            dataType: 'html',
+
+            beforeSend: function() {
+                ajaxindicatorstart("Please wait.", base_url);
+            },
+            success: function(data) {
+                ajaxindicatorstop();
+                $('.itn-search-result-section').html(data);
+            }
+        });
+    });
+
+    $('body').on('click', '.reset-form-iti', function() {
+
+        $('.multiselect-selected-text').text('None selected')
+        $('.multiselect-selected-text').parent().attr('title', 'None selected')
+
+    })
+</script>
