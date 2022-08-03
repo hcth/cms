@@ -294,6 +294,30 @@
                                 </a>
                             </li>
                         <?php endif; ?>
+                        <li class="m-menu__item" aria-haspopup="true">
+                            <a href="<?php echo base_url('management/role_management'); ?>" class="m-menu__link">
+                                <i class="m-menu__link-icon la la-ticket"></i>
+                                <span class="m-menu__link-title">
+                                    <span class="m-menu__link-wrap">
+                                        <span class="m-menu__link-text">
+                                            Role Management
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="m-menu__item" aria-haspopup="true">
+                            <a href="<?php echo base_url('management/user_management'); ?>" class="m-menu__link">
+                                <i class="m-menu__link-icon la la-ticket"></i>
+                                <span class="m-menu__link-title">
+                                    <span class="m-menu__link-wrap">
+                                        <span class="m-menu__link-text">
+                                            User Management
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <!-- END: Aside Menu -->
@@ -310,7 +334,7 @@
                 <div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
                     <div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
                         <span class="m-footer__copyright">
-                            2018 &copy; by
+                            <?= date('Y'); ?> &copy; by
                             <a href="<?php echo base_url(); ?>" class="m-link">
                                 Adventourist
                             </a>
