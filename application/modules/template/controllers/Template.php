@@ -22,7 +22,10 @@ class Template extends MX_Controller {
 		$this->load->view('dash',$record);
 	}
 	
-	
+	public function dubai($record){
+	    $this->load->view('dubai',$record);
+	}
+
 	public function package($record){
 	    $this->load->view('pack',$record);
 	}

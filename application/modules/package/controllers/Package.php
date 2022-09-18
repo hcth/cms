@@ -65,6 +65,30 @@ class Package extends MX_Controller {
 		echo modules::run('template/'.$template,$record);
 	}
 	
+	public function dubai($p1){
+	    if($p1 != ''){
+			if($p1=="lp1"){
+				$template = "dubai";   
+				$record['destination'] = "Dubai";
+				$record['platform'] = "Google";
+				$record['ct'] = "Search";
+				$record['ad'] = "Dubai-Lp1";
+				
+			}  else{
+				show_404();
+			}
+			
+			$record['title'] = "Team Adventourist Changing The Way You Travel.";
+			$record['descriptions'] = "Team adventourist, adventourist team members chirag joshi and other members behind the establishment of adventourist.";
+			$record['keywords'] = "adventourist team, team adventourist, adventourist employees, adventourist travellers, chirag joshi.";
+			$record['viewFile'] = "package";
+			$record['module'] = "package";
+			echo modules::run('template/'.$template,$record);
+		} else {
+			show_404();
+		}
+	}
+
     public function leh_ladak($p1)
 	{
 	    if($p1 != ''){
