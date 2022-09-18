@@ -268,10 +268,10 @@ class Itineraries extends MX_Controller
 
 	function viewItineraries()
 	{
-		$isAdmin = $this->session->userdata('isAdmin');
-		$adminIds = $this->session->userdata('adminid');
-		$istraveler = $this->session->userdata('istraveler');
-		if (!empty($isAdmin)) :
+		$validate = validate_module_access('admin/dashboard');
+		if (!empty($validate)):
+			$adminIds = $this->session->userdata('adminid');
+			$istraveler = $this->session->userdata('istraveler');
 			$conditionArray = array('id' => $this->session->userdata('adminid'));
 			if (isset($istraveler) && $istraveler == 1) :
 				$adminRecord = $this->admin_model->getwhere("realtraveller", $conditionArray);

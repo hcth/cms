@@ -8,7 +8,7 @@ jQuery(document).ready(function () {
 
     passwordLogin = $("#loginPassword").val();
     if(passwordLogin != '') {  
-    var pass = SHA1(passwordLogin);
+    var pass = window.btoa(passwordLogin);
     $("#loginPassword").val(pass);
     }
     formUrl = $("#loginform").attr('action');

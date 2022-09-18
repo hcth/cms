@@ -16,7 +16,7 @@
                 <tr>
                     <td><?= $counter; ?></td>
                     <td><?= $value->name; ?></td>
-                    <td><?= $value->role; ?></td>
+                    <td><?= $value->role_name; ?></td>
                     <td><?= date('d/m/Y', strtotime($value->created_at)); ?></td>
                     <td>
                         <ul>
@@ -50,12 +50,13 @@
     });
 
     $('.edit').click(function() {
-        var role = $(this).attr("data-role");
+        var role = $(this).attr("data-id");
+        console.log(role);
         $('#edit_id').val($(this).attr("data-id"));
         $('#edit_name').val($(this).attr("data-name"));
         $('#edit_email').val($(this).attr("data-email"));
         $('#edit_mobile').val($(this).attr("data-mobile"));
-        $('#edit_password').val($(this).attr("data-password"));
+        // $('#edit_password').val($(this).attr("data-password"));
         $("#edit_role option[value='" + role + "']").prop("selected", true);
         $('#edit-user-modal').modal('show');
     });

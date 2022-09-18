@@ -129,11 +129,15 @@
                                                     <div class="form-group">
                                                         <label>Menu List </label>
                                                         <select class="form-control " id="modules" multiple="multiple">
-                                                            <option value="Dashboard">Dashboard</option>
-                                                            <option value="Admin Management">Admin Management</option>
-                                                            <option value="DB Management">DB Management</option>
-                                                            <option value="Role Creation">Role Creation</option>
-                                                            <option value="User Creation">User Creation</option>
+                                                            <option value="admin/dashboard">Admin Dashboard</option>
+                                                            <option value="adminrights">Admin Management</option>
+                                                            <option value="itineraries/viewItineraries">Itineraries</option>
+                                                            <option value="itinerariesexpert">Itineraries Expert List</option>
+                                                            <option value="package/listpackage">Lead Management</option>
+                                                            <option value="package/db_management">DB Management</option>
+                                                            <option value="package/feedback">Feedback Management</option>
+                                                            <option value="management/role_management">Role Management</option>
+                                                            <option value="management/user_management">User Management</option>
                                                         </select>
                                                         <p class="error-text" id='error_modules'></p>
                                                     </div>
@@ -222,7 +226,7 @@
                                                         <p class="error-text" id='error_edit_role_name'></p>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <div class="mb-10"> <label>Tool List</label>
@@ -246,14 +250,14 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <div class="mb-10"> <label>Lead Allocate</label>
-                                                    </div>
-                                                    <div class="m-checkbox-inline">
-                                                        <label class="m-checkbox m-checkbox--air m-checkbox--state-brand">
-                                                            <input type="radio" name='edit_assign_leads' value="1">
+                                                        </div>
+                                                        <div class="m-checkbox-inline">
+                                                            <label class="m-checkbox m-checkbox--air m-checkbox--state-brand">
+                                                                <input type="radio" name='edit_assign_leads' value="1">
                                                                 Yes
                                                                 <span></span>
                                                             </label>
@@ -269,11 +273,15 @@
                                                     <div class="form-group">
                                                         <label>Menu List </label>
                                                         <select class="form-control " id="edit_modules" multiple="multiple">
-                                                            <option value="Dashboard">Dashboard</option>
-                                                            <option value="Admin Management">Admin Management</option>
-                                                            <option value="DB Management">DB Management</option>
-                                                            <option value="Role Creation">Role Creation</option>
-                                                            <option value="User Creation">User Creation</option>
+                                                            <option value="admin/dashboard">Admin Dashboard</option>
+                                                            <option value="adminrights">Admin Management</option>
+                                                            <option value="itineraries/viewItineraries">Itineraries</option>
+                                                            <option value="itinerariesexpert">Itineraries Expert List</option>
+                                                            <option value="package/listpackage">Lead Management</option>
+                                                            <option value="package/db_management">DB Management</option>
+                                                            <option value="package/feedback">Feedback Management</option>
+                                                            <option value="management/role_management">Role Management</option>
+                                                            <option value="management/user_management">User Management</option>
                                                         </select>
                                                         <p class="error-text" id='error_edit_modules'></p>
                                                     </div>
@@ -329,22 +337,33 @@
         let arrModule = [];
         if (this.value == 'admin') {
             arrModule = [
-                'Dashboard',
-                'Admin Management',
-                'DB Management',
-                'Role Creation',
-                'User Creation',
+                'admin/dashboard',
+                'adminrights',
+                'itineraries/viewItineraries',
+                'itinerariesexpert',
+                'package/listpackage',
+                'package/db_management',
+                'package/feedback',
+                'management/role_management',
+                'management/user_management',
             ];
         } else if (this.value == 'team_lead') {
             arrModule = [
-                'Role Creation',
-                'User Creation',
+                'admin/dashboard',
+                'adminrights',
+                'itineraries/viewItineraries',
+                'itinerariesexpert',
+                'package/listpackage',
+                'package/db_management',
+                'package/feedback',
             ];
         } else if (this.value == 'executive') {
             arrModule = [
-                'Dashboard',
-                'Admin Management',
-                'DB Management',
+                'itineraries/viewItineraries',
+                'itinerariesexpert',
+                'package/listpackage',
+                'package/db_management',
+                'package/feedback',
             ];
         }
         $("#modules option:selected").prop("selected", false);
@@ -358,22 +377,33 @@
         let arrModule = [];
         if (this.value == 'admin') {
             arrModule = [
-                'Dashboard',
-                'Admin Management',
-                'DB Management',
-                'Role Creation',
-                'User Creation',
+                'admin/dashboard',
+                'adminrights',
+                'itineraries/viewItineraries',
+                'itinerariesexpert',
+                'package/listpackage',
+                'package/db_management',
+                'package/feedback',
+                'management/role_management',
+                'management/user_management',
             ];
         } else if (this.value == 'team_lead') {
             arrModule = [
-                'Role Creation',
-                'User Creation',
+                'admin/dashboard',
+                'adminrights',
+                'itineraries/viewItineraries',
+                'itinerariesexpert',
+                'package/listpackage',
+                'package/db_management',
+                'package/feedback',
             ];
         } else if (this.value == 'executive') {
             arrModule = [
-                'Dashboard',
-                'Admin Management',
-                'DB Management',
+                'itineraries/viewItineraries',
+                'itinerariesexpert',
+                'package/listpackage',
+                'package/db_management',
+                'package/feedback',
             ];
         }
         $("#edit_modules option:selected").prop("selected", false);
@@ -383,7 +413,7 @@
     });
 
     $('#create_role').click(function() {
-        
+
         $("#error_role_name").hide();
         $("#error_modules").hide();
         var flag = 1
@@ -401,7 +431,7 @@
             create_role();
         }
     });
-    
+
     function create_role() {
 
         $.ajax({
@@ -421,8 +451,8 @@
                 console.log(res);
                 $('#create-role-modal').modal('hide');
                 $('#role_name').val('')
-                $('input[name=assign_leads]').prop('checked',false);
-                $('input[name=module_group]').prop('checked',false);
+                $('input[name=assign_leads]').prop('checked', false);
+                $('input[name=module_group]').prop('checked', false);
                 $('#modules').val('')
 
                 if (res.status == 'success') {
@@ -483,7 +513,7 @@
     });
 
     function edit_role() {
-        
+
         $.ajax({
             url: base_url + 'management/edit_role',
             dataType: 'json',
@@ -502,8 +532,8 @@
                 console.log(res);
                 $('#edit-role-modal').modal('hide');
                 $('#edit_role_name').val('')
-                $('input[name=edit_assign_leads]').prop('checked',false);
-                $('input[name=edit_module_group]').prop('checked',false);
+                $('input[name=edit_assign_leads]').prop('checked', false);
+                $('input[name=edit_module_group]').prop('checked', false);
                 $('#edit_modules').val('')
 
                 if (res.status == 'success') {

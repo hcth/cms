@@ -10,15 +10,66 @@ class Admin extends MX_Controller {
 
 	public function index()
 	{
-		$isAdmin = $this->session->userdata('isAdmin');
-		if(!empty($isAdmin)):
+		$id = $this->session->userdata('id');
+		if(!empty($id)){
 			redirect('admin/dashboard');
-		else :
+		}
+		else{
+			$this->session->sess_destroy();	
 			echo $this->load->view('admin/login');
-		endif;
+		}
 	}
 
 	public function login(){
+		$loginRecord = $this->input->post();
+		if(isset($loginRecord['isAjax']) && $loginRecord['isAjax'] == 1):
+			$this->form_validation->set_rules('email','Email','required|trim|xss_clean');	
+			$this->form_validation->set_rules('password','Password','required|trim|xss_clean');
+			if($this->form_validation->run() == FALSE):
+				echo json_encode($this->form_validation->error_array());
+			else :
+				$conditionArray = array('email'=>$loginRecord['email'],'password'=>md5(base64_decode($loginRecord['password'])));
+				$query = "
+					SELECT 
+						`user`.`id`,
+						`user`.`name`,
+						`user`.`email`,
+						`user`.`mobile`,
+						`user`.`password`,
+						`role`.`name` as role_name,
+						`role`.`module`,
+						`role`.`assign_leads`
+					FROM `user`
+					LEFT JOIN `role` ON role.id = user.role
+					WHERE 
+						`user`.`is_deleted` = '0' AND 
+						`user`.`email` = '" . $loginRecord['email'] ."' AND 
+						`user`.`password` = '" . md5(base64_decode($loginRecord['password'])) ."'
+				";
+				$checkLogin = $this->Admin_model->get_query($query);
+				// x($checkLogin);
+				if(is_array($checkLogin) && !empty($checkLogin)):
+					$adminSession = array(
+						'id'			=> $checkLogin[0]->id,
+						'name'			=> $checkLogin[0]->name,
+						'email'			=> $checkLogin[0]->email,
+						'mobile'		=> $checkLogin[0]->mobile,
+						'role_name'		=> $checkLogin[0]->role_name,
+						'module'		=> json_decode(json_encode(json_decode($checkLogin[0]->module)),true),
+						'assign_leads'	=> $checkLogin[0]->assign_leads,
+					);
+					$this->session->set_userdata($adminSession);
+					echo 1;
+				else:
+					echo 2;
+				endif;	
+			endif;	
+		else :
+			redirect('admin/index');
+		endif;
+	}
+
+	/* public function login(){
 		$loginRecord = $this->input->post();
 		if(isset($loginRecord['isAjax']) && $loginRecord['isAjax'] == 1):
 			$this->form_validation->set_rules('email','Email','required|trim|xss_clean');	
@@ -46,14 +97,12 @@ class Admin extends MX_Controller {
 		else :
 			redirect('admin/index');
 		endif;
-	}
-
+	} */
 
 	function dashboard()
 	{
-		$isAdmin = $this->session->userdata('isAdmin');
-		$istraveler = $this->session->userdata('istraveler');
-		if(!empty($isAdmin)):
+		$validate = validate_module_access('admin/dashboard');
+		if(!empty($validate)):
 			
 			$query = "SELECT count(1) as total_lead FROM package_detail";
 			$record['total_lead'] = $this->Admin_model->get_query($query)[0]->total_lead;
@@ -94,19 +143,8 @@ class Admin extends MX_Controller {
 
 
 	function logout(){	
-		$isAdmin = $this->session->userdata('isAdmin');
-		$istraveler = $this->session->userdata('istraveler');
-		if(!empty($isAdmin)):
-			if(isset($istraveler) && $istraveler == 1):
-				$redirect = "/";
-			else :
-				$redirect = "admin";				
-			endif;		
-			$this->session->sess_destroy();
-			redirect($redirect);
-		else :
-			redirect('admin');
-		endif;	
+		$this->session->sess_destroy();	
+		redirect('admin/index');
 	}
 
 	function get_lead_stats(){

@@ -13,6 +13,18 @@
         <?php
         $counter = 1;
         if (isset($all_roles) && is_Array($all_roles)) {
+            $arr_modules = [
+                "admin/dashboard"               =>"Admin Dashboard",
+                "adminrights"                   =>"Admin Management",
+                "itineraries/viewItineraries"   =>"Itineraries",
+                "itinerariesexpert"             =>"Itineraries Expert",
+                "package/listpackage"           =>"Lead Management",
+                "package/db_management"         =>"DB Management",
+                "package/feedback"              =>"Feedback Management",
+                "management/role_management"    =>"Role Management",
+                "management/user_management"    =>"User Management",
+            ];
+            
             foreach ($all_roles as $value) { 
                 $modules = json_decode($value->module);
                 ?>
@@ -22,7 +34,7 @@
                     <td>
                         <?php 
                         foreach($modules as $module){
-                            echo $module . ',';
+                            echo $arr_modules[$module] . '<br>';
                         } ?>
                     </td>
                     <td><?= ($value->assign_leads == 1) ? 'Yes' : 'No'; ?></td>

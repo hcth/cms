@@ -172,7 +172,7 @@
             </div>
         </header>
         <!-- END: Header -->
-        
+
         <!-- begin::Body -->
         <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
             <!-- BEGIN: Left Aside -->
@@ -195,8 +195,7 @@
                     <ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow">
                         <?php $frontid = $this->session->userdata('frontid'); ?>
 
-                        <?php
-                        if ($istraveler != 1 && empty($frontid)) : ?>
+                        <?php if (validate_module_access('admin/dashboard')) : ?>
                             <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('admin/dashboard'); ?>" class="m-menu__link">
                                     <i class="m-menu__link-icon flaticon-dashboard"></i>
@@ -211,7 +210,7 @@
                             </li>
                         <?php endif; ?>
 
-                        <?php if ($istraveler != 1 && $admin_Status == '0') : ?>
+                        <?php if (validate_module_access('adminrights')) : ?>
                             <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('adminrights'); ?>" class="m-menu__link">
                                     <i class="m-menu__link-icon flaticon-dashboard"></i>
@@ -226,7 +225,7 @@
                             </li>
                         <?php endif; ?>
 
-                        <?php if ($istraveler == 1 || isset($rightsArray) && in_array('2', $rightsArray)) : ?>
+                        <?php if (validate_module_access('itineraries/viewItineraries')) : ?>
                             <li class="m-menu__item " aria-haspopup="true">
                                 <a href="<?php echo base_url('itineraries/viewItineraries'); ?>" class="m-menu__link ">
                                     <i class="m-menu__link-icon flaticon-map-location"></i>
@@ -241,7 +240,7 @@
                             </li>
                         <?php endif; ?>
 
-                        <?php if ($istraveler != 1 && isset($rightsArray) && in_array('11', $rightsArray)) : ?>
+                        <?php if (validate_module_access('itinerariesexpert')) : ?>
                             <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('itinerariesexpert'); ?>" class="m-menu__link">
                                     <i class="m-menu__link-icon la la-ticket"></i>
@@ -256,7 +255,7 @@
                             </li>
                         <?php endif; ?>
 
-                        <?php if ($istraveler != 1) : ?>
+                        <?php if (validate_module_access('package/listpackage')) : ?>
                             <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('package/listpackage'); ?>" class="m-menu__link">
                                     <i class="m-menu__link-icon la la-ticket"></i>
@@ -269,7 +268,9 @@
                                     </span>
                                 </a>
                             </li>
+                        <?php endif; ?>
 
+                        <?php if (validate_module_access('package/db_management')) : ?>
                             <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('package/db_management'); ?>" class="m-menu__link">
                                     <i class="m-menu__link-icon la la-ticket"></i>
@@ -282,6 +283,9 @@
                                     </span>
                                 </a>
                             </li>
+                        <?php endif; ?>
+
+                        <?php if (validate_module_access('package/feedback')) : ?>
                             <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('package/feedback'); ?>" class="m-menu__link">
                                     <i class="m-menu__link-icon la la-ticket"></i>
@@ -295,30 +299,35 @@
                                 </a>
                             </li>
                         <?php endif; ?>
-                        <li class="m-menu__item" aria-haspopup="true">
-                            <a href="<?php echo base_url('management/role_management'); ?>" class="m-menu__link">
-                                <i class="m-menu__link-icon la la-ticket"></i>
-                                <span class="m-menu__link-title">
-                                    <span class="m-menu__link-wrap">
-                                        <span class="m-menu__link-text">
-                                            Role Management
+
+                        <?php if (validate_module_access('management/role_management')) : ?>
+                            <li class="m-menu__item" aria-haspopup="true">
+                                <a href="<?php echo base_url('management/role_management'); ?>" class="m-menu__link">
+                                    <i class="m-menu__link-icon la la-ticket"></i>
+                                    <span class="m-menu__link-title">
+                                        <span class="m-menu__link-wrap">
+                                            <span class="m-menu__link-text">
+                                                Role Management
+                                            </span>
                                         </span>
                                     </span>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="m-menu__item" aria-haspopup="true">
-                            <a href="<?php echo base_url('management/user_management'); ?>" class="m-menu__link">
-                                <i class="m-menu__link-icon la la-ticket"></i>
-                                <span class="m-menu__link-title">
-                                    <span class="m-menu__link-wrap">
-                                        <span class="m-menu__link-text">
-                                            User Management
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                        <?php if (validate_module_access('management/user_management')) : ?>
+                            <li class="m-menu__item" aria-haspopup="true">
+                                <a href="<?php echo base_url('management/user_management'); ?>" class="m-menu__link">
+                                    <i class="m-menu__link-icon la la-ticket"></i>
+                                    <span class="m-menu__link-title">
+                                        <span class="m-menu__link-wrap">
+                                            <span class="m-menu__link-text">
+                                                User Management
+                                            </span>
                                         </span>
                                     </span>
-                                </span>
-                            </a>
-                        </li>
+                                </a>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </div>
                 <!-- END: Aside Menu -->

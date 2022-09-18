@@ -601,8 +601,8 @@ class Package extends MX_Controller {
 	
 	public function listpackage()
 	{
-	    $isAdmin = $this->session->userdata('isAdmin');
-		if(!empty($isAdmin)):
+		$validate = validate_module_access('admin/dashboard');
+		if(!empty($validate)):
 			$conditionArray = array('id'=>$this->session->userdata('adminid'));
 			$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
 
@@ -644,6 +644,8 @@ class Package extends MX_Controller {
 			$record['viewfile'] = "packagelist";
 			$record['module'] = "package";
 			echo modules::run('template/'.$template,$record);
+		else :
+			redirect('admin');
 		endif;
 	}
 	
@@ -829,13 +831,8 @@ class Package extends MX_Controller {
 
 	function db_management()
 	{
-		$isAdmin = $this->session->userdata('isAdmin');
-		if(!empty($isAdmin)):
-
-			// $query = "SELECT count(1) as sales_closed FROM package_detail
-			// 	WHERE sales_status = 'Sale Closed'";
-			// $record['sales_closed'] = $this->Admin_model->get_query($query)[0]->sales_closed;
-			
+		$validate = validate_module_access('admin/dashboard');
+		if(!empty($validate)):			
 			$template = "admin";
 			$record['viewfile'] = "db_management";
 			$record['module'] = "package";
@@ -899,9 +896,8 @@ class Package extends MX_Controller {
 
 	function feedback()
 	{
-		$isAdmin = $this->session->userdata('isAdmin');
-		if(!empty($isAdmin)):
-			
+		$validate = validate_module_access('admin/dashboard');
+		if(!empty($validate)):
 			$template = "admin";
 			$record['viewfile'] = "feedback";
 			$record['module'] = "package";

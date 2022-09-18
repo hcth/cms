@@ -53,3 +53,16 @@ function y($data=[''],$desc=''){
     print_r($desc);
     print_r($data);
 }
+
+function validate_module_access($module){
+	$arr_modules = $_SESSION['module'];
+	// x($arr_modules, $module);
+	if(!empty($_SESSION['id']) && !empty($_SESSION['module'])){
+		$arr_modules = $_SESSION['module'];
+		if(in_array(trim($module),$arr_modules)){
+			return true;
+		}
+	}
+	return false;
+	// redirect('admin');
+}
