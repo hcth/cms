@@ -80,7 +80,7 @@ class Adminrights extends MX_Controller {
 
 	public function  editrights($id)
 	{
-		$validate = validate_module_access('admin/dashboard');
+		$validate = validate_module_access('adminrights/editrights');
 		if (!empty($validate)):
 			$conditionArray = array('id'=>$this->session->userdata('adminid'));
 			$adminRecord = $this->Adminrights_model->getwhere("adminmaster",$conditionArray);

@@ -13,7 +13,7 @@ class Management extends MX_Controller
 	// Role Management Module Code Start here
 	public function role_management()
 	{
-		$validate = validate_module_access('admin/dashboard');
+		$validate = validate_module_access('management/role_management');
 		if (!empty($validate)) {
 			$template = "admin";
 			$record['viewfile'] = "role_management";
@@ -81,7 +81,7 @@ class Management extends MX_Controller
 	// User Management Module Code Start here
 	public function user_management()
 	{
-		$validate = validate_module_access('admin/dashboard');
+		$validate = validate_module_access('management/user_management');
 		if (!empty($validate)) {
 			$template = "admin";
 			$record['viewfile'] = "user_management";

@@ -601,7 +601,7 @@ class Package extends MX_Controller {
 	
 	public function listpackage()
 	{
-		$validate = validate_module_access('admin/dashboard');
+		$validate = validate_module_access('package/listpackage');
 		if(!empty($validate)):
 			$conditionArray = array('id'=>$this->session->userdata('adminid'));
 			$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
@@ -813,8 +813,11 @@ class Package extends MX_Controller {
 			$old_note = json_decode($res_call_notes,true);
 		}
 		// print_r($old_note[0]);die;
+		$pattern = '~[\r\n\s?]+~';
+		$notes = $_POST['call_notes'];
+		$notes = preg_replace( $pattern, "$1 $2",$notes);
 
-		$note = [['date_created'=>date('Y-m-d H:i:s'),'note'=>$_POST['call_notes']]];
+		$note = [[ 'user_id' => $_SESSION['id'], 'date_created'=>date('Y-m-d H:i:s'),'note'=>$notes]];
 		if(!empty($old_note))
 			$note = array_merge($note , $old_note);
 		$note = json_encode($note);
@@ -831,7 +834,7 @@ class Package extends MX_Controller {
 
 	function db_management()
 	{
-		$validate = validate_module_access('admin/dashboard');
+		$validate = validate_module_access('package/db_management');
 		if(!empty($validate)):			
 			$template = "admin";
 			$record['viewfile'] = "db_management";
@@ -896,7 +899,7 @@ class Package extends MX_Controller {
 
 	function feedback()
 	{
-		$validate = validate_module_access('admin/dashboard');
+		$validate = validate_module_access('package/feedback');
 		if(!empty($validate)):
 			$template = "admin";
 			$record['viewfile'] = "feedback";

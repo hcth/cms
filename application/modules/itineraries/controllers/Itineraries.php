@@ -268,7 +268,7 @@ class Itineraries extends MX_Controller
 
 	function viewItineraries()
 	{
-		$validate = validate_module_access('admin/dashboard');
+		$validate = validate_module_access('itineraries/viewItineraries');
 		if (!empty($validate)):
 			$adminIds = $this->session->userdata('adminid');
 			$istraveler = $this->session->userdata('istraveler');
