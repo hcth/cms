@@ -676,40 +676,47 @@ class Package extends MX_Controller {
 	
 	public function gatAllClientList()
 	{
-	    $isAdmin = $this->session->userdata('isAdmin');
-		if(!empty($isAdmin)):
-
-			$where_cond = [];
-			
-			if(!empty($_POST['fromdate']) && !empty($_POST['todate'])){
-
-				$where_cond['updated_date >= '] = $_POST['fromdate'];
-				$where_cond['updated_date <= '] = $_POST['todate'];
-			}
-			
-			if(!empty($_POST['platform']))
-				$where_cond['platform'] = $_POST['platform'];
-
-			if(!empty($_POST['camp_type']))
-				$where_cond['campaigntype'] = $_POST['camp_type'];
-
-			if(!empty($_POST['sales_status']))
-				$where_cond['sales_status'] = $_POST['sales_status'];
-
-			if(!empty($_POST['disposition']))
-				$where_cond['disposition'] = $_POST['disposition'];
-
-			if(!empty($_POST['destination']))
-				$where_cond['destination'] = $_POST['destination'];
-
-			if(!empty($_POST['adgroup']))
-				$where_cond['adgroup'] = $_POST['adgroup'];
-
-			$record['package_detail'] = $this->admin_model->getwhere('package_detail',$where_cond);
-			// print_r($record);
+		$where_cond = [];
 		
-			echo $this->load->view("package/client_list_table",$record);
-		endif;
+		if(!empty($_POST['fromdate']) && !empty($_POST['todate'])){
+
+			$where_cond['updated_date >= '] = $_POST['fromdate'];
+			$where_cond['updated_date <= '] = $_POST['todate'];
+		}
+		
+		if(!empty($_POST['platform']))
+			$where_cond['platform'] = $_POST['platform'];
+
+		if(!empty($_POST['camp_type']))
+			$where_cond['campaigntype'] = $_POST['camp_type'];
+
+		if(!empty($_POST['sales_status']))
+			$where_cond['sales_status'] = $_POST['sales_status'];
+
+		if(!empty($_POST['disposition']))
+			$where_cond['disposition'] = $_POST['disposition'];
+
+		if(!empty($_POST['destination']))
+			$where_cond['destination'] = $_POST['destination'];
+
+		if(!empty($_POST['adgroup']))
+			$where_cond['adgroup'] = $_POST['adgroup'];
+
+		if(!empty($_POST['assigned_to'])){
+			if($_POST['assigned_to'] == 'me'){
+				$where_cond['assigned_to'] = $_SESSION['id'];
+			}
+			elseif($_POST['assigned_to'] == 'others'){
+				$where_cond['assigned_to != '] = $_SESSION['id'];
+			}else{
+				$where_cond['assigned_to != '] = NULL;
+			}
+		}
+
+		$record['package_detail'] = $this->admin_model->getwhere('package_detail',$where_cond);
+		// print_r($record);
+	
+		echo $this->load->view("package/lead_list_table",$record);
 	}
 
 	public function getCrmData(){
@@ -923,5 +930,64 @@ class Package extends MX_Controller {
 		$record['feedback_data'] = $this->admin_model->get_query($query);
 		// print_r($record['feedback_data']);die;
 		echo $this->load->view("package/feedback_table",$record);
+	}
+
+
+	public function lead_management()
+	{
+		$validate = 1;//validate_module_access('package/lead_management');
+		if(!empty($validate)):
+
+			$query = "SELECT count(1) AS disposition_count, lower(disposition) as disposition
+				FROM package_detail 
+				GROUP BY disposition 
+			";
+			$disposition_detail = $this->admin_model->get_query($query);
+			foreach($disposition_detail as $d_v){
+				$record['disposition_detail'][trim($d_v->disposition)] = $d_v->disposition_count;
+			}
+			$query = "SELECT `name` FROM platform WHERE `delete` = 0";
+			$record['platform'] = $this->admin_model->get_query($query);
+			
+			$query = "SELECT `name` FROM campaigntype WHERE `delete` = 0";
+			$record['campaigntype'] = $this->admin_model->get_query($query);
+
+			$query = "SELECT `name` FROM destination WHERE `delete` = 0";
+			$record['destination'] = $this->admin_model->get_query($query);
+
+			$query = "SELECT `name` FROM sales_status WHERE `delete` = 0";
+			$record['sales_status'] = $this->admin_model->get_query($query);
+
+			$query = "SELECT `name` FROM disposition WHERE `delete` = 0";
+			$record['disposition'] = $this->admin_model->get_query($query);
+
+			$query = "SELECT `name` FROM adgroup WHERE `delete` = 0";
+			$record['adgroup'] = $this->admin_model->get_query($query);
+			
+			// echo '<pre>';
+			// print_r($record);
+			// die;
+			$template = "admin";
+			$record['title'] = "Advent Tourist | Package List";
+			$record['viewfile'] = "lead_management";
+			$record['module'] = "package";
+			echo modules::run('template/'.$template,$record);
+		else :
+			redirect('admin');
+		endif;
+	}
+
+
+	public function assign_lead_to_me(){
+		
+		$id = $_POST['id'];
+
+		$data = [
+			'assigned_to' => $_SESSION['id']
+		];
+		$this->db->where('id',$id);
+		$this->db->update('package_detail',$data);
+
+		echo 'Data Updated successfully!!!';
 	}
 }

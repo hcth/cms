@@ -28,7 +28,6 @@ class Admin extends MX_Controller {
 			if($this->form_validation->run() == FALSE):
 				echo json_encode($this->form_validation->error_array());
 			else :
-				$conditionArray = array('email'=>$loginRecord['email'],'password'=>md5(base64_decode($loginRecord['password'])));
 				$query = "
 					SELECT 
 						`user`.`id`,

@@ -310,7 +310,6 @@ class Home extends MX_Controller
 	{
 		$id = $this->session->userdata('frontid');
 		if (!empty($id) && intval($id)) :
-			//$isAdmin = $this->session->userdata('isAdmin');
 			//$isStatus = $this->session->userdata('admin_Status');
 			if (!empty($id)) :
 				$conditionArray = array('id' => $this->session->userdata('frontid'));
@@ -339,7 +338,6 @@ class Home extends MX_Controller
 	{
 		$id = $this->session->userdata('frontid');
 		if (!empty($id) && intval($id)) :
-			//$isAdmin = $this->session->userdata('isAdmin');
 			//$isStatus = $this->session->userdata('admin_Status');
 			if (!empty($id)) :
 				$conditionArray = array('id' => $this->session->userdata('frontid'));

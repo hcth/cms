@@ -13,44 +13,34 @@ class Adminrights extends MX_Controller {
 
 	public function index()
 	{	
-		$isAdmin = $this->session->userdata('isAdmin');
-		if(!empty($isAdmin)):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
-			$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
-		
-			if(is_array($adminRecord)):
-				$record['rec'] = $adminRecord;
-			endif;
+		$conditionArray = array('id'=>$this->session->userdata('adminid'));
+		$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
+	
+		if(is_array($adminRecord)):
+			$record['rec'] = $adminRecord;
+		endif;
 
-			$record['adminRec'] = $this->Adminrights_model->getwhere("adminmaster",array('admin_Status!='=>'0'));
-			$template = "admin";
-			$record['viewfile'] = "view_admin_rights";
-			$record['module'] = "adminrights";
-			echo modules::run('template/'.$template ,$record);
-		else :
-			redirect('admin');
-		endif;	
+		$record['adminRec'] = $this->Adminrights_model->getwhere("adminmaster",array('admin_Status!='=>'0'));
+		$template = "admin";
+		$record['viewfile'] = "view_admin_rights";
+		$record['module'] = "adminrights";
+		echo modules::run('template/'.$template ,$record);
 	}
 	
 	function add_rights()
 	{
-		$isAdmin = $this->session->userdata('isAdmin');
-		if(!empty($isAdmin)):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
-			$adminRecord = $this->Adminrights_model->getwhere("adminmaster",$conditionArray);
-			if(is_array($adminRecord)):
-				$record['rec'] = $adminRecord;
-			endif;
+		$conditionArray = array('id'=>$this->session->userdata('adminid'));
+		$adminRecord = $this->Adminrights_model->getwhere("adminmaster",$conditionArray);
+		if(is_array($adminRecord)):
+			$record['rec'] = $adminRecord;
+		endif;
 
-			$record['rights'] = $this->Adminrights_model->getwhere("rights",array('is_active='=>'1'));
-			$template = "admin";
-			$record['viewfile'] = "add_rights";
-			$record['module'] = "adminrights";
+		$record['rights'] = $this->Adminrights_model->getwhere("rights",array('is_active='=>'1'));
+		$template = "admin";
+		$record['viewfile'] = "add_rights";
+		$record['module'] = "adminrights";
 
-			echo modules::run('template/'.$template ,$record);
-		else :
-			redirect('admin');
-		endif;	
+		echo modules::run('template/'.$template ,$record);
 	}
 
 	public function rightsadd()

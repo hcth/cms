@@ -13,43 +13,33 @@ class Cms extends MX_Controller {
 
 	public function index()
 	{	
-		$isAdmin = $this->session->userdata('isAdmin');
-		if(!empty($isAdmin)):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
-			$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
-		
-			if(is_array($adminRecord)):
-				$record['rec'] = $adminRecord;
-			endif;
+		$conditionArray = array('id'=>$this->session->userdata('adminid'));
+		$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
+	
+		if(is_array($adminRecord)):
+			$record['rec'] = $adminRecord;
+		endif;
 
-			$record['adminRec'] = $this->cms_model->getdata("cms");
-			$template = "admin";
-			$record['viewfile'] = "view_cms_list";
-			$record['module'] = "cms";
-			echo modules::run('template/'.$template ,$record);
-		else :
-			redirect('admin');
-		endif;	
+		$record['adminRec'] = $this->cms_model->getdata("cms");
+		$template = "admin";
+		$record['viewfile'] = "view_cms_list";
+		$record['module'] = "cms";
+		echo modules::run('template/'.$template ,$record);
 	}
 	
 	function add_page()
 	{
-		$isAdmin = $this->session->userdata('isAdmin');
-		if(!empty($isAdmin)):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
-			$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
-			if(is_array($adminRecord)):
-				$record['rec'] = $adminRecord;
-			endif;
+		$conditionArray = array('id'=>$this->session->userdata('adminid'));
+		$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
+		if(is_array($adminRecord)):
+			$record['rec'] = $adminRecord;
+		endif;
 
-			$template = "admin";
-			$record['viewfile'] = "add_page";
-			$record['module'] = "cms";
-            
-			echo modules::run('template/'.$template ,$record);
-		else :
-			redirect('admin');
-		endif;	
+		$template = "admin";
+		$record['viewfile'] = "add_page";
+		$record['module'] = "cms";
+		
+		echo modules::run('template/'.$template ,$record);
 	}
 
 	function pageadd()
@@ -98,22 +88,17 @@ class Cms extends MX_Controller {
 
 	public function  editcms($id)
 	{
-		$isAdmin = $this->session->userdata('isAdmin');
-		if(!empty($isAdmin)):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
-			$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
-			if(is_array($adminRecord)):
-				$record['rec'] = $adminRecord;
-			endif;
-			$record['cms_data'] = $this->cms_model->getwhere("cms",array('id='=>$id));
-			$template = "admin";
-			$record['viewfile'] = "edit_page";
-			$record['module'] = "cms";
+		$conditionArray = array('id'=>$this->session->userdata('adminid'));
+		$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
+		if(is_array($adminRecord)):
+			$record['rec'] = $adminRecord;
+		endif;
+		$record['cms_data'] = $this->cms_model->getwhere("cms",array('id='=>$id));
+		$template = "admin";
+		$record['viewfile'] = "edit_page";
+		$record['module'] = "cms";
 
-			echo modules::run('template/'.$template ,$record);
-		else :
-			redirect('admin');
-		endif;	
+		echo modules::run('template/'.$template ,$record);
 	}
 
 	public function  page_edit()

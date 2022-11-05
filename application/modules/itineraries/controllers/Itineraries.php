@@ -316,13 +316,6 @@ class Itineraries extends MX_Controller
 
 	function itineraries_details_ajax()
 	{
-		$isAdmin = $this->session->userdata('isAdmin');
-		$adminIds = $this->session->userdata('adminid');
-		$istraveler = $this->session->userdata('istraveler');
-		if (!empty($isAdmin)) {
-		}
-		$itid = $this->session->userdata('itinerariesId');
-
 		$record = $this->input->post();
 		$record['admin_page'] = 1;
 		$record["itinerariesAllRecord"]  = $this->Itineraries_model->getfilterRecord($record);
@@ -342,45 +335,27 @@ class Itineraries extends MX_Controller
 		if ($id == '') :
 			$this->session->unset_userdata('itinerariesId');
 		endif;
-		$isAdmin = $this->session->userdata('isAdmin');
-		$istraveler = $this->session->userdata('istraveler');
-		$istraveler = $this->session->userdata('istraveler');
-		if (!empty($isAdmin)) :
-			$conditionArray = array('id' => $this->session->userdata('adminid'));
-			if (isset($istraveler) && $istraveler == 1) :
-				$adminRecord = $this->admin_model->getwhere("realtraveller", $conditionArray);
-			else :
-				$adminRecord = $this->admin_model->getwhere("adminmaster", $conditionArray);
+		$itid = $this->session->userdata('itinerariesId');
+		if (!empty($itid)) :
+			$itinerariesRecord = $this->admin_model->getwhere("ti_itineraries", array('id' => $itid));
+			if (is_array($itinerariesRecord)) :
+				$record['itineraries'] = $itinerariesRecord[0];
 			endif;
-
-			if (is_array($adminRecord)) :
-				$record['rec'] = $adminRecord;
-			endif;
-
-			$itid = $this->session->userdata('itinerariesId');
-			if (!empty($itid)) :
-				$itinerariesRecord = $this->admin_model->getwhere("ti_itineraries", array('id' => $itid));
-				if (is_array($itinerariesRecord)) :
-					$record['itineraries'] = $itinerariesRecord[0];
-				endif;
-			endif;
-
-			$itid = $this->session->userdata('itinerariesId');
-			if (!empty($itid)) :
-				$tripdetailsRecord = $this->admin_model->getwhere("ti_itineraries_details", array('master_id' => $itid));
-				if (is_array($tripdetailsRecord)) :
-					$record['trip_details'] = $tripdetailsRecord;
-				endif;
-			endif;
-			$record['cities'] = $this->Itineraries_model->getcities();
-			$template = "admin";
-			$record['viewfile'] = "view_itineraries_details";
-			$record['module'] = "itineraries";
-
-			echo modules::run('template/' . $template, $record);
-		else :
-			redirect('admin');
 		endif;
+
+		$itid = $this->session->userdata('itinerariesId');
+		if (!empty($itid)) :
+			$tripdetailsRecord = $this->admin_model->getwhere("ti_itineraries_details", array('master_id' => $itid));
+			if (is_array($tripdetailsRecord)) :
+				$record['trip_details'] = $tripdetailsRecord;
+			endif;
+		endif;
+		$record['cities'] = $this->Itineraries_model->getcities();
+		$template = "admin";
+		$record['viewfile'] = "view_itineraries_details";
+		$record['module'] = "itineraries";
+
+		echo modules::run('template/' . $template, $record);
 	}
 
 	function itinerarySeoData()

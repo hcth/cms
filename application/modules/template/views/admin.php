@@ -262,13 +262,28 @@
                                     <span class="m-menu__link-title">
                                         <span class="m-menu__link-wrap">
                                             <span class="m-menu__link-text">
-                                                Lead Management
+                                                Admin Lead Management
                                             </span>
                                         </span>
                                     </span>
                                 </a>
                             </li>
                         <?php endif; ?>
+
+                        <?php // if (validate_module_access('package/lead_management')) : ?>
+                            <li class="m-menu__item" aria-haspopup="true">
+                                <a href="<?php echo base_url('package/lead_management'); ?>" class="m-menu__link">
+                                    <i class="m-menu__link-icon la la-ticket"></i>
+                                    <span class="m-menu__link-title">
+                                        <span class="m-menu__link-wrap">
+                                            <span class="m-menu__link-text">
+                                                Lead Management
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                        <?php // endif; ?>
 
                         <?php if (validate_module_access('package/db_management')) : ?>
                             <li class="m-menu__item" aria-haspopup="true">

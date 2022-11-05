@@ -13,14 +13,12 @@ class Communication extends MX_Controller {
 
 	public function index()
 	{
-		$isAdmin = $this->session->userdata('isAdmin');
-		if(!empty($isAdmin)):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
-			$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
-		
-			if(is_array($adminRecord)):
-				$record['rec'] = $adminRecord;
-			endif;
+		$conditionArray = array('id'=>$this->session->userdata('adminid'));
+		$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
+	
+		if(is_array($adminRecord)):
+			$record['rec'] = $adminRecord;
+		endif;
 		$data = "*";
 		$table = "subscribeemail";
 		$condition = '';		
@@ -30,7 +28,6 @@ class Communication extends MX_Controller {
 		$record['viewfile'] = "communication";
 		$record['module'] = "communication";
 		echo modules::run('template/'.$template,$record);
-	endif;
 	}
 	
 	public function download_communicationcsv()
