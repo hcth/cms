@@ -99,7 +99,7 @@
                     </td>
 
                     <td>
-                        <?php echo $value->assigned_to; ?>
+                        <?php echo $value->assigned_to_name; ?>
                     </td>
 
                     <td>

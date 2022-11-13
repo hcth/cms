@@ -708,12 +708,9 @@ class Package extends MX_Controller {
 			}
 			elseif($_POST['assigned_to'] == 'others'){
 				$where_cond['assigned_to != '] = $_SESSION['id'];
-			}else{
-				$where_cond['assigned_to != '] = NULL;
 			}
 		}
-
-		$record['package_detail'] = $this->admin_model->getwhere('package_detail',$where_cond);
+		$record['package_detail'] = $this->admin_model->getLeadsList('package_detail',$where_cond);
 		// print_r($record);
 	
 		echo $this->load->view("package/lead_list_table",$record);

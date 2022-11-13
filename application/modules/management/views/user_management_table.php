@@ -3,6 +3,7 @@
         <tr>
             <th title="#">#</th>
             <th title="userName">User Name</th>
+            <th title="email">Email</th>
             <th title="RoleName">Role Name</th>
             <th width="80">Date Created</th>
             <th width="80">Action</th>
@@ -16,6 +17,7 @@
                 <tr>
                     <td><?= $counter; ?></td>
                     <td><?= $value->name; ?></td>
+                    <td><?= $value->email; ?></td>
                     <td><?= $value->role_name; ?></td>
                     <td><?= date('d/m/Y', strtotime($value->created_at)); ?></td>
                     <td>

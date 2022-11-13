@@ -1,4 +1,3 @@
-<link rel='stylesheet' href='https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css'>
 <!-- begin: page content -->
 <div class="m-grid__item m-grid__item--fluid m-wrapper">
     <!-- BEGIN: Subheader -->
@@ -281,7 +280,6 @@
 <!-- All Modal End -->
 
 <script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>
-<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" type="text/javascript"></script>
 
 <script>
     $(document).ready(function() {

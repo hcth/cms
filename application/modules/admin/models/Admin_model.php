@@ -15,6 +15,19 @@ class Admin_model extends CI_Model {
     	endif;	
     }
     
+    public function getLeadsList($table,$condition){
+    	$checkLogin = $this->db
+		->select('package_detail.*,user.name as assigned_to_name')
+		->join('user','user.id=package_detail.assigned_to', 'left')
+		->get_where($table,$condition)
+		;
+        if($checkLogin->num_rows() > 0):
+    		return $checkLogin->result();
+    	else:
+    		return false;
+    	endif;	
+    }
+
         public function getwheres($data,$table){
         $this->db->select($data)->from($table);
         $getdata = $this->db->get();

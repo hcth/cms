@@ -386,7 +386,7 @@
 
 
     <!--end::Base Scripts -->
-    <?php if (isset($module) && $module == "itineraries" || $module == "traveller" || $module == "stories" || $module == "things_to_do" || $module == "adminrights"  || $module == "cms" || $module == "communication" || $module == "users" || $module == "realtraveller" || $module == "itinerariesexpert" || $module == "package") : ?>
+    <?php if (isset($module) && $module == "itineraries" || $module == "traveller" || $module == "stories" || $module == "things_to_do" || $module == "adminrights"  || $module == "cms" || $module == "communication" || $module == "users" || $module == "realtraveller" || $module == "itinerariesexpert" || $module == "package"  || $module == "management") : ?>
         <script src="<?php echo base_url() . 'assets/admin/js/datatable.js'; ?>" type="text/javascript"></script>
 
         <script src="<?php echo base_url() . 'assets/admin/js/common.js'; ?>" type="text/javascript"></script>
@@ -617,7 +617,7 @@
 
     <script>
         $('.cropme').simpleCropper();
-        cropper.getCroppedCanvas().toDataURL('image/jpeg')
+        // cropper.getCroppedCanvas().toDataURL('image/jpeg')
 
         <?php if (isset($_GET['ttd'])) { ?>
             $(document).ready(function() {

@@ -176,10 +176,9 @@
                             </div>
                             <div class="col-md-2">
                                 <select class="form-control" id="assigned_to">
-                                    <option selected value="">Assigned To</option>
-                                    <option value="me">Me</option>
-                                    <option value="others">Others</option>
-                                    <option value="all">All</option>
+                                    <option selected value="me">My Leads</option>
+                                    <option value="others">Others Leads</option>
+                                    <option value="all">All Leads</option>
                                 </select>
                             </div>
                         </div>
