@@ -1,3 +1,9 @@
+<link href="<?php echo base_url() . 'assets/css/vijay2.css'; ?>" rel="stylesheet" type="text/css" />
+<style>
+      .modal-confirm.show{display:block;}
+      .mb-10{margin-bottom: 10px !important;}
+      .container-m-auto{margin: 0 auto; width: 500px;}           
+   </style>
 <!-- begin: page content -->
 <div class="m-grid__item m-grid__item--fluid m-wrapper">
     <!-- BEGIN: Subheader -->
@@ -12,7 +18,8 @@
     </div>
     <!-- END: Subheader -->
     <div class="m-content">
-        <div class="m-portlet">
+
+        <!-- <div class="m-portlet">
             <div class="m-portlet__body">
                 <div class="row">
                     <div class="col-md-10 col-lg-10">
@@ -31,15 +38,23 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!--begin::Portlet-->
         <div class="m-portlet">
             <div class="m-portlet__body m-form">
                 <div class="row">
+                <div class="col-md-12">
+                    <div class="heading-flex">
+                        <h2 class="mt-6 xsmt-5">Create User Management</h2>         
+                        <!-- <button type="button" class="btn btn-info m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air add-sell" data-toggle="modal" data-target="#m_modal_6"><i class="la la-plus"></i> Role Creation</button>                                                       -->
+                        <button type="button" class="btn btn-info m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air add-sell" data-toggle="modal" data-target="#create-user-modal"><i class="la la-plus"></i> User Creation</button>
+                    </div>  
+                </div>
+                
                     <!--begin: Datatable -->
-                    <div class="col-md-12">
-                        <div class="table-responsive db_table_div">
+                    <div class="col-md-12 mt-2">
+                        <div class="db_table_div">
 
                         </div>
                     </div>

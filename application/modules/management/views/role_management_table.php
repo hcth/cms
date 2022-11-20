@@ -1,4 +1,4 @@
-<table id="db_management" width="100%">
+<table id="db_management" class="display nowrap" width="100%">
     <thead>
         <tr>
             <th title="#">#</th>
@@ -39,15 +39,23 @@
                     </td>
                     <td><?= ($value->assign_leads == 1) ? 'Yes' : 'No'; ?></td>
                     <td><?= date('d/m/Y', strtotime($value->created_at)); ?></td>
-                    <td>
-                        <ul>
-                            <li>
-                                <a href="javascript:void(0);" class="edit dropdown-item" data-id='<?= $value->id; ?>' data-name='<?= $value->name; ?>' data-assign_leads='<?= $value->assign_leads; ?>' data-module='<?= $value->module; ?>' ><i class="la la-edit"></i> Edit </a>
-                            </li>
-                            <li>
-                                <a href='javascript:void(0)' class="delete dropdown-item"  data-id='<?= $value->id; ?>' ><i class="la la-close"></i> Delete </a>
-                            </li>
-                        </ul>
+                    <td style="position: relative;">
+                        <div class="edit-btndv">
+                            <div class="edit-btns"><span></span><span></span><span></span></div> 
+                            <div class="dropdown-menu1" style="display: none;">
+                                <ul>  
+                                <li>
+                                    <a href="javascript:void(0);" class="edit dropdown-item" data-id='<?= $value->id; ?>' data-name='<?= $value->name; ?>' data-assign_leads='<?= $value->assign_leads; ?>' data-module='<?= $value->module; ?>' ><i class="la la-edit"></i> Edit </a>
+                                </li>
+                                <li>
+                                    <a href='javascript:void(0)' class="delete dropdown-item"  data-id='<?= $value->id; ?>' ><i class="la la-close"></i> Delete </a>
+                                </li>
+
+                                <!-- <li><a data-toggle="modal" data-target="#m_modal_6" class="dropdown-item" href="javascript:void(0);"><i class="la la-edit"></i> Edit </a></li>
+                                <li><a data-toggle="modal" data-target="#myModal1" class="dropdown-item" href="javascript:void(0);"><i class="la la-close"></i> Delete </a></li>                                                 -->
+                                </ul>                                                                                                                                
+                            </div>
+                        </div>                                                        
                     </td>
                 </tr>
             <?php
@@ -62,7 +70,14 @@
 
 <script>
     $(document).ready(function() {
-        $('#db_management').DataTable();
+        $('#db_management').DataTable({
+             "scrollX": true,
+             fixedColumns:   {          
+               right: 1
+        }
+         });
+        $('#db_management_filter.dataTables_filter').append('<a href="#" tooltip="Download CSV" flow="left"><i class="icons excel-icon"></i></a>');                  
+         
     });
 
     $('.delete').click(function() {
@@ -81,3 +96,34 @@
         $('#edit-role-modal').modal('show');
     });
 </script>
+
+
+
+<script>
+           
+           $(document).click(function(e) {
+          var target = e.target;
+          if (!$(target).is('.edit-btns') && !$(target).parents().is('.edit-btns')) {
+              $('.dropdown-menu1').hide();
+              $('.context-menu1').removeClass('active-menu');
+          }
+          });      
+          $(".edit-btns").click(function(){
+              $(".dropdown-menu1").hide();
+              //$(this).next('.context-menu').toggle();
+              if($(this).next('.dropdown-menu1').hasClass("active-menu")){
+                $(this).next('.dropdown-menu1').hide().removeClass('active-menu');
+              }else{
+                $('.context-menu').removeClass('active-menu');
+                $(this).next('.dropdown-menu1').show().addClass('active-menu');
+              }
+              $(this).parents('.nav-item').addClass('active');
+          });
+
+      
+
+
+      
+    
+      
+       </script>
