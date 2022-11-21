@@ -599,7 +599,7 @@ class Package extends MX_Controller {
 		endif;	
 	}
 	
-	public function listpackage()
+	/* public function listpackage()
 	{
 		$validate = validate_module_access('package/listpackage');
 		if(!empty($validate)):
@@ -647,7 +647,7 @@ class Package extends MX_Controller {
 		else :
 			redirect('admin');
 		endif;
-	}
+	} */
 	
 	public function download_packagecsv()
 	{
@@ -720,6 +720,7 @@ class Package extends MX_Controller {
 		$query = "SELECT *
 			FROM package_detail 
 			WHERE disposition = '" . $_POST['disp'] . "' 
+			ORDER BY updated_date DESC
 		";
 		// echo $query;
 		$record['crm_data'] = $this->admin_model->get_query($query);
@@ -961,6 +962,19 @@ class Package extends MX_Controller {
 			$query = "SELECT `name` FROM adgroup WHERE `delete` = 0";
 			$record['adgroup'] = $this->admin_model->get_query($query);
 			
+			$query = "SELECT `value` FROM admin WHERE `name` = 'auto_assign_leads'";
+			$record['auto_assign_leads'] = $this->admin_model->get_query($query)[0]->value;
+
+			$query = "SELECT 
+						`user`.`id`,
+						`user`.`name`,
+						`user`.`email`						
+					FROM `user`
+					LEFT JOIN `role` ON role.id = user.role
+					WHERE 
+						`user`.`is_deleted` = '0' AND `role`.`assign_leads` = '1'";
+			$record['executives'] = $this->admin_model->get_query($query);
+
 			// echo '<pre>';
 			// print_r($record);
 			// die;
@@ -984,6 +998,31 @@ class Package extends MX_Controller {
 		];
 		$this->db->where('id',$id);
 		$this->db->update('package_detail',$data);
+
+		echo 'Data Updated successfully!!!';
+	}
+
+	public function assign_lead_to_user(){
+		
+		$leads_arr = $_POST['leads_arr'];
+		$user_id = $_POST['user_id'];
+
+		$data = [
+			'assigned_to' => $user_id
+		];
+		$this->db->where_in('id',$leads_arr);
+		$this->db->update('package_detail',$data);
+
+		echo 'Data Updated successfully!!!';
+	}
+
+	public function update_auto_assign_lead_mechanism(){
+		
+		$data = [
+			'value' => $_POST['auto_assign_leads']
+		];
+		$this->db->where('name','auto_assign_leads');
+		$this->db->update('admin',$data);
 
 		echo 'Data Updated successfully!!!';
 	}

@@ -126,13 +126,22 @@
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="form-group">
+                                                        <div class="m-checkbox-inline">
+                                                            <label class="m-checkbox m-checkbox--air m-checkbox--state-brand">
+                                                                <input type="checkbox" name='is_admin' value="1">
+                                                                Is Admin
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
                                                         <label>Menu List </label>
                                                         <select class="form-control " id="modules" multiple="multiple">
                                                             <option value="admin/dashboard">Admin Dashboard</option>
-                                                            <option value="adminrights">Admin Management</option>
                                                             <option value="itineraries/viewItineraries">Itineraries</option>
-                                                            <option value="itinerariesexpert">Itineraries Expert List</option>
-                                                            <option value="package/listpackage">Lead Management</option>
+                                                            <option value="package/lead_management">Lead Management</option>
                                                             <option value="package/db_management">DB Management</option>
                                                             <option value="package/feedback">Feedback Management</option>
                                                             <option value="management/role_management">Role Management</option>
@@ -270,13 +279,22 @@
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="form-group">
+                                                        <div class="m-checkbox-inline">
+                                                            <label class="m-checkbox m-checkbox--air m-checkbox--state-brand">
+                                                                <input type="checkbox" name='edit_is_admin' value="1">
+                                                                Is Admin
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
                                                         <label>Menu List </label>
                                                         <select class="form-control " id="edit_modules" multiple="multiple">
                                                             <option value="admin/dashboard">Admin Dashboard</option>
-                                                            <option value="adminrights">Admin Management</option>
                                                             <option value="itineraries/viewItineraries">Itineraries</option>
-                                                            <option value="itinerariesexpert">Itineraries Expert List</option>
-                                                            <option value="package/listpackage">Lead Management</option>
+                                                            <option value="package/lead_management">Lead Management</option>
                                                             <option value="package/db_management">DB Management</option>
                                                             <option value="package/feedback">Feedback Management</option>
                                                             <option value="management/role_management">Role Management</option>
@@ -336,10 +354,8 @@
         if (this.value == 'admin') {
             arrModule = [
                 'admin/dashboard',
-                'adminrights',
                 'itineraries/viewItineraries',
-                'itinerariesexpert',
-                'package/listpackage',
+                'package/lead_management',
                 'package/db_management',
                 'package/feedback',
                 'management/role_management',
@@ -348,18 +364,15 @@
         } else if (this.value == 'team_lead') {
             arrModule = [
                 'admin/dashboard',
-                'adminrights',
                 'itineraries/viewItineraries',
-                'itinerariesexpert',
-                'package/listpackage',
+                'package/lead_management',
                 'package/db_management',
                 'package/feedback',
             ];
         } else if (this.value == 'executive') {
             arrModule = [
                 'itineraries/viewItineraries',
-                'itinerariesexpert',
-                'package/listpackage',
+                'package/lead_management',
                 'package/db_management',
                 'package/feedback',
             ];
@@ -376,10 +389,8 @@
         if (this.value == 'admin') {
             arrModule = [
                 'admin/dashboard',
-                'adminrights',
                 'itineraries/viewItineraries',
-                'itinerariesexpert',
-                'package/listpackage',
+                'package/lead_management',
                 'package/db_management',
                 'package/feedback',
                 'management/role_management',
@@ -388,10 +399,8 @@
         } else if (this.value == 'team_lead') {
             arrModule = [
                 'admin/dashboard',
-                'adminrights',
                 'itineraries/viewItineraries',
-                'itinerariesexpert',
-                'package/listpackage',
+                'package/lead_management',
                 'package/db_management',
                 'package/feedback',
             ];
@@ -399,7 +408,7 @@
             arrModule = [
                 'itineraries/viewItineraries',
                 'itinerariesexpert',
-                'package/listpackage',
+                'package/lead_management',
                 'package/db_management',
                 'package/feedback',
             ];
@@ -439,6 +448,7 @@
             data: {
                 role_name: $('#role_name').val(),
                 assign_leads: $('input[name="assign_leads"]:checked').val(),
+                is_admin: $('input[name="is_admin"]:checked').val(),
                 modules: $('#modules').val(),
             },
             beforeSend: function() {
@@ -450,6 +460,7 @@
                 $('#create-role-modal').modal('hide');
                 $('#role_name').val('')
                 $('input[name=assign_leads]').prop('checked', false);
+                $('input[name=is_admin]').prop('checked', false);
                 $('input[name=module_group]').prop('checked', false);
                 $('#modules').val('')
 
@@ -520,6 +531,7 @@
                 id: $('#edit_id').val(),
                 role_name: $('#edit_role_name').val(),
                 assign_leads: $('input[name="edit_assign_leads"]:checked').val(),
+                is_admin: $('input[name="edit_is_admin"]:checked').val(),
                 modules: $('#edit_modules').val(),
             },
             beforeSend: function() {
@@ -531,6 +543,7 @@
                 $('#edit-role-modal').modal('hide');
                 $('#edit_role_name').val('')
                 $('input[name=edit_assign_leads]').prop('checked', false);
+                $('input[name=edit_is_admin]').prop('checked', false);
                 $('input[name=edit_module_group]').prop('checked', false);
                 $('#edit_modules').val('')
 

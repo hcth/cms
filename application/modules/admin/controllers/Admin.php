@@ -37,7 +37,8 @@ class Admin extends MX_Controller {
 						`user`.`password`,
 						`role`.`name` as role_name,
 						`role`.`module`,
-						`role`.`assign_leads`
+						`role`.`assign_leads`,
+						`role`.`is_admin`
 					FROM `user`
 					LEFT JOIN `role` ON role.id = user.role
 					WHERE 
@@ -56,6 +57,7 @@ class Admin extends MX_Controller {
 						'role_name'		=> $checkLogin[0]->role_name,
 						'module'		=> json_decode(json_encode(json_decode($checkLogin[0]->module)),true),
 						'assign_leads'	=> $checkLogin[0]->assign_leads,
+						'is_admin'    	=> $checkLogin[0]->is_admin,
 					);
 					$this->session->set_userdata($adminSession);
 					echo 1;

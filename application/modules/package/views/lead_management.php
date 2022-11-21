@@ -176,11 +176,32 @@
                             </div>
                             <div class="col-md-2">
                                 <select class="form-control" id="assigned_to">
-                                    <option selected value="me">My Leads</option>
+                                    <option value="me">My Leads</option>
                                     <option value="others">Others Leads</option>
-                                    <option value="all">All Leads</option>
+                                    <option selected value="all">All Leads</option>
                                 </select>
                             </div>
+                            <?php
+                            if ($_SESSION['is_admin'] == 1) {
+                            ?>
+                                <div class="col-md-2">
+                                    <select class="form-control" id="assigned_to_user">
+                                        <option selected value="">Executive List</option>
+                                        <?php
+                                        foreach ($executives as $executive) {
+                                            echo "<option value='$executive->id'>$executive->name (" . $executive->email . ")</option>";
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    Auto Lead Assign is
+                                    <input type="radio" <?php if ($auto_assign_leads == 'on') echo 'checked'; ?> name='auto_lead_assign_mechanism' value='on'>On
+                                    <input type="radio" <?php if ($auto_assign_leads == 'off') echo 'checked'; ?> name='auto_lead_assign_mechanism' value="off">Off
+                                </div>
+                            <?php
+                            }
+                            ?>
                         </div>
                         <!--/.row-->
                         <div class="row mt-4">
@@ -714,6 +735,22 @@
         getCrmData(this.value);
     });
 
+    $('#assigned_to_user').change(function() {
+        var array = [];
+        $("input:checkbox[name=lead_id]:checked").each(function() {
+            array.push($(this).val());
+        });
+        console.log($('#assigned_to_user').val())
+        console.log(array);
+        if (array.length == 0) {
+            alert('Atleast 1 user should be selected')
+        } else {
+            if (confirm('Are you sure?')) {
+                assignLead(array, $('#assigned_to_user').val());
+            }
+        }
+    });
+
     $('#add_client').click(function() {
         add_client();
     });
@@ -917,4 +954,46 @@
             },
         });
     }
+
+
+    function assignLead(leads_arr, user_id) {
+        $.ajax({
+            url: base_url + 'package/assign_lead_to_user',
+            dataType: 'html',
+            type: "post",
+            data: {
+                leads_arr: leads_arr,
+                user_id: user_id
+            },
+            beforeSend: function() {
+                // $(".loader").show();
+            },
+            success: function(data) {
+                // $(".loader").hide();
+                // console.log(data);
+                getClientList();
+            },
+        });
+    }
+
+    $('input[type=radio][name=auto_lead_assign_mechanism]').change(function() {
+        if (confirm('Are you sure??')) {
+            $.ajax({
+                url: base_url + 'package/update_auto_assign_lead_mechanism',
+                dataType: 'text',
+                type: "post",
+                data: {
+                    auto_assign_leads: this.value,
+                },
+                beforeSend: function() {
+                    // $(".loader").show();
+                },
+                success: function(data) {
+                    alert(data);
+                    // $(".loader").hide();
+                    // console.log(data);
+                },
+            });
+        }
+    });
 </script>

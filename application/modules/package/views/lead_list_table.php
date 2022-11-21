@@ -84,7 +84,11 @@
 
                     <td>
                         <?php
-                        if ($value->assigned_to == 0) {
+                        if ($_SESSION['is_admin'] == 1) {
+                        ?>
+                            <input type="checkbox" name="lead_id" value="<?= $value->id ?>">
+                        <?php
+                        } elseif ($value->assigned_to == 0) {
                         ?>
                             <a href="javascript:void(0)" onclick="assignLeadToMe('<?= $value->id ?>'); return false;">Assigned To Me</a>
                         <?php
@@ -183,7 +187,6 @@
         $('#edit_disposition').val($(this).attr("data-disposition"));
         $('#edit_sales_status').val($(this).attr("data-sales_status"));
         var a = '';
-        console.log($(this).attr("data-call_notes"));
         if ($(this).attr("data-call_notes") != '') {
             $.each(JSON.parse($(this).attr("data-call_notes")), function(key, value) {
                 a = a + '[' + value.date_created + "] Note : " + value.note + '<br>';
