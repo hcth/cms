@@ -120,10 +120,7 @@
               $(this).parents('.nav-item').addClass('active');
           });
 
-      
-
-
-      
+    
     
       
        </script>

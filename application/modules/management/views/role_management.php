@@ -571,6 +571,7 @@
         });
     }
 
+    
     function get_all_roles() {
         $.ajax({
             url: base_url + 'management/get_all_roles',
