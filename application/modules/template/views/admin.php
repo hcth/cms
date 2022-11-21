@@ -210,8 +210,8 @@
                             </li>
                         <?php endif; ?>
 
-                        <?php if (validate_module_access('adminrights')) : ?>
-                            <li class="m-menu__item" aria-haspopup="true">
+                        <?php // if (validate_module_access('adminrights')) : ?>
+                            <!-- <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('adminrights'); ?>" class="m-menu__link">
                                     <i class="m-menu__link-icon flaticon-dashboard"></i>
                                     <span class="m-menu__link-title">
@@ -222,8 +222,8 @@
                                         </span>
                                     </span>
                                 </a>
-                            </li>
-                        <?php endif; ?>
+                            </li> -->
+                        <?php // endif; ?>
 
                         <?php if (validate_module_access('itineraries/viewItineraries')) : ?>
                             <li class="m-menu__item " aria-haspopup="true">
@@ -240,8 +240,8 @@
                             </li>
                         <?php endif; ?>
 
-                        <?php if (validate_module_access('itinerariesexpert')) : ?>
-                            <li class="m-menu__item" aria-haspopup="true">
+                        <?php // if (validate_module_access('itinerariesexpert')) : ?>
+                        <!--     <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('itinerariesexpert'); ?>" class="m-menu__link">
                                     <i class="m-menu__link-icon la la-ticket"></i>
                                     <span class="m-menu__link-title">
@@ -253,10 +253,10 @@
                                     </span>
                                 </a>
                             </li>
-                        <?php endif; ?>
+                         --><?php // endif; ?>
 
-                        <?php if (validate_module_access('package/listpackage')) : ?>
-                            <li class="m-menu__item" aria-haspopup="true">
+                        <?php // if (validate_module_access('package/listpackage')) : ?>
+                            <!-- <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('package/listpackage'); ?>" class="m-menu__link">
                                     <i class="m-menu__link-icon la la-ticket"></i>
                                     <span class="m-menu__link-title">
@@ -267,8 +267,8 @@
                                         </span>
                                     </span>
                                 </a>
-                            </li>
-                        <?php endif; ?>
+                            </li> -->
+                        <?php // endif; ?>
 
                         <?php // if (validate_module_access('package/lead_management')) : ?>
                             <li class="m-menu__item" aria-haspopup="true">

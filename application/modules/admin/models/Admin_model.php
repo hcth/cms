@@ -19,6 +19,7 @@ class Admin_model extends CI_Model {
     	$checkLogin = $this->db
 		->select('package_detail.*,user.name as assigned_to_name')
 		->join('user','user.id=package_detail.assigned_to', 'left')
+		->order_by('package_detail.updated_date','desc')
 		->get_where($table,$condition)
 		;
         if($checkLogin->num_rows() > 0):
