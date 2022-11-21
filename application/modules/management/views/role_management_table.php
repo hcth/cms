@@ -97,8 +97,6 @@
     });
 </script>
 
-
-
 <script>
            
            $(document).click(function(e) {
@@ -118,12 +116,5 @@
                 $(this).next('.dropdown-menu1').show().addClass('active-menu');
               }
               $(this).parents('.nav-item').addClass('active');
-          });
-
-      
-
-
-      
-    
-      
+          });      
        </script>
