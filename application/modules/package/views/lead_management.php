@@ -712,6 +712,7 @@
                 <!--/.row-->
             </div>
             <div class="modal-footer">
+                <input type='hidden' id='edit_assigned_to'>
                 <button type="button" id="edit_client" class="btn btn-info m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill">
                     Submit
                 </button>
@@ -724,6 +725,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
+        current_user_id = "<?= $_SESSION['id'] ?>"
+        is_admin = "<?= $_SESSION['is_admin'] ?>"
         getClientList();
     });
 

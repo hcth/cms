@@ -97,7 +97,7 @@
                     </td>
 
                     <td>
-                        <a href="javascript:void(0)" class="m--font-danger editdata" data-toggle="modal" data-id='<?php echo $value->id; ?>' data-name='<?php echo $value->name; ?>' data-email='<?php echo $value->email; ?>' data-phone='<?php echo $value->phone; ?>' data-platform='<?php echo $value->platform; ?>' data-campaigntype='<?php echo $value->campaigntype; ?>' data-destination='<?php echo $value->destination; ?>' data-adgroup='<?php echo $value->adgroup; ?>' data-package='<?php echo $value->package; ?>' data-disposition='<?php echo $value->disposition; ?>' data-sales_status='<?php echo $value->sales_status; ?>' data-call_notes='<?php echo $value->call_notes; ?>'>
+                        <a href="javascript:void(0)" class="m--font-danger editdata" data-toggle="modal" data-id='<?php echo $value->id; ?>' data-name='<?php echo $value->name; ?>' data-email='<?php echo $value->email; ?>' data-phone='<?php echo $value->phone; ?>' data-platform='<?php echo $value->platform; ?>' data-campaigntype='<?php echo $value->campaigntype; ?>' data-destination='<?php echo $value->destination; ?>' data-adgroup='<?php echo $value->adgroup; ?>' data-package='<?php echo $value->package; ?>' data-disposition='<?php echo $value->disposition; ?>' data-sales_status='<?php echo $value->sales_status; ?>' data-call_notes='<?php echo $value->call_notes; ?>' data-assigned_to='<?php echo $value->assigned_to; ?>'>
                             <?php echo $value->traveller_code; ?>
                         </a>
                     </td>
@@ -155,7 +155,7 @@
                     </td>
 
                     <td>
-                        <a href="javascript:void(0)" class="m--font-danger editdata" data-toggle="modal" data-id='<?php echo $value->id; ?>' data-name='<?php echo $value->name; ?>' data-email='<?php echo $value->email; ?>' data-phone='<?php echo $value->phone; ?>' data-platform='<?php echo $value->platform; ?>' data-campaigntype='<?php echo $value->campaigntype; ?>' data-destination='<?php echo $value->destination; ?>' data-adgroup='<?php echo $value->adgroup; ?>' data-package='<?php echo $value->package; ?>' data-disposition='<?php echo $value->disposition; ?>' data-sales_status='<?php echo $value->sales_status; ?>' data-call_notes='<?php echo $value->call_notes; ?>'>
+                        <a href="javascript:void(0)" class="m--font-danger editdata" data-toggle="modal" data-id='<?php echo $value->id; ?>' data-name='<?php echo $value->name; ?>' data-email='<?php echo $value->email; ?>' data-phone='<?php echo $value->phone; ?>' data-platform='<?php echo $value->platform; ?>' data-campaigntype='<?php echo $value->campaigntype; ?>' data-destination='<?php echo $value->destination; ?>' data-adgroup='<?php echo $value->adgroup; ?>' data-package='<?php echo $value->package; ?>' data-disposition='<?php echo $value->disposition; ?>' data-sales_status='<?php echo $value->sales_status; ?>' data-call_notes='<?php echo $value->call_notes; ?>' data-assigned_to='<?php echo $value->assigned_to; ?>'>
                             Notes
                         </a>
                     </td>
@@ -186,11 +186,17 @@
 
         $('#edit_disposition').val($(this).attr("data-disposition"));
         $('#edit_sales_status').val($(this).attr("data-sales_status"));
+        $('#edit_assigned_to').val($(this).attr("data-assigned_to"));
         var a = '';
         if ($(this).attr("data-call_notes") != '') {
             $.each(JSON.parse($(this).attr("data-call_notes")), function(key, value) {
                 a = a + '[' + value.date_created + "] Note : " + value.note + '<br>';
             });
+        }
+        if((current_user_id == $(this).attr("data-assigned_to")) || is_admin == 1 ){
+            $('#edit_client').show();
+        }else{
+            $('#edit_client').hide();
         }
         $('#all_notes').html(a);
 

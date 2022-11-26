@@ -4,8 +4,14 @@
             <th title="#">
                 #
             </th>
+            <th title="Assign">
+                Assign
+            </th>
             <th title="TravellerCode">
                 Traveller Code
+            </th>    
+            <th title="AssignedTo">
+                Assigned To
             </th>
             <th title="Name">
                 Name
@@ -59,6 +65,19 @@
                         <?php echo $counter; ?>
                     </td>
                     <td>
+                        <?php
+                        if ($_SESSION['is_admin'] == 1) {
+                        ?>
+                            <input type="checkbox" name="lead_id" value="<?= $value->id ?>">
+                        <?php
+                        } elseif ($value->assigned_to == 0) {
+                        ?>
+                            <a href="javascript:void(0)" onclick="assignLeadToMe('<?= $value->id ?>'); return false;">Assigned To Me</a>
+                        <?php
+                        }
+                        ?>
+                    </td>
+                    <td>
                         <a href="javascript:void(0)" class="m--font-danger editdata" data-toggle="modal"
                             data-id='<?php echo $value->id; ?>'
                             data-name='<?php echo $value->name; ?>'
@@ -72,9 +91,13 @@
                             data-disposition='<?php echo $value->disposition; ?>'
                             data-sales_status='<?php echo $value->sales_status; ?>'
                             data-call_notes='<?php echo $value->call_notes; ?>'
+                            data-assigned_to='<?php echo $value->assigned_to; ?>'
                         >
                             <?php echo $value->traveller_code; ?>
                         </a>
+                    </td>
+                    <td>
+                        <?php echo $value->assigned_to_name; ?>
                     </td>
                     <td>
                         <?php echo $value->name; ?>
@@ -129,6 +152,7 @@
                             data-disposition='<?php echo $value->disposition; ?>'
                             data-sales_status='<?php echo $value->sales_status; ?>'
                             data-call_notes='<?php echo $value->call_notes; ?>'
+                            data-assigned_to='<?php echo $value->assigned_to; ?>'
                         >
                             Notes
                         </a>
@@ -159,6 +183,7 @@ $('.editdata').click(function() {
     
     $('#edit_disposition').val($(this).attr("data-disposition"));
     $('#edit_sales_status').val($(this).attr("data-sales_status"));
+    $('#edit_assigned_to').val($(this).attr("data-assigned_to"));
     var a='';
     console.log($(this).attr("data-call_notes"));
     if($(this).attr("data-call_notes") != ''){
@@ -166,6 +191,11 @@ $('.editdata').click(function() {
             a = a + '[' + value.date_created + "] Note : " + value.note + '<br>';
         });
     }
+    if((current_user_id == $(this).attr("data-assigned_to")) || is_admin == 1 ){
+            $('#edit_client').show();
+        }else{
+            $('#edit_client').hide();
+        }
     $('#all_notes').html(a);
 
     $('#editleadmodal').modal('show');

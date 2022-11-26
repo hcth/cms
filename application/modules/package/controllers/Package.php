@@ -599,56 +599,6 @@ class Package extends MX_Controller {
 		endif;	
 	}
 	
-	/* public function listpackage()
-	{
-		$validate = validate_module_access('package/listpackage');
-		if(!empty($validate)):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
-			$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
-
-			if(is_array($adminRecord)):
-				$record['rec'] = $adminRecord;
-			endif;
-
-			$query = "SELECT count(1) AS disposition_count, lower(disposition) as disposition
-				FROM package_detail 
-				GROUP BY disposition 
-			";
-			$disposition_detail = $this->admin_model->get_query($query);
-			foreach($disposition_detail as $d_v){
-				$record['disposition_detail'][trim($d_v->disposition)] = $d_v->disposition_count;
-			}
-			$query = "SELECT `name` FROM platform WHERE `delete` = 0";
-			$record['platform'] = $this->admin_model->get_query($query);
-			
-			$query = "SELECT `name` FROM campaigntype WHERE `delete` = 0";
-			$record['campaigntype'] = $this->admin_model->get_query($query);
-
-			$query = "SELECT `name` FROM destination WHERE `delete` = 0";
-			$record['destination'] = $this->admin_model->get_query($query);
-
-			$query = "SELECT `name` FROM sales_status WHERE `delete` = 0";
-			$record['sales_status'] = $this->admin_model->get_query($query);
-
-			$query = "SELECT `name` FROM disposition WHERE `delete` = 0";
-			$record['disposition'] = $this->admin_model->get_query($query);
-
-			$query = "SELECT `name` FROM adgroup WHERE `delete` = 0";
-			$record['adgroup'] = $this->admin_model->get_query($query);
-			
-			// echo '<pre>';
-			// print_r($record);
-			// die;
-			$template = "admin";
-			$record['title'] = "Advent Tourist | Package List";
-			$record['viewfile'] = "packagelist";
-			$record['module'] = "package";
-			echo modules::run('template/'.$template,$record);
-		else :
-			redirect('admin');
-		endif;
-	} */
-	
 	public function download_packagecsv()
 	{
 		$table = "package_detail";
@@ -717,13 +667,14 @@ class Package extends MX_Controller {
 	}
 
 	public function getCrmData(){
-		$query = "SELECT *
+		/* $query = "SELECT *
 			FROM package_detail 
 			WHERE disposition = '" . $_POST['disp'] . "' 
 			ORDER BY updated_date DESC
-		";
-		// echo $query;
-		$record['crm_data'] = $this->admin_model->get_query($query);
+		"; */
+		// $record['crm_data'] = $this->admin_model->get_query($query);
+		$where_cond['disposition'] = $_POST['disp'];
+		$record['crm_data'] = $this->admin_model->getLeadsList('package_detail',$where_cond);
 		// print_r($record['crm_data']);die;
 		echo $this->load->view("package/client_crm_table",$record);
 	}
@@ -933,7 +884,7 @@ class Package extends MX_Controller {
 
 	public function lead_management()
 	{
-		$validate = 1;//validate_module_access('package/lead_management');
+		$validate = validate_module_access('package/lead_management');
 		if(!empty($validate)):
 
 			$query = "SELECT count(1) AS disposition_count, lower(disposition) as disposition
