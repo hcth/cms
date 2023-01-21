@@ -92,6 +92,10 @@
                         ?>
                             <a href="javascript:void(0)" onclick="assignLeadToMe('<?= $value->id ?>'); return false;">Assigned To Me</a>
                         <?php
+                        } else {
+                        ?>
+                            Assigned
+                        <?php
                         }
                         ?>
                     </td>
@@ -193,9 +197,9 @@
                 a = a + '[' + value.date_created + "] Note : " + value.note + '<br>';
             });
         }
-        if((current_user_id == $(this).attr("data-assigned_to")) || is_admin == 1 ){
+        if ((current_user_id == $(this).attr("data-assigned_to")) || is_admin == 1) {
             $('#edit_client').show();
-        }else{
+        } else {
             $('#edit_client').hide();
         }
         $('#all_notes').html(a);

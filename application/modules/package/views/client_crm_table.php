@@ -74,6 +74,10 @@
                         ?>
                             <a href="javascript:void(0)" onclick="assignLeadToMe('<?= $value->id ?>'); return false;">Assigned To Me</a>
                         <?php
+                        }else{
+                            ?>
+                            Assigned
+                            <?php
                         }
                         ?>
                     </td>

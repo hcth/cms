@@ -743,8 +743,8 @@
         $("input:checkbox[name=lead_id]:checked").each(function() {
             array.push($(this).val());
         });
-        console.log($('#assigned_to_user').val())
-        console.log(array);
+        // console.log($('#assigned_to_user').val())
+        // console.log(array);
         if (array.length == 0) {
             alert('Atleast 1 user should be selected')
         } else {
@@ -752,6 +752,7 @@
                 assignLead(array, $('#assigned_to_user').val());
             }
         }
+        $("#assigned_to_user").val('');
     });
 
     $('#add_client').click(function() {
