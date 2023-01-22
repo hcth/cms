@@ -66,3 +66,28 @@ function validate_module_access($module){
 	return false;
 	// redirect('admin');
 }
+
+function get_assigned_to_user(){
+	$CI = &get_instance();
+	$next_assigned_to = '';
+	
+	$query = "SELECT `value` FROM admin WHERE `name` = 'auto_assign_leads'";
+	$auto_assign_leads = $CI->admin_model->get_query($query)[0]->value;
+	if ($auto_assign_leads == 'on') {
+		$query = "SELECT id, `assigned_to` FROM package_detail WHERE `assigned_to` IS NOT NULL ORDER BY id DESC LIMIT 1";
+		$assigned_to = $CI->admin_model->get_query($query)[0];
+		if(!empty($assigned_to)){
+			$assigned_to = $assigned_to->assigned_to;
+	
+			$query = "SELECT user.id FROM user JOIN role on role.id = user.role WHERE user.id > $assigned_to AND `assign_leads` = 1 AND user.is_deleted = 0 AND role.is_deleted = 0 LIMIT 1";
+			$next_assigned_to = $CI->admin_model->get_query($query)[0];
+		}
+	
+		if(empty($next_assigned_to)){
+			$query = "SELECT user.id FROM user JOIN role WHERE `assign_leads` = 1 AND user.is_deleted = 0 AND role.is_deleted = 0 LIMIT 1";
+			$next_assigned_to = $CI->admin_model->get_query($query)[0];
+		}
+		$next_assigned_to = $next_assigned_to->id;
+	};	
+	return $next_assigned_to;
+}

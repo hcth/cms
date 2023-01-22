@@ -219,11 +219,6 @@ class Home extends MX_Controller
 					$traveller_code = $clientData[0]->traveller_code;
 				}
 
-				$query = "SELECT `value` FROM admin WHERE `name` = 'auto_assign_leads'";
-				$auto_assign_leads = $this->admin_model->get_query($query)[0]->value;
-				if ($auto_assign_leads == 'on') {
-					$assigned_to = $this->get_assigned_to_user();
-				};	
 				$data = array(
 					'traveller_code' => $traveller_code,
 					'name' => $record['username'],
@@ -235,7 +230,7 @@ class Home extends MX_Controller
 					'platform' => $record['platform'],
 					'campaigntype' => $record['campaigntype'],
 					'adgroup' => $record['adgroup'],
-					'assigned_to' => $assigned_to ?? '',
+					'assigned_to' => get_assigned_to_user() ?? '',
 					'created_date' => date('Y-m-d H:i:s'),
 					'updated_date' => date('Y-m-d H:i:s'),
 				);
@@ -249,25 +244,6 @@ class Home extends MX_Controller
 				echo 3;
 			endif;
 		endif;
-	}
-
-	public function get_assigned_to_user(){
-
-		$query = "SELECT id, `assigned_to` FROM package_detail WHERE `assigned_to` IS NOT NULL ORDER BY id DESC LIMIT 1";
-		$assigned_to = $this->admin_model->get_query($query)[0];
-		$next_assigned_to = '';
-		if(!empty($assigned_to)){
-			$assigned_to = $assigned_to->assigned_to;
-
-			$query = "SELECT user.id FROM user JOIN role WHERE user.id > $assigned_to AND `assign_leads` = 1 AND user.is_deleted = 0 AND role.is_deleted = 0 LIMIT 1";
-			$next_assigned_to = $this->admin_model->get_query($query)[0];
-		}
-
-		if(empty($next_assigned_to)){
-			$query = "SELECT user.id FROM user JOIN role WHERE `assign_leads` = 1 AND user.is_deleted = 0 AND role.is_deleted = 0 LIMIT 1";
-			$next_assigned_to = $this->admin_model->get_query($query)[0];
-		}
-		return $next_assigned_to->id;
 	}
 
 	public function signup()

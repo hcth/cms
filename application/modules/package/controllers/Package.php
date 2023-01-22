@@ -421,6 +421,7 @@ class Package extends MX_Controller {
 				'platform'=>$record['platform'],
 				'campaigntype'=>$record['campaigntype'],
 				'adgroup'=>$record['adgroup'],
+				'assigned_to' 	=> get_assigned_to_user() ?? '',
 				'created_date'=>date('Y-m-d H:i:s'),
 				'updated_date'=>date('Y-m-d H:i:s'),
 			);
@@ -740,7 +741,7 @@ class Package extends MX_Controller {
 			'disposition'	=> $_POST['disposition'],
 			'campaigntype'	=> $_POST['campaigntype'],
 			'call_notes'	=> json_encode([['date_created'=>date('Y-m-d H:i:s'),'note'=>$_POST['call_notes']]]),
-			
+			'assigned_to' 	=> get_assigned_to_user() ?? '',
 			'package'		=> $_POST['package'],
 			'created_date'	=> date('Y-m-d H:i:s'),
 			'updated_date'	=> date('Y-m-d H:i:s'),
