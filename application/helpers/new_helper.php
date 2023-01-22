@@ -84,7 +84,7 @@ function get_assigned_to_user(){
 		}
 	
 		if(empty($next_assigned_to)){
-			$query = "SELECT user.id FROM user JOIN role WHERE `assign_leads` = 1 AND user.is_deleted = 0 AND role.is_deleted = 0 LIMIT 1";
+			$query = "SELECT user.id FROM user JOIN role on role.id = user.role WHERE `assign_leads` = 1 AND user.is_deleted = 0 AND role.is_deleted = 0 LIMIT 1";
 			$next_assigned_to = $CI->admin_model->get_query($query)[0];
 		}
 		$next_assigned_to = $next_assigned_to->id;
