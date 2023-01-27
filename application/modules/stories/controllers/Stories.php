@@ -29,7 +29,7 @@ class Stories extends MX_Controller {
 	{
 		$isAdmin = $this->session->userdata('isAdmin');
 		if(!empty($isAdmin)):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
+			$conditionArray = array('id'=>$this->session->userdata('id'));
 			$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
 			if(is_array($adminRecord)):
 				$record['rec'] = $adminRecord;
@@ -51,7 +51,7 @@ class Stories extends MX_Controller {
 		$isAdmin = $this->session->userdata('isAdmin');
 		$istraveler = $this->session->userdata('istraveler');
 		if(!empty($isAdmin)):
-		    $conditionArray = array('id'=>$this->session->userdata('adminid'));
+		    $conditionArray = array('id'=>$this->session->userdata('id'));
 				if(isset($istraveler) && $istraveler == 1):
 					$adminRecord = $this->admin_model->getwhere("realtraveller",$conditionArray);
 				else :	
@@ -63,7 +63,7 @@ class Stories extends MX_Controller {
 			endif;
 			
 			
-			/*$conditionArray = array('id'=>$this->session->userdata('adminid'));
+			/*$conditionArray = array('id'=>$this->session->userdata('id'));
 			$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
 			if(is_array($adminRecord)):
 				$record['rec'] = $adminRecord;
@@ -90,7 +90,7 @@ class Stories extends MX_Controller {
 		$isAdmin = $this->session->userdata('isAdmin');
 			$istraveler = $this->session->userdata('istraveler');
 		if(!empty($isAdmin)):
-		$conditionArray = array('id'=>$this->session->userdata('adminid'));
+		$conditionArray = array('id'=>$this->session->userdata('id'));
 				if(isset($istraveler) && $istraveler == 1):
 					$adminRecord = $this->admin_model->getwhere("realtraveller",$conditionArray);
 				else :	
@@ -122,7 +122,7 @@ class Stories extends MX_Controller {
 		else:
 			$isAdmin = $this->session->userdata('isAdmin');
 			if(!empty($isAdmin)):
-				$conditionArray = array('id'=>$this->session->userdata('adminid'));
+				$conditionArray = array('id'=>$this->session->userdata('id'));
 				$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
 				if(is_array($adminRecord)):
 					$record['rec'] = $adminRecord;
@@ -497,7 +497,7 @@ class Stories extends MX_Controller {
 	    	$isStatus = $this->session->userdata('admin_Status');
 	    	$istraveler = $this->session->userdata('istraveler');
 		if(!empty($isAdmin)):
-				$conditionArray = array('id'=>$this->session->userdata('adminid'));
+				$conditionArray = array('id'=>$this->session->userdata('id'));
 				if(isset($istraveler) && $istraveler == 1):
 					$adminRecord = $this->admin_model->getwhere("realtraveller",$conditionArray);
 				else :	
@@ -529,13 +529,13 @@ class Stories extends MX_Controller {
 
 
 	    public function travelerInfo(){
-	    $id = $this->session->userdata('adminid');		
+	    $id = $this->session->userdata('id');		
 	    if(!empty($id) && intval($id)):
 	    	$isAdmin = $this->session->userdata('isAdmin');
 	    	$isStatus = $this->session->userdata('admin_Status');
 	    	$istraveler = $this->session->userdata('istraveler');
 		if(!empty($isAdmin)):
-				$conditionArray = array('id'=>$this->session->userdata('adminid'));
+				$conditionArray = array('id'=>$this->session->userdata('id'));
 				if(isset($istraveler) && $istraveler == 1):
 					$adminRecord = $this->admin_model->getwhere("realtraveller",$conditionArray);
 				else :	
@@ -831,7 +831,7 @@ class Stories extends MX_Controller {
 		$isAdmin = $this->session->userdata('isAdmin');
 		$istraveler = $this->session->userdata('istraveler');
 		if(!empty($isAdmin) && $istraveler != 1):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
+			$conditionArray = array('id'=>$this->session->userdata('id'));
 			$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
 			if(is_array($adminRecord)):
 				$record['rec'] = $adminRecord;

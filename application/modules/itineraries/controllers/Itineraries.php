@@ -270,9 +270,9 @@ class Itineraries extends MX_Controller
 	{
 		$validate = validate_module_access('itineraries/viewItineraries');
 		if (!empty($validate)):
-			$adminIds = $this->session->userdata('adminid');
+			$adminIds = $this->session->userdata('id');
 			$istraveler = $this->session->userdata('istraveler');
-			$conditionArray = array('id' => $this->session->userdata('adminid'));
+			$conditionArray = array('id' => $this->session->userdata('id'));
 			if (isset($istraveler) && $istraveler == 1) :
 				$adminRecord = $this->admin_model->getwhere("realtraveller", $conditionArray);
 			else :
@@ -361,7 +361,7 @@ class Itineraries extends MX_Controller
 	function itinerarySeoData()
 	{
 
-		$id = $this->session->userdata('adminid');
+		$id = $this->session->userdata('id');
 		$istraveller = $this->session->userdata('istraveler');
 
 		if ($istraveller != '') {

@@ -27,7 +27,7 @@ class Traveller extends MX_Controller {
 	{
 		$isAdmin = $this->session->userdata('isAdmin');
 		if(!empty($isAdmin)):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
+			$conditionArray = array('id'=>$this->session->userdata('id'));
 			$adminRecord = $this->Admin_model->getwhere("adminmaster",$conditionArray);
 			if(is_array($adminRecord)):
 				$record['rec'] = $adminRecord;
@@ -48,7 +48,7 @@ class Traveller extends MX_Controller {
 	{
 		$isAdmin = $this->session->userdata('isAdmin');
 		if(!empty($isAdmin)):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
+			$conditionArray = array('id'=>$this->session->userdata('id'));
 			$adminRecord = $this->Admin_model->getwhere("adminmaster",$conditionArray);
 			if(is_array($adminRecord)):
 				$record['rec'] = $adminRecord;
@@ -289,7 +289,7 @@ class Traveller extends MX_Controller {
 	    	$isStatus = $this->session->userdata('admin_Status');
 	    	$istraveler = $this->session->userdata('istraveler');
 		if(!empty($isAdmin)):
-				$conditionArray = array('id'=>$this->session->userdata('adminid'));
+				$conditionArray = array('id'=>$this->session->userdata('id'));
 				if(isset($istraveler) && $istraveler == 1):
 					$adminRecord = $this->Admin_model->getwhere("realtraveller",$conditionArray);
 				else :	
@@ -333,14 +333,14 @@ class Traveller extends MX_Controller {
 	           show_404(); 
 	       endif;     
 	    else:      
-	    $id = $this->session->userdata('adminid');		
+	    $id = $this->session->userdata('id');		
 	    endif;
 	    if(!empty($id) && intval($id)):
 	    	$isAdmin = $this->session->userdata('isAdmin');
 	    	$isStatus = $this->session->userdata('admin_Status');
 	    	$istraveler = $this->session->userdata('istraveler');
 		if(!empty($isAdmin)):
-				$conditionArray = array('id'=>$this->session->userdata('adminid'));
+				$conditionArray = array('id'=>$this->session->userdata('id'));
 				if(isset($istraveler) && $istraveler == 1):
 					$adminRecord = $this->Admin_model->getwhere("realtraveller",$conditionArray);
 				else :	

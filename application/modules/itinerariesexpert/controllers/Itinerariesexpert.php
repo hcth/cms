@@ -16,7 +16,7 @@ class Itinerariesexpert extends MX_Controller {
 		
 		$validate = validate_module_access('itinerariesexpert');
 		if (!empty($validate)):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
+			$conditionArray = array('id'=>$this->session->userdata('id'));
 			$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
 		
 			if(is_array($adminRecord)):

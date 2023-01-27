@@ -70,36 +70,6 @@ class Admin extends MX_Controller {
 		endif;
 	}
 
-	/* public function login(){
-		$loginRecord = $this->input->post();
-		if(isset($loginRecord['isAjax']) && $loginRecord['isAjax'] == 1):
-			$this->form_validation->set_rules('email','Email','required|trim|xss_clean');	
-			$this->form_validation->set_rules('password','Password','required|trim|xss_clean');
-			if($this->form_validation->run() == FALSE):
-				echo json_encode($this->form_validation->error_array());
-			else :
-				$conditionArray = array('admin_name'=>$loginRecord['email'],'admin_password'=>$loginRecord['password']);
-				$checkLogin = $this->Admin_model->getwhere("adminmaster",$conditionArray);
-				if(is_array($checkLogin) && !empty($checkLogin)):
-					$adminSession = array(
-						'isAdmin' => 1,
-						'adminid' => $checkLogin[0]->id,
-						'adminStatus'=> $checkLogin[0]->admin_Status,
-						'adminName'=>$checkLogin[0]->admin_name,
-						'adminRoles'=>$checkLogin[0]->rights
-						
-					);
-					$this->session->set_userdata($adminSession);
-					echo 1;
-				else:
-					echo 2;
-				endif;	
-			endif;	
-		else :
-			redirect('admin/index');
-		endif;
-	} */
-
 	function dashboard()
 	{
 		$validate = validate_module_access('admin/dashboard');

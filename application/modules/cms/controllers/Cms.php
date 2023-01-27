@@ -13,7 +13,7 @@ class Cms extends MX_Controller {
 
 	public function index()
 	{	
-		$conditionArray = array('id'=>$this->session->userdata('adminid'));
+		$conditionArray = array('id'=>$this->session->userdata('id'));
 		$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
 	
 		if(is_array($adminRecord)):
@@ -29,7 +29,7 @@ class Cms extends MX_Controller {
 	
 	function add_page()
 	{
-		$conditionArray = array('id'=>$this->session->userdata('adminid'));
+		$conditionArray = array('id'=>$this->session->userdata('id'));
 		$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
 		if(is_array($adminRecord)):
 			$record['rec'] = $adminRecord;
@@ -88,7 +88,7 @@ class Cms extends MX_Controller {
 
 	public function  editcms($id)
 	{
-		$conditionArray = array('id'=>$this->session->userdata('adminid'));
+		$conditionArray = array('id'=>$this->session->userdata('id'));
 		$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
 		if(is_array($adminRecord)):
 			$record['rec'] = $adminRecord;

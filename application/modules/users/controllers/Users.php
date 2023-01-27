@@ -15,7 +15,7 @@ class Users extends MX_Controller {
 	{
 		$isAdmin = $this->session->userdata('isAdmin');
 		if(!empty($isAdmin)):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
+			$conditionArray = array('id'=>$this->session->userdata('id'));
 			$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
 		
 			if(is_array($adminRecord)):

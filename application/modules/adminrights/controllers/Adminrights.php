@@ -13,7 +13,7 @@ class Adminrights extends MX_Controller {
 
 	public function index()
 	{	
-		$conditionArray = array('id'=>$this->session->userdata('adminid'));
+		$conditionArray = array('id'=>$this->session->userdata('id'));
 		$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
 	
 		if(is_array($adminRecord)):
@@ -29,7 +29,7 @@ class Adminrights extends MX_Controller {
 	
 	function add_rights()
 	{
-		$conditionArray = array('id'=>$this->session->userdata('adminid'));
+		$conditionArray = array('id'=>$this->session->userdata('id'));
 		$adminRecord = $this->Adminrights_model->getwhere("adminmaster",$conditionArray);
 		if(is_array($adminRecord)):
 			$record['rec'] = $adminRecord;
@@ -72,7 +72,7 @@ class Adminrights extends MX_Controller {
 	{
 		$validate = validate_module_access('adminrights/editrights');
 		if (!empty($validate)):
-			$conditionArray = array('id'=>$this->session->userdata('adminid'));
+			$conditionArray = array('id'=>$this->session->userdata('id'));
 			$adminRecord = $this->Adminrights_model->getwhere("adminmaster",$conditionArray);
 			if(is_array($adminRecord)):
 				$record['rec'] = $adminRecord;

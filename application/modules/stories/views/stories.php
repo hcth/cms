@@ -82,7 +82,7 @@
                                     Count
                                 </span>
                                 <span class="m-widget24__stats m--font-info" id="stories_per_traveller">
-                                    <?php $id =  $this->session->userdata('adminid');
+                                    <?php $id =  $this->session->userdata('id');
                                         echo modules::run('stories/getRealTravellerStoriesCount',$id);
                                     ?>
                                 </span> 

@@ -13,7 +13,7 @@ class Communication extends MX_Controller {
 
 	public function index()
 	{
-		$conditionArray = array('id'=>$this->session->userdata('adminid'));
+		$conditionArray = array('id'=>$this->session->userdata('id'));
 		$adminRecord = $this->admin_model->getwhere("adminmaster",$conditionArray);
 	
 		if(is_array($adminRecord)):
