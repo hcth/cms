@@ -2,7 +2,9 @@
 <style>
       .modal-confirm.show{display:block;}
       .mb-10{margin-bottom: 10px !important;}
-      .container-m-auto{margin: 0 auto; width: 500px;}           
+      .container-m-auto{margin: 0 auto; width: 500px;}   
+      .modal-open .modal{padding-left:0px;}     
+      .form-group .error-text {margin: 0px; text-align: left; font-size: 14px; color: red; margin-top: 5px;}        
    </style>
 <!-- begin: page content -->
 <div class="m-grid__item m-grid__item--fluid m-wrapper">
