@@ -54,6 +54,7 @@
 $(document).ready(function() {
    $('#feedbacks_table').DataTable({
         dom: 'Bfrtip',
+        "scrollX": true,
         buttons: [{
             extend: 'csv',
             filename: 'Feedback',

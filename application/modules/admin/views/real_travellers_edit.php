@@ -319,7 +319,7 @@
                         </div>                
                     </div>
                 </div>  
-                <table id="table_stories" class="tableData" width="100%">
+                <table id="table_stories" class="table nowrap" width="100%">
                     <thead>
                         <tr>
                             <th title="#">

@@ -276,7 +276,7 @@
                             </div> -->
                             <!--begin: Datatable -->
                             <div class="col-md-12 mt-5">
-                                <div class="table-responsive" id="client_list_table">
+                                <div class="" id="client_list_table">
                                 </div>
                             </div>
                             <!--end: Datatable -->

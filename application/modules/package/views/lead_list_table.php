@@ -175,7 +175,9 @@
 
 <script>
     $(document).ready(function() {
-        $('#adminrights').DataTable();
+        $('#adminrights').DataTable({
+  "scrollX": true
+});
     });
 
     $('.editdata').click(function() {

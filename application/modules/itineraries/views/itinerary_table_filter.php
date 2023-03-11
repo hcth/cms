@@ -1,5 +1,5 @@
                         <!--begin: Datatable -->
-                        <div class="m-form m-form--label-align-right m--margin-bottom-30">
+                        <div class="m-form m-form--label-align-right">
 
                         </div>
                         <div class="table-responsive">

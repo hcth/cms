@@ -48,7 +48,9 @@
 
 <script>
 $(document).ready(function() {
-   $('#db_management').DataTable();
+   $('#db_management').DataTable({
+  "scrollX": true
+});
 });
 
 $('.delete_data').click(function() {

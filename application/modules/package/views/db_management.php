@@ -1,5 +1,5 @@
 
-<link rel='stylesheet' href='https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css'>
+<!-- <link rel='stylesheet' href='https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css'> -->
 <!-- begin: page content -->
 <div class="m-grid__item m-grid__item--fluid m-wrapper">
     <!-- BEGIN: Subheader -->
@@ -66,7 +66,7 @@
                 <div class="row">  
                     <!--begin: Datatable -->
                     <div class="col-md-12">
-                        <div class="table-responsive db_table_div">
+                        <div class="db_table_div">
                             
                         </div>
                     </div>

@@ -172,7 +172,9 @@
 
 <script>
 $(document).ready(function() {
-   $('#crm_managment_datatable').DataTable();
+   $('#crm_managment_datatable').DataTable({
+  "scrollX": true
+});
 });
 
 $('.editdata').click(function() {

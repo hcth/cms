@@ -40,7 +40,7 @@
                     </div> -->
                 </div>
                     <!--begin: Datatable --> 
-                <div class="table-responsive" id='feedback_div'>
+                <div class="" id='feedback_div'>
                     
                 </div> 
                 <!--end: Datatable -->

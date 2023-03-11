@@ -258,7 +258,7 @@
                         <?php if (validate_module_access('package/lead_management')) : ?>
                             <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('package/lead_management'); ?>" class="m-menu__link">
-                                    <i class="m-menu__link-icon la la-ticket"></i>
+                                    <i class="m-menu__link-icon la flaticon-list-3"></i>
                                     <span class="m-menu__link-title">
                                         <span class="m-menu__link-wrap">
                                             <span class="m-menu__link-text">
@@ -273,7 +273,7 @@
                         <?php if (validate_module_access('package/db_management')) : ?>
                             <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('package/db_management'); ?>" class="m-menu__link">
-                                    <i class="m-menu__link-icon la la-ticket"></i>
+                                    <i class="m-menu__link-icon la flaticon-folder-2"></i>
                                     <span class="m-menu__link-title">
                                         <span class="m-menu__link-wrap">
                                             <span class="m-menu__link-text">
@@ -288,7 +288,7 @@
                         <?php if (validate_module_access('package/feedback')) : ?>
                             <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('package/feedback'); ?>" class="m-menu__link">
-                                    <i class="m-menu__link-icon la la-ticket"></i>
+                                    <i class="m-menu__link-icon la flaticon-comment"></i>
                                     <span class="m-menu__link-title">
                                         <span class="m-menu__link-wrap">
                                             <span class="m-menu__link-text">
@@ -303,7 +303,7 @@
                         <?php if (validate_module_access('management/role_management')) : ?>
                             <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('management/role_management'); ?>" class="m-menu__link">
-                                    <i class="m-menu__link-icon la la-ticket"></i>
+                                    <i class="m-menu__link-icon la flaticon-users"></i>
                                     <span class="m-menu__link-title">
                                         <span class="m-menu__link-wrap">
                                             <span class="m-menu__link-text">
@@ -317,7 +317,7 @@
                         <?php if (validate_module_access('management/user_management')) : ?>
                             <li class="m-menu__item" aria-haspopup="true">
                                 <a href="<?php echo base_url('management/user_management'); ?>" class="m-menu__link">
-                                    <i class="m-menu__link-icon la la-ticket"></i>
+                                    <i class="m-menu__link-icon la flaticon-user-settings"></i>
                                     <span class="m-menu__link-title">
                                         <span class="m-menu__link-wrap">
                                             <span class="m-menu__link-text">
@@ -404,6 +404,7 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 var table = $('#itinerariesTables').DataTable({
+                    "scrollX": true,
                     dom: 'Bfrtip',
                     buttons: [{
                         extend: 'csvHtml5',
@@ -622,6 +623,18 @@
             $('.multiselect-selected-text').parent().attr('title', 'None selected')
 
         })
+    </script>
+
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/admin/bootstrap-multiselect.css">
+    <script src="<?php echo base_url(); ?>/assets/admin/js/bootstrap-multiselect.js"></script>    
+    <script>
+            $(document).ready(function() {
+            $('#modules, #edit_modules').multiselect({
+                buttonWidth : '100%',
+                includeSelectAllOption : true,
+                    nonSelectedText: 'Select Option'
+            });      
+        });
     </script>
 
 

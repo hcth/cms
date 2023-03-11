@@ -1,3 +1,36 @@
+<style>
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 14px !important;
+    font-weight: 300;
+    font-family: Poppins !important;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+    .m-widget{display:flex; padding: 15px 0px; }
+    .m-widget24  {margin-top: 0px !important; display:flex; align-items:center; justify-content:space-between !important; width:33.33%; padding:0px 20px !important; border-right: 1px solid #eee;}
+    .m-widget24:last-child{border:none !important;}
+    .multiselect-native-select{width:100% !important;}
+    .m-widget24 .m-widget24__item .m-widget24__stats{font-size:2rem;}
+    .m-widget24 .m-widget24__title{margin-top:0px !important; margin-bottom:0px !important; display: block !important;  margin-left:0px !important;}
+    .m-widget24 .m-widget24__item .m-widget24__desc{margin-left:0px !important;}
+    .m-widget24 .m-widget24__item .m-widget24__stats{margin:0px !important; line-height:48px;}
+    .m-widget24 .m-widget24__item .m-widget24__stats .m--font-info{line-height:initial;}
+    .m-widget24.center{justify-content:center !important}
+    .dt-buttons{position: absolute;}
+    .btn-group {width: 100% !important;}
+    .multiselect {width: 100% !important; text-align: left; display: flex; align-items: center; justify-content: space-around;}
+
+    @media (max-width: 768px){ 
+        .m-widget{display: block; }  
+        .m-widget24 {width: 100% !important; margin-bottom:12px; border-right: none !important; border-bottom:1px solid #eee; padding-bottom:10px !important;}        
+        .m-widget24:last-child {border-bottom: none; margin-bottom:0px !important}
+        
+    }
+</style>
 <div class="m-grid__item m-grid__item--fluid m-wrapper">
     <!-- BEGIN: Subheader -->
     <div class="m-subheader">
@@ -14,49 +47,49 @@
 
         <div class="m-portlet">
             <div class="m-portlet__body  m-portlet__body--no-padding">
-                <div class="row m-row--no-padding m-row--col-separator-xl">
-                    <div class="col-md-12 col-lg-6 col-xl-4">
+                <div class="m-widget">                    
                         <!--begin::Total Profit-->
                         <div class="m-widget24">
                             <div class="m-widget24__item">
                                 <h4 class="m-widget24__title">
                                     Total Count of
-                                </h4><br>
+                                </h4>
                                 <span class="m-widget24__desc">
                                     Itineraries
-                                </span>
-                                <span class="m-widget24__stats m--font-info">
-                                    <?php if (isset($count) && !empty($count)) : echo $count;
-                                    else : echo 0;
-                                    endif; ?>
-                                </span>
-                                <!-- <span class="m-widget24__stats m--font-brand float_none">
-                                    20
-                                </span> -->
+                                </span>                                                                
                             </div>
+                            <div class="m-widget24__item">
+                                <span class="m-widget24__stats m--font-info">
+                                        <?php if (isset($count) && !empty($count)) : echo $count;
+                                        else : echo 0;
+                                        endif; ?>
+                                </span>
+                            </div>
+
                         </div>
-                        <!--end::Total Profit-->
-                    </div>
-                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <!--end::Total Profit-->                    
+                    
                         <!--begin::New Feedbacks-->
                         <div class="m-widget24">
                             <div class="m-widget24__item">
                                 <h4 class="m-widget24__title">
                                     Itinerary Per Traveler
-                                </h4><br>
+                                </h4>
                                 <span class="m-widget24__desc">
                                     Count
-                                </span>
+                                </span>                                
+                            </div>
+                            <div class="m-widget24__item">
                                 <span class="m-widget24__stats m--font-info">
                                     1349
                                 </span>
                             </div>
                         </div>
                         <!--end::New Feedbacks-->
-                    </div>
-                    <div class="col-md-12 col-lg-6 col-xl-4">
+                    
+                    
                         <!--begin::New Orders-->
-                        <div class="m-widget24 text-center">
+                        <div class="m-widget24 center">
                             <div class="m-widget24__item">
                                 <h4 class="m-widget24__title m--icon-font-size-lg2">
                                     <a href="<?php echo base_url('itineraries/addItineraries'); ?>" class="m--font-danger">
@@ -65,7 +98,7 @@
                             </div>
                         </div>
                         <!--end::New Orders-->
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -87,16 +120,13 @@
             <form id="frmTripSummary" class="m-form">
                 <div class="m-portlet__body">
                     <div class="form-group m-form__group row">
-                        <div class="col-md-6 mt-2">
+                        <div class="col-md-3 mt-2">
                             <label class="col-form-label">
-                                Destination<br />
-                                <span class="m-form__help">
-                                    Select your Destination
-                                </span>
+                                Destination                                
                             </label>
                             <div>
                                 <input type="text" class="form-control form-control-sm-1" placeholder="Enter Itinerary Destination" id="cityName" name="cityName">
-
+                                <!-- <span class="m-form__help">Select your Destination</span> -->
                             </div>
                         </div>
                         <!--/.col-->
@@ -116,18 +146,16 @@
                         </div><!--/.col-->
                         <div class="col-md-3 mt-2">
                             <label class="col-form-label">
-                                Total Budget<br />
-                                <span class="m-form__help">
-                                    Total Budget
-                                </span>
+                                Total Budget                                
                             </label>
                             <div>
                                 <input type="text" class="form-control m-input" id="total_budget" name="total_budget" placeholder="Enter Total Trip Budget" />
                                 <div id="slider-range"></div>
+                                <!-- <span class="m-form__help">Total Budget</span> -->
                             </div>
                         </div>
                         <!--/.col-->
-                        <div class="col-md-6 mt-2">
+                        <div class="col-md-3 mt-2">
                             <label class="col-form-label">
                                 Suitable for
                             </label>
@@ -145,7 +173,7 @@
                             </div>
                         </div>
                         <!--/.col-->
-                        <div class="col-md-6 mt-2">
+                        <div class="col-md-3 mt-2">
                             <label class="col-form-label">
                                 Theme
                             </label>
@@ -186,8 +214,8 @@
                         <div class="m-form m-form--label-align-right m--margin-bottom-30">
 
                         </div>
-                        <div class="table-responsive">
-                            <table id="itinerariesTables" width="100%">
+                        
+                            <table id="itinerariesTables" class="display data-table-custom display nowrap" width="100%">
                                 <thead>
                                     <tr>
                                         <th title="#">
@@ -306,7 +334,7 @@
                                         <tr>No Record found!</tr>
                                     <?php endif; ?>
                                 </tbody>
-                                <tfoot>
+                                <!-- <tfoot>
                                     <tr>
                                         <th title="#">
                                             #
@@ -336,9 +364,9 @@
                                             Status
                                         </th>
                                     </tr>
-                                </tfoot>
+                                </tfoot> -->
                             </table>
-                        </div>
+                        
                         <!--end: Datatable -->
                     </div>
 

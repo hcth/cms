@@ -225,7 +225,7 @@
                             </div>
                             <!--begin: Datatable -->
                             <div class="col-md-12 mt-5">
-                                <div class="table-responsive" id="client_list_table">
+                                <div class="" id="client_list_table">
                                 </div>
                             </div>
                             <!--end: Datatable -->
@@ -712,7 +712,6 @@
                 <!--/.row-->
             </div>
             <div class="modal-footer">
-                <input type='hidden' id='edit_assigned_to'>
                 <button type="button" id="edit_client" class="btn btn-info m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill">
                     Submit
                 </button>
@@ -725,8 +724,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
-        current_user_id = "<?= $_SESSION['id'] ?>"
-        is_admin = "<?= $_SESSION['is_admin'] ?>"
         getClientList();
     });
 
@@ -743,8 +740,8 @@
         $("input:checkbox[name=lead_id]:checked").each(function() {
             array.push($(this).val());
         });
-        // console.log($('#assigned_to_user').val())
-        // console.log(array);
+        console.log($('#assigned_to_user').val())
+        console.log(array);
         if (array.length == 0) {
             alert('Atleast 1 user should be selected')
         } else {
@@ -752,7 +749,6 @@
                 assignLead(array, $('#assigned_to_user').val());
             }
         }
-        $("#assigned_to_user").val('');
     });
 
     $('#add_client').click(function() {
