@@ -70,7 +70,7 @@
                         <!--end::Total Profit-->                    
                     
                         <!--begin::New Feedbacks-->
-                        <div class="m-widget24">
+                        <!-- <div class="m-widget24">
                             <div class="m-widget24__item">
                                 <h4 class="m-widget24__title">
                                     Itinerary Per Traveler
@@ -84,7 +84,7 @@
                                     1349
                                 </span>
                             </div>
-                        </div>
+                        </div> -->
                         <!--end::New Feedbacks-->
                     
                     
