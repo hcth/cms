@@ -1,3 +1,4 @@
+<link href="<?php echo base_url() . 'assets/css/vijay2.css'; ?>" rel="stylesheet" type="text/css" />
 <style>
     html, body {
     height: 100%;
@@ -5,7 +6,7 @@
     padding: 0;
     font-size: 14px !important;
     font-weight: 300;
-    font-family: Poppins !important;
+    font-family: 'Inter', sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -23,11 +24,23 @@
     .dt-buttons{position: absolute;}
     .btn-group {width: 100% !important;}
     .multiselect {width: 100% !important; text-align: left; display: flex; align-items: center; justify-content: space-around;}
+    .heading-flex h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #808080;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:15px
+}
+.heading-flex h3 span { color:#434343; font-size:16px !important; font-weight:600;}
+.dataTables_filter{margin-bottom:10px !important;}
 
     @media (max-width: 768px){ 
         .m-widget{display: block; }  
         .m-widget24 {width: 100% !important; margin-bottom:12px; border-right: none !important; border-bottom:1px solid #eee; padding-bottom:10px !important;}        
         .m-widget24:last-child {border-bottom: none; margin-bottom:0px !important}
+        .heading-flex{display:block;}
+        .heading-flex h3, .heading-flex h2 {margin-bottom: 10px;}
         
     }
 </style>
@@ -45,10 +58,9 @@
     <!-- END: Subheader -->
     <div class="m-content">
 
-        <div class="m-portlet">
+        <!-- <div class="m-portlet">
             <div class="m-portlet__body  m-portlet__body--no-padding">
-                <div class="m-widget">                    
-                        <!--begin::Total Profit-->
+                <div class="m-widget">                                            
                         <div class="m-widget24">
                             <div class="m-widget24__item">
                                 <h4 class="m-widget24__title">
@@ -65,12 +77,8 @@
                                         endif; ?>
                                 </span>
                             </div>
-
                         </div>
-                        <!--end::Total Profit-->                    
-                    
-                        <!--begin::New Feedbacks-->
-                        <!-- <div class="m-widget24">
+                        <div class="m-widget24">
                             <div class="m-widget24__item">
                                 <h4 class="m-widget24__title">
                                     Itinerary Per Traveler
@@ -84,29 +92,24 @@
                                     1349
                                 </span>
                             </div>
-                        </div> -->
-                        <!--end::New Feedbacks-->
-                    
-                    
-                        <!--begin::New Orders-->
+                        </div>
                         <div class="m-widget24 center">
                             <div class="m-widget24__item">
                                 <h4 class="m-widget24__title m--icon-font-size-lg2">
-                                    <a href="<?php echo base_url('itineraries/addItineraries'); ?>" class="m--font-danger">
-                                        <i class="fa fa-plus-square-o m--icon-font-size-lg2"></i> New Itinerary</a>
+                                    
                                 </h4>
                             </div>
-                        </div>
-                        <!--end::New Orders-->
-                    
+                        </div>                                            
                 </div>
             </div>
-        </div>
+        </div> -->
+
         <!--/.m-portlet-->
 
         <div class="m-portlet">
+        
             <!--begin: Portlet Head-->
-            <div class="m-portlet__head">
+            <!-- <div class="m-portlet__head">
                 <div class="m-portlet__head-caption">
                     <div class="m-portlet__head-title">
                         <h3 class="m-portlet__head-text">
@@ -114,13 +117,32 @@
                         </h3>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!--end: Portlet Head-->
 
             <form id="frmTripSummary" class="m-form">
                 <div class="m-portlet__body">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <div class="heading-flex">
+                            <h2 class="mt-6 xsmt-5">Filters</h2>        
+                            <h3 class="mt-6 xsmt-5">
+                                    Total Count of Itineraries: 
+                                    <span class="">
+                                            <?php if (isset($count) && !empty($count)) : echo $count;
+                                            else : echo 0;
+                                            endif; ?>
+                                    </span>
+                            </h3>                                    
+                            <a href="<?php echo base_url('itineraries/addItineraries'); ?>" class="btn btn-info m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air add-sell">
+                                        <i class="la la-plus"></i> New Itinerary</a>
+                        </div>
+                    </div>
+                  </div>
+                
+
                     <div class="form-group m-form__group row">
-                        <div class="col-md-3 mt-2">
+                        <div class="col-md-3">
                             <label class="col-form-label">
                                 Destination                                
                             </label>
@@ -144,7 +166,7 @@
                                        />
                             </div>
                         </div><!--/.col-->
-                        <div class="col-md-3 mt-2">
+                        <div class="col-md-3">
                             <label class="col-form-label">
                                 Total Budget                                
                             </label>
@@ -155,7 +177,7 @@
                             </div>
                         </div>
                         <!--/.col-->
-                        <div class="col-md-3 mt-2">
+                        <div class="col-md-3">
                             <label class="col-form-label">
                                 Suitable for
                             </label>
@@ -173,7 +195,7 @@
                             </div>
                         </div>
                         <!--/.col-->
-                        <div class="col-md-3 mt-2">
+                        <div class="col-md-3">
                             <label class="col-form-label">
                                 Theme
                             </label>
@@ -231,7 +253,7 @@
                                             Budget
                                         </th>
                                         <th title="Best time to Visit">
-                                            time to Visit
+                                            Time to Visit
                                         </th>
                                         <th title="Suitable">
                                             Suitable

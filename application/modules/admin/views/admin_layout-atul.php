@@ -11,16 +11,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!--begin::Web font -->
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-        <script>
-            var base_url = "<?php echo base_url('admin/'); ?>";
-            WebFont.load({
-                google: {"families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]},
-                active: function () {
-                    sessionStorage.fonts = true;
-                }
-            });
-        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;700&family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
         <!--end::Web font -->
         <!--begin::Base Styles -->
         <link href="<?php echo base_url() . 'css/admin/vendors.bundle.css'; ?>" rel="stylesheet" type="text/css" />
