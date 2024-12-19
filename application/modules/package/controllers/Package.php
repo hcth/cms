@@ -122,8 +122,8 @@ class Package extends MX_Controller
 			} else if ($p1 == "lp5") {
 				$template = "package5";
 				$record['destination'] = "Leh";
-				$record['platform'] = "Facebook";
-				$record['ct'] = "Remarketing";
+				$record['platform'] = "Google";
+				$record['ct'] = "Search";
 				$record['ad'] = "Leh-Lp5";
 			} else if ($p1 == "lp6") {
 				/*$template = "packag6";

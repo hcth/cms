@@ -53,7 +53,7 @@ table[class=devicewidth] {
                       Meanwhile let us know your tentative dates of travel and number of people travelling, This will help us to respond to your inquiry faster.<br>
                        <p align="center"><strong>You have enquired for</strong></p>
                         <p><strong style="text-decoration: underline;">Trip:</strong> <?php echo $package; ?></p>
-                        <p><strong style="text-decoration: underline;">Travel Expert Allocated:</strong> Pinky / Minal  - <a href="tel:+91-8108081169">+919930400694</a></p>
+                        <p><strong style="text-decoration: underline;">Travel Expert Allocated:</strong> Minal / Pinky / Kiran  - <a href="tel:+91-8108081169">+919930400694</a></p>
 Also we would like to let you know that we are not an ordinary mass tourism company, We are bunch of real travellers that started Adventourist with sheer passion for travelling.<br><br>
                         All our itineraries are hand crafted by travel experts and real travellers with the help of local guides. If we haven't travelled to a certain destination, <strong>we do not plan itinerary for that destination, It’s that simple.</strong><br><br>
                         

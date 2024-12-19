@@ -60,6 +60,8 @@ $route['itinerary'] = "itineraries/itinerary";
 $route['itineraries/explore-itinerary'] = "itineraries/explore_itinerary";
 
 $route['package/leh-ladak/(:any)'] = "package/leh_ladak/$1";
+$route['package/thailand-gs-th01'] = "package/thailand";
+$route['package/northeast-gs-ne01'] = "package/northEast";
 
 $route['terms-and-conditions'] = "terms_and_conditions";
 $route['get-featured'] = "contributor";

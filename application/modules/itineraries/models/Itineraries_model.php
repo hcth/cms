@@ -69,7 +69,7 @@ class Itineraries_model extends CI_Model {
         $this->db->select('*,ti_itineraries.id as itiid');
         $this->db->from('ti_itineraries');
         if($isAdmins == '1'){
-        $this->db->join('adminmaster','adminmaster.id=ti_itineraries.real_traveller');
+        // $this->db->join('adminmaster','adminmaster.id=ti_itineraries.real_traveller');
         } else {
         $this->db->join('realtraveller','realtraveller.id=ti_itineraries.real_traveller');    
         }

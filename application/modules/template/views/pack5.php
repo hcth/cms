@@ -1,641 +1,3076 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Best Itinerary for Leh 6 Nights and 7 Days</title>
-  <meta name="keywords" content="Leh Itinerary, Leh Ladakh itinerary, Leh plan, Leh Detailed Itinerary Meta Description: Best Itinerary for Leh Personally Written by Real Travellers and Local Guides.">
-  <meta content="width=device-width, initial-scale=1" name="viewport"> 
-  <link rel="shortcut icon" href="<?php echo base_url()?>packassets/images/favicon.ico" type="image/x-icon"> 
-  <link href="<?php echo base_url()?>packassets/css/bootstrap.css" rel="stylesheet"> 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125860174-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventourist: Road Trips | Things To Do | Stories</title>
+  <meta name="Get your travel itineraries, road trip & vacation planned by real travellers and local guides at no extra cost">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://adventourist.in/package/css/style.css">
+  <link rel="shortcut icon" href="https://adventourist.in/assets/images/favicon.ico" type="image/x-icon">
+  <style>
+    /* =======================================
+        Color Variables
+    ========================================*/
+    :root {
+      --text-white: #fff;
+      --border-white: #fff;
+      --bg-white: #fff;
 
-  gtag('config', 'UA-125860174-1');
-</script>
-  <!-- Global site tag (gtag.js) - Google Ads: 787029942 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-787029942"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-787029942'); </script>
- <!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+      --text-black: #4e4e4e;
+      --border-black: #4e4e4e;
+      --bg-black: #4e4e4e;
 
- fbq('init', '328244091233140'); 
-fbq('track', 'PageView');
-</script>
-<noscript>
- <img height="1" width="1" 
-src="https://www.facebook.com/tr?id=328244091233140&ev=PageView
-&noscript=1"/>
-</noscript>
-<!-- End Facebook Pixel Code -->
-<script type="text/javascript">
-        var base_url = "<?php echo base_url()?>";
-    </script>
+      --text-gray: #cccccc;
+      --border-gray: #cccccc;
+      --bg-gray: #cccccc;
+
+      --text-blue: #1a91f8;
+      --border-blue: #1a91f8;
+      --bg-blue: #1a91f8;
+
+      /* rare backgrounds */
+      --bg-extra-light-blue: #f0f5fe;
+      --bg-light-blue: #e5f0fd;
+      --bg-dark-blue: #106dbe;
+
+      /* rare text */
+      --text-lime: #25d366;
+      --text-soot-black: #434343;
+      --text-light-gray: #737373;
+
+      /* rate border */
+      --border-light-gray: #e0e0e0;
+    }
+
+    /* =======================================
+            General CSS
+========================================*/
+    @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+
+    * {
+      box-sizing: border-box;
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-ExtraBoldItalic.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-ExtraBoldItalic.woff") format("woff");
+      font-weight: bold;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-Black.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-Black.woff") format("woff");
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-BoldItalic.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-BoldItalic.woff") format("woff");
+      font-weight: bold;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-ExtraBold.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-ExtraBold.woff") format("woff");
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-BlackItalic.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-BlackItalic.woff") format("woff");
+      font-weight: 900;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-Bold.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-Bold.woff") format("woff");
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-ExtraLightItalic.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-ExtraLightItalic.woff") format("woff");
+      font-weight: 200;
+      font-style: italic;
+      font-display: swap;
+      @
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-Regular.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-Regular.woff") format("woff");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-LightItalic.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-LightItalic.woff") format("woff");
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-ExtraLight.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-ExtraLight.woff") format("woff");
+      font-weight: 200;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-SemiBold.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-SemiBold.woff") format("woff");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-Italic.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-Italic.woff") format("woff");
+      font-weight: normal;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-Light.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-Light.woff") format("woff");
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Mulish";
+      src: url("<?php echo base_url() ?>packassets/fonts/Mulish-SemiBoldItalic.woff2") format("woff2"),
+        url("<?php echo base_url() ?>packassets/fonts/Mulish-SemiBoldItalic.woff") format("woff");
+      font-weight: 600;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Mulish";
+      color: var(--text-soot-black);
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%;
+      display: inline-block;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 600;
+      color: var(--text-black);
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    a,
+    button {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      text-decoration: none !important;
+      display: inline-block;
+    }
+
+    input {
+      outline: none;
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    main.home-main {
+      overflow: hidden;
+    }
+
+    .mfp-bg {
+      z-index: 99999 !important;
+    }
+
+    .mfp-wrap {
+      z-index: 99999 !important;
+    }
+
+    /* =======================================
+        Reusable classes
+========================================*/
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .container {
+      max-width: 1166px;
+      margin: 0 auto;
+    }
+
+    .theme-input {
+      padding: 0 15px;
+      height: 50px;
+      font-size: 15px;
+      transition: 0.3s;
+      background: rgba(255, 255, 255, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 5px;
+    }
+
+    .theme-input:focus {
+      border-color: var(--border-blue);
+    }
+
+    .theme-btn {
+      color: var(--text-white);
+      background-color: var(--bg-blue);
+      border: none;
+      border-radius: 6px;
+      height: 50px;
+      padding: 0 40px;
+      font-size: 16px;
+      display: inline-grid;
+      place-content: center;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    select {
+      border: 0px;
+      outline: 0px;
+    }
+
+    .theme-btn:hover {
+      background-color: var(--bg-dark-blue);
+    }
+
+    .title-block {
+      text-align: center;
+      max-width: 717px;
+      margin: 0 auto 70px;
+    }
+
+    .title-block h2 {
+      margin: 0 0 30px;
+    }
+
+    .w-50 {
+      width: 50%;
+    }
+
+    .show-btn {
+      display: none;
+    }
+
+    .register-fix-btn {
+      position: fixed;
+      right: 10px;
+      bottom: -50px;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      z-index: 99;
+    }
+
+    a.register-fix-btn {
+      display: flex !important;
+      align-items: center;
+      border-radius: 50px;
+      background: #fff;
+      box-shadow: 2px 2px 4px 1px rgb(0 0 0 / 14%);
+    }
+
+    a.register-fix-btn img {
+      width: 100%;
+      max-width: 50px;
+      border-radius: 50px;
+    }
+
+    .cl-txt label {
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-left: 8px;
+      margin-right: 10px;
+      color: #1e73be;
+    }
+
+    /* =======================================
+            header
+========================================*/
+    header.header .wrapper {
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header.header .logo {
+      width: 100%;
+      max-width: 260px;
+    }
+
+    header.header {
+      padding: 16px;
+    }
+
+    header.header .wrapper .nav-bar ul {
+      list-style: none;
+    }
+
+    .nav-bar ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-bar ul li a {
+      font-size: 16px;
+      padding: 0 10px;
+      color: var(--bg-black);
+    }
+
+    .nav-bar ul li a.active {
+      color: #1a91f8;
+    }
+
+    .humberger-menu {
+      padding: 5px;
+      width: 35px;
+      height: auto;
+      aspect-ratio: 1/0;
+    }
+
+    .humberger-menu-cvr {
+      display: none;
+    }
+
+    /* =======================================
+            banner
+========================================*/
+
+    section.banner {
+      padding: 165px 0 85px;
+      background-image: url(<?php echo base_url() ?>packassets/images/banner.jpg);
+      z-index: 1;
+      background-position: 60% 89%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    section.banner:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(90deg,
+          #ffffff 12.14%,
+          rgba(255, 255, 255, 0.757218) 33.44%,
+          rgba(255, 255, 255, 0) 62.99%);
+      z-index: -1;
+    }
+
+    .banner-bg img {
+      height: 100%;
+    }
+
+    .banner-bg {
+      position: absolute;
+      top: 25px;
+      bottom: 0;
+      left: 54%;
+      z-index: -1;
+    }
+
+    .bnr-input-cover label {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      font-size: 14px;
+      color: #000;
+      transform: translateY(-50%);
+      background-color: none;
+      transition: 0.3s;
+      padding: 0 10px;
+    }
+
+    .bnr-input-cover input::placeholder {
+      font-size: 14px;
+      color: #000;
+    }
+
+    .bnr-input-cover select {
+      width: 100%;
+      padding: 0 15px;
+      height: 50px;
+      font-size: 18px;
+      transition: 0.3s;
+      background: rgba(255, 255, 255, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 5px;
+      font-size: 14px;
+      color: #000;
+    }
+
+    .bnr-input-cover {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .banner-box {
+      width: 50%;
+      max-width: 480px;
+      position: relative;
+    }
+
+    .banner-content {
+      max-width: 540px;
+    }
+
+    .banner-content ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner-content ul li {
+      font-size: 23px;
+      font-weight: 400;
+      margin-bottom: 13px;
+      line-height: 1.9;
+    }
+
+    .banner-content ul li p b {
+      font-weight: 600;
+      color: #434343;
+      font-size: 20px;
+    }
+
+    .banner-content ul li:last-child {
+      display: flex;
+      align-items: center;
+    }
+
+    .banner-content ul li p {
+      color: #434343;
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .banner-content h2 {
+      margin: 0 0 28px;
+      font-size: 43px;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .banner-content ul li img {
+      margin-right: 24px;
+      width: 100%;
+      max-width: 35px;
+    }
+
+    .banner-form h3 {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #000000;
+      font-size: 22px;
+    }
+
+    .banner-form.banner-box p {
+      text-align: center;
+      color: #000000;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    section.banner .wrapper {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .bnr-input-cover input {
+      width: 100%;
+    }
+
+    .wp-update label span {
+      color: var(--text-lime);
+    }
+
+    .wp-update label {
+      margin-left: 10px;
+      font-size: 16px;
+      color: #000;
+    }
+
+    .wp-update {
+      margin-bottom: 20px;
+    }
+
+    .banner-form button {
+      width: 100%;
+    }
+
+    .banner-content p {
+      max-width: 766px;
+      margin: 0 auto 46px;
+      font-size: 20px;
+      color: var(--bg-white);
+    }
+
+    .banner-content .theme-btn {
+      padding: 0 15px;
+    }
+
+    .banner-content .wrapper {
+      margin: 26px auto 0;
+      max-width: 866px;
+      justify-content: space-between;
+    }
+
+    .banner-form.banner-box {
+      padding: 29px;
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid #ffffff;
+      backdrop-filter: blur(20px);
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    .banner-form.banner-box>img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    .wp-update input#wp {
+      width: 15px;
+      height: 15px;
+      filter: brightness(0.8);
+    }
+
+    /* =======================================
+            short-itinerary
+========================================*/
+    section.short-itinerary {
+      background: #fff;
+    }
+
+    .short-itinerary-title h1 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 64px;
+    }
+
+    .short-itinerary-inner .tabs ul {
+      display: flex;
+      align-items: center;
+      /* justify-content: space-between; */
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .short-itinerary-inner .tabs ul li a {
+      padding: 19px 31px;
+      text-align: center;
+      margin-right: 17px;
+      background: #ffffff;
+      border-width: 1px 1px 0px 1px;
+      border-style: solid;
+      border-color: #f2f2f2;
+      border-radius: 6px 6px 0px 0px;
+      color: #000;
+      font-size: 17px;
+      font-weight: 500;
+      box-shadow: 0 0 10px -4px #00000036;
+    }
+
+    .short-itinerary-inner .tabs ul li {
+      border-bottom: 1px solid #1e73be;
+    }
+
+    .short-itinerary-inner .tabs ul li.ui-state-active a {
+      padding: 19px 31px;
+      text-align: center;
+      background: #ffffff;
+      border-width: 1px 1px 0px 1px;
+      border-style: solid;
+      border-color: #1e73be;
+      border-radius: 6px 6px 0px 0px;
+      margin-right: 17px;
+      border-bottom: 1px solid #fff;
+      margin-bottom: -1px;
+      box-shadow: none;
+      font-weight: 600;
+    }
+
+    .short-itinerary-inner .tabs ul li:last-child a {
+      margin-right: 0;
+    }
+
+    .net-cvr.active span {
+      transform: rotate(180deg);
+    }
+
+    .net-cvr span {
+      transition: 0.3s;
+    }
+
+    .question-bx-cvr-text {
+      display: flex;
+      align-items: center;
+    }
+
+    .wrapper.net-cvr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 38px;
+    }
+
+    .question-bx-cvr-text h2 {
+      margin: 0;
+      color: #232323;
+      font-size: 20px;
+      font-weight: 600;
+      margin-right: 75px;
+      position: relative;
+    }
+
+    .question-bx-cvr-text h4 {
+      margin: 0;
+      color: #363636;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .faq-accodian {
+      margin-top: 54px;
+    }
+
+    .wrapper.net-cvr.active h4 {
+      color: #1e73be;
+    }
+
+    .question-bx-cvr-text h2:before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      background: #b6ddff;
+      right: -50px;
+      top: 0px;
+      border-radius: 50px;
+    }
+
+    .question-bx-cvr {
+      position: relative;
+    }
+
+    .question-bx-cvr:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      left: 93px;
+      top: 3px;
+      border: 1px dashed #b6ddff;
+    }
+
+    .question-bx-cvr:last-child:before {
+      border: none;
+    }
+
+    .question-bx-cvr p {
+      padding-left: 120px;
+      margin: 0;
+      padding-bottom: 30px;
+    }
+
+    .tabs-4-part {
+      width: 60%;
+    }
+
+    .enquire-form {
+      width: 40%;
+    }
+
+    .stor-itinery {
+      background: linear-gradient(270deg,
+          rgba(25, 118, 210, 0.24) 0%,
+          rgba(129, 192, 255, 0) 100%);
+      position: relative;
+      padding: 55px 0;
+      margin-top: 70px;
+    }
+
+    .enquire-form {
+      width: 40%;
+      position: absolute;
+      right: 0;
+      top: -50px;
+    }
+
+    .resort p {
+      margin: 0;
+    }
+
+    .resort {
+      width: 33.33%;
+      text-align: center;
+      padding: 0 15px;
+    }
+
+    .enquire-form .theme-input {
+      padding: 0 15px;
+      height: 50px;
+      font-size: 18px;
+      transition: 0.3s;
+      background: rgba(255, 255, 255, 0.22);
+      border: 1px solid #8a8a8a;
+      border-radius: 5px;
+    }
+
+    .enquire-form .banner-form.banner-box {
+      padding: 42px;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0px 4px 25px rgb(0 0 0 / 25%);
+      border-radius: 12px;
+    }
+
+    .enquire-form .banner-form h3 {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 18px;
+      color: #000000;
+    }
+
+    .enquire-form .theme-btn {
+      margin-top: 25px;
+    }
+
+    .tabs-4-part h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 50px;
+    }
+
+    /* =======================================
+            gallary-cvr1
+========================================*/
+
+    section.gallary-cvr1 {
+      background: #f1f1f1;
+      padding: 100px 0;
+    }
+
+    .gallary-cvr .wrapper {
+      justify-content: space-between;
+    }
+
+    .inclusions ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .exclusions ul {
+      list-style: none;
+    }
+
+    .inclusions {
+      padding: 61px 31px 31px;
+      background: #eaf3fc;
+      border-radius: 6px;
+      position: relative;
+      width: 49%;
+    }
+
+    .inclusions h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .inclusions .bag-inclusions {
+      position: absolute;
+      top: -41px;
+    }
+
+    .exclusions .bag-inclusions {
+      position: absolute;
+      top: -30px;
+    }
+
+    .inclusions ul li img {
+      width: 100%;
+      max-width: 7px;
+      margin-right: 10px;
+      margin-top: 6px;
+    }
+
+    .inclusions ul li {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .exclusions ul li img {
+      width: 100%;
+      max-width: 7px;
+      margin-right: 10px;
+      margin-top: 6px;
+    }
+
+    .exclusions ul li {
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .exclusions {
+      padding: 61px 31px 31px;
+      background: #ffecec;
+      border-radius: 6px;
+      position: relative;
+      width: 49%;
+    }
+
+    .exclusions h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000;
+    }
+
+    ul.exclusions-cvr li {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    ul.exclusions-cvr li p {
+      margin: 0;
+      margin-left: 10px;
+    }
+
+    .modal-last-cvr-btn a {
+      font-size: 15px;
+      color: #000;
+      font-weight: 600;
+    }
+
+    .modal-last-cvr-btn {
+      margin-left: 0px;
+      text-align: left;
+      margin-right: 23px;
+      font-weight: bold;
+    }
+
+    .exclusions-full {
+      /*max-height: 158px;
+            overflow: hidden;*/
+      transition: 1s;
+    }
+
+    /* =======================================
+            popup-slider
+========================================*/
+    section.popup-slider {
+      background: #fff;
+    }
+
+    /* slider */
+    @import url("https://fonts.googleapis.com/css?family=Abel");
+
+    h1 {
+      font-family: "Mulish", sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      text-align: center;
+    }
+
+    /* .container {
+  width: 80%;
+  margin: 0 auto;
+} */
+
+    a {
+      outline: 0 !important;
+    }
+
+    .magnific-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .magnific-img {
+      display: inline-block;
+      width: 32.3%;
+    }
+
+    a.image-popup-vertical-fit {
+      cursor: -webkit-zoom-in;
+    }
+
+    .mfp-with-zoom .mfp-container,
+    .mfp-with-zoom.mfp-bg {
+      opacity: 0;
+      -webkit-backface-visibility: hidden;
+      /* ideally, transition speed should match zoom duration */
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+
+    .mfp-with-zoom.mfp-ready .mfp-container {
+      opacity: 1;
+    }
+
+    .mfp-with-zoom.mfp-ready.mfp-bg {
+      opacity: 0.98;
+    }
+
+    .mfp-with-zoom.mfp-removing .mfp-container,
+    .mfp-with-zoom.mfp-removing.mfp-bg {
+      opacity: 0;
+    }
+
+    .mfp-arrow-left:before {
+      border-right: none !important;
+    }
+
+    .mfp-arrow-right:before {
+      border-left: none !important;
+    }
+
+    button.mfp-arrow,
+    .mfp-counter {
+      opacity: 0 !important;
+      transition: opacity 200ms ease-in, opacity 2000ms ease-out;
+    }
+
+    .mfp-container:hover button.mfp-arrow,
+    .mfp-container:hover .mfp-counter {
+      opacity: 1 !important;
+    }
+
+    /* Magnific Popup CSS */
+    .mfp-bg {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1042;
+      overflow: hidden;
+      position: fixed;
+      background: #0b0b0b;
+      opacity: 0.8;
+    }
+
+    .mfp-wrap {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1043;
+      position: fixed;
+      outline: none !important;
+      -webkit-backface-visibility: hidden;
+    }
+
+    .mfp-container {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      padding: 0 8px;
+      box-sizing: border-box;
+    }
+
+    .mfp-container:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    .mfp-align-top .mfp-container:before {
+      display: none;
+    }
+
+    .mfp-content {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 auto;
+      text-align: left;
+      z-index: 1045;
+    }
+
+    .mfp-inline-holder .mfp-content,
+    .mfp-ajax-holder .mfp-content {
+      width: 100%;
+      cursor: auto;
+    }
+
+    .mfp-ajax-cur {
+      cursor: progress;
+    }
+
+    .mfp-zoom-out-cur,
+    .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+      cursor: -moz-zoom-out;
+      cursor: -webkit-zoom-out;
+      cursor: zoom-out;
+    }
+
+    .mfp-zoom {
+      cursor: pointer;
+      cursor: -webkit-zoom-in;
+      cursor: -moz-zoom-in;
+      cursor: zoom-in;
+    }
+
+    .mfp-auto-cursor .mfp-content {
+      cursor: auto;
+    }
+
+    .mfp-close,
+    .mfp-arrow,
+    .mfp-preloader,
+    .mfp-counter {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    .mfp-loading.mfp-figure {
+      display: none;
+    }
+
+    .mfp-hide {
+      display: none !important;
+    }
+
+    .mfp-preloader {
+      color: #ccc;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      text-align: center;
+      margin-top: -0.8em;
+      left: 8px;
+      right: 8px;
+      z-index: 1044;
+    }
+
+    .mfp-preloader a {
+      color: #ccc;
+    }
+
+    .mfp-preloader a:hover {
+      color: #fff;
+    }
+
+    .mfp-s-ready .mfp-preloader {
+      display: none;
+    }
+
+    .mfp-s-error .mfp-content {
+      display: none;
+    }
+
+    button.mfp-close,
+    button.mfp-arrow {
+      overflow: visible;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      -webkit-appearance: none;
+      display: block;
+      outline: none;
+      padding: 0;
+      z-index: 1046;
+      box-shadow: none;
+      touch-action: manipulation;
+    }
+
+    button::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+
+    .mfp-close {
+      width: 44px;
+      height: 44px;
+      line-height: 44px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-decoration: none;
+      text-align: center;
+      opacity: 0.65;
+      padding: 0 0 18px 10px;
+      color: #fff;
+      font-style: normal;
+      font-size: 28px;
+      font-family: Arial, Baskerville, monospace;
+    }
+
+    .slick-track {
+      display: flex !important
+    }
+
+    .slick-slide {
+      height: auto;
+    }
+
+    .mfp-close:hover,
+    .mfp-close:focus {
+      opacity: 1;
+    }
+
+    .mfp-close:active {
+      top: 1px;
+    }
+
+    .mfp-close-btn-in .mfp-close {
+      color: #333;
+    }
+
+    .mfp-image-holder .mfp-close,
+    .mfp-iframe-holder .mfp-close {
+      color: #fff;
+      right: -6px;
+      text-align: right;
+      padding-right: 6px;
+      width: 100%;
+    }
+
+    .mfp-counter {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #ccc;
+      font-size: 12px;
+      line-height: 18px;
+      white-space: nowrap;
+    }
+
+    .mfp-arrow {
+      position: absolute;
+      opacity: 0.65;
+      margin: 0;
+      top: 50%;
+      margin-top: -55px;
+      padding: 0;
+      width: 90px;
+      height: 110px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mfp-arrow:active {
+      margin-top: -54px;
+    }
+
+    .mfp-arrow:hover,
+    .mfp-arrow:focus {
+      opacity: 1;
+    }
+
+    .mfp-arrow:before,
+    .mfp-arrow:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin-top: 35px;
+      margin-left: 35px;
+      border: medium inset transparent;
+    }
+
+    .mfp-arrow:after {
+      border-top-width: 13px;
+      border-bottom-width: 13px;
+      top: 8px;
+    }
+
+    .mfp-arrow:before {
+      border-top-width: 21px;
+      border-bottom-width: 21px;
+      opacity: 0.7;
+    }
+
+    .mfp-arrow-left {
+      left: 0;
+    }
+
+    .mfp-arrow-left:after {
+      border-right: 17px solid #fff;
+      margin-left: 31px;
+    }
+
+    .mfp-arrow-left:before {
+      margin-left: 25px;
+      border-right: 27px solid #3f3f3f;
+    }
+
+    .mfp-arrow-right {
+      right: 0;
+    }
+
+    .mfp-arrow-right:after {
+      border-left: 17px solid #fff;
+      margin-left: 39px;
+    }
+
+    .mfp-arrow-right:before {
+      border-left: 27px solid #3f3f3f;
+    }
+
+    .mfp-iframe-holder {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .mfp-iframe-holder .mfp-content {
+      line-height: 0;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .mfp-iframe-holder .mfp-close {
+      top: -40px;
+    }
+
+    .mfp-iframe-scaler {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      padding-top: 56.25%;
+    }
+
+    .mfp-iframe-scaler iframe {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+      background: #000;
+    }
+
+    /* Main image in popup */
+    img.mfp-img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      line-height: 0;
+      box-sizing: border-box;
+      padding: 40px 0 40px;
+      margin: 0 auto;
+    }
+
+    /* The shadow behind the image */
+    .mfp-figure {
+      line-height: 0;
+    }
+
+    .mfp-figure:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 40px;
+      bottom: 40px;
+      display: block;
+      right: 0;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+      background: #444;
+    }
+
+    .mfp-figure small {
+      color: #bdbdbd;
+      display: block;
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    .mfp-figure figure {
+      margin: 0;
+    }
+
+    .mfp-bottom-bar {
+      margin-top: -36px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      cursor: auto;
+    }
+
+    .mfp-title {
+      text-align: left;
+      line-height: 18px;
+      color: #f3f3f3;
+      word-wrap: break-word;
+      padding-right: 36px;
+    }
+
+    .mfp-image-holder .mfp-content {
+      max-width: 100%;
+    }
+
+    .mfp-gallery .mfp-image-holder .mfp-figure {
+      cursor: pointer;
+    }
+
+    img.mfp-img {
+      width: 100%;
+      max-width: 500px !important;
+    }
+
+    .img-gallery-magnific-inner {
+      width: 60%;
+      padding: 10px;
+    }
+
+    .popup-slider-middle-part {
+      width: 31%;
+      padding: 10px;
+    }
+
+    .magnific-img-cvr {
+      width: 100%;
+      padding: 10px;
+      height: 100%;
+      max-width: 230px;
+    }
+
+    .popup-slider-middle-part>div a {
+      padding-bottom: 10px;
+    }
+
+    .popup-slider-last-part .magnific-img a {
+      margin-bottom: 11px;
+    }
+
+    .popup-slider-last-part {
+      width: 31%;
+      padding: 10px;
+    }
+
+    a.image-popup-vertical-fit {
+      width: 100%;
+    }
+
+    section.img-gallery-magnific {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .popup-slider-middle-part.imgbox-md {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .imgbox-md>div.small {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .imgbox-md {
+      width: 20% !important;
+      max-width: 20%;
+    }
+
+    .magnific-img {
+      width: 100%;
+    }
+
+    .imgbox-lg {
+      width: 40% !important;
+      max-width: 40% !important;
+    }
+
+    .magnific-img {
+      width: 100%;
+    }
+
+    .imgbox-md a {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    .magnific-img-cvr.imgbox-md {
+      height: auto;
+    }
+
+    .magnific-img-cvr.imgbox-md>div,
+    .magnific-img-cvr.imgbox-md>div>a,
+    .magnific-img-cvr.imgbox-md>div,
+    .magnific-img-cvr.imgbox-md>div>a>img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    @media screen and (max-width: 800px) and (orientation: landscape),
+    screen and (max-height: 300px) {
+
+      /**
+   * Remove all paddings around the image on small screen
+   */
+      .mfp-img-mobile .mfp-image-holder {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .mfp-img-mobile img.mfp-img {
+        padding: 0;
+      }
+
+      .mfp-img-mobile .mfp-figure:after {
+        top: 0;
+        bottom: 0;
+      }
+
+      .mfp-img-mobile .mfp-figure small {
+        display: inline;
+        margin-left: 5px;
+      }
+
+      .mfp-img-mobile .mfp-bottom-bar {
+        background: rgba(0, 0, 0, 0.6);
+        bottom: 0;
+        margin: 0;
+        top: auto;
+        padding: 3px 5px;
+        position: fixed;
+        box-sizing: border-box;
+      }
+
+      .mfp-img-mobile .mfp-bottom-bar:empty {
+        padding: 0;
+      }
+
+      .mfp-img-mobile .mfp-counter {
+        right: 5px;
+        top: 3px;
+      }
+
+      .mfp-img-mobile .mfp-close {
+        top: 0;
+        right: 0;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        background: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        text-align: center;
+        padding: 0;
+      }
+    }
+
+    @media all and (max-width: 900px) {
+      .mfp-arrow {
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75);
+      }
+
+      .mfp-arrow-left {
+        -webkit-transform-origin: 0;
+        transform-origin: 0;
+      }
+
+      .mfp-arrow-right {
+        -webkit-transform-origin: 100%;
+        transform-origin: 100%;
+      }
+
+      .mfp-container {
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+    }
+
+    /* =======================================
+            why-adventourist
+========================================*/
+    section.why-adventourist {
+      background: #f1f1f1;
+    }
+
+    .why-adventourist-text h2 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 60px;
+    }
+
+    .best-pricing p {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 500;
+      color: #000;
+      max-width: 210px;
+      margin: auto;
+      margin-top: 25px;
+    }
+
+    .best-pricing {
+      text-align: center;
+      width: 33.33%;
+      margin-bottom: 40px;
+    }
+
+    .h-plus {
+      margin: 0;
+      font-size: 42px;
+      font-weight: 700;
+      color: #4dc246;
+    }
+
+    /* =======================================
+          trip-rt
+========================================*/
+    section#talk-to-expert {
+      background: #fff;
+    }
+
+    .trip-rt a img.Google {
+      width: 100%;
+      max-width: 70px;
+    }
+
+    a.clnn p {
+      margin: 25px 0 0 0;
+      font-size: 25px;
+      color: #191717;
+      text-decoration: none;
+    }
+
+    .heading {
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-bottom: 60px;
+      color: var(--text-black);
+      text-align: center;
+    }
+
+    .trip-rt img.star-img {
+      width: 100%;
+      max-width: 25px;
+      margin: auto;
+      display: inline-block;
+    }
+
+    .trip-rt a.clnn {
+      margin: 0 11px;
+    }
+
+    .trip-rt {
+      text-align: center;
+    }
+
+    /* =======================================
+          section.testimonials
+========================================*/
+    section.testimonials {
+      background: #e8f4ff;
+      overflow: hidden;
+    }
+
+    .travel-experts-inner img {
+      border-radius: 10px;
+    }
+
+    .testimonials-inner-text img {
+      width: 100%;
+      max-width: 170px;
+      margin: auto;
+    }
+
+    .testimonials-inner-text {
+      width: 33.33%;
+      text-align: center;
+      padding: 32px;
+      border-radius: 18px;
+      margin: 13px;
+    }
+
+    .testimonials-inner-text p {
+      font-size: 16px;
+      color: #000000;
+      font-weight: 400;
+      margin: 23px 0;
+      line-height: 2;
+    }
+
+    .testimonials-inner-text span {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    section.testimonials .why-adventourist-text {
+      margin-bottom: 50px;
+    }
+
+    .testimonials-cvr .wrapper {
+      padding-bottom: 50px;
+    }
+
+    .testimonials-cvr {
+      /* overflow: hidden; */
+      width: 100%;
+    }
+
+    ul.slick-dots {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      position: absolute;
+      bottom: 0;
+      left: 36%;
+      transform: translateX(-50%);
+    }
+
+    ul.slick-dots li button {
+      border-radius: 50px;
+      width: 5px;
+      height: 5px;
+      font-size: 0;
+      background: #ebebeb;
+      margin: 5px;
+    }
+
+    li.slick-active button {
+      background: #4285f4 !important;
+    }
+
+    .star-img img {
+      width: 100%;
+      padding: 3px;
+    }
+
+    .star-img {
+      display: flex;
+      width: 100%;
+      max-width: 25px;
+      margin: auto;
+      justify-content: center;
+      margin-top: 17px;
+    }
+
+    /* travel-experts-1 */
+    ul.slick-dots li {
+      border-radius: 50px;
+      background: gray;
+      width: 6px;
+      height: 6px;
+      margin: 0 5px;
+    }
+
+    li.slick-active {
+      background: #2897f8 !important;
+    }
+
+    ul.slick-dots li button {
+      font-size: 0;
+      display: none;
+    }
+
+    .travel-experts-cvr .wrapper {
+      padding-bottom: 50px;
+    }
+
+    ul.slick-dots {
+      left: 50%;
+    }
+
+    .humberger-menu.active {
+      top: 34px;
+    }
+
+    /* =======================================
+          travel-experts
+========================================*/
+    section.travel-experts {
+      background: #fff;
+    }
+
+    section.travel-experts .why-adventourist-text {
+      margin-bottom: 50px;
+    }
+
+    .travel-experts-inner {
+      width: 33.33%;
+      padding: 0 15px;
+      text-align: center;
+    }
+
+    .travel-experts-inner-text {
+      text-align: center;
+      background: #e9e9e9;
+      border-radius: 10px 10px 0px 0px;
+      margin-top: -90px;
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .travel-experts-inner-text h3 {
+      font-size: 24px;
+      font-weight: 500;
+      color: #000;
+      margin: 0;
+    }
+
+    .travel-experts-inner-text p {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0;
+      margin-top: 8px;
+      color: #000;
+    }
+
+    /* =======================================
+          footer
+========================================*/
+    footer.footer p {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    footer.footer {
+      text-align: center;
+      background: #1e73be;
+      padding: 15px 0;
+      color: #fff;
+    }
+
+    .exp-slider-1 .slick-slider .slick-track,
+    .slick-slider .slick-list {
+      width: 100% !important;
+    }
+
+    .exp-slider-1 .tdt-slider .slick-slide {
+      width: 100% !important;
+    }
+
+    /* =======================================
+          media-qeury
+========================================*/
+    @media (max-width: 1439px) {
+      header.header .logo {
+        max-width: 200px;
+      }
+
+      .stor-itinery {
+        margin-bottom: 100px;
+      }
+
+
+      .nav-bar ul li a {
+        font-size: 15px;
+        padding: 0 10px;
+      }
+
+      .banner-content ul li {
+        font-size: 18px;
+      }
+
+      .banner-content ul li img {
+        margin-right: 15px;
+        width: 100%;
+        max-width: 21px;
+      }
+
+      .banner-content ul li p b {
+        font-size: 16px;
+      }
+
+      .banner-content ul li p {
+        font-size: 16px;
+      }
+
+      .short-itinerary-inner .tabs ul li a {
+        padding: 16px 28px;
+        font-size: 14px;
+      }
+
+      .short-itinerary-inner .tabs ul li.ui-state-active a {
+        padding: 16px 28px;
+        font-size: 14px;
+      }
+
+      .question-bx-cvr-text h2 {
+        font-size: 17px;
+      }
+
+      .question-bx-cvr-text h4 {
+        font-size: 17px;
+      }
+
+      .question-bx-cvr-text h2:before {
+        width: 20px;
+        height: 20px;
+      }
+
+      .question-bx-cvr:before {
+        left: 84px;
+      }
+
+      .question-bx-cvr p {
+        font-size: 15px;
+        padding-left: 11%;
+      }
+
+      section.short-itinerary {
+        padding-bottom: 0;
+      }
+
+      ul.slick-dots {
+        left: 50%;
+      }
+
+      .enquire-form {
+        width: 50%;
+      }
+
+      .tabs-4-part {
+        width: 50%;
+      }
+
+      .tabs-4-part h2 {
+        font-size: 25px;
+      }
+
+      .resort p {
+        font-size: 13px;
+      }
+
+      .enquire-form .banner-form.banner-box {
+        padding: 32px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .banner-content {
+        padding: 0 10px;
+      }
+
+
+      .stor-itinery {
+        margin-bottom: 100px;
+      }
+
+      .banner-form.banner-box {
+        width: 100%;
+        margin: auto;
+        margin-top: 40px;
+      }
+
+      .banner-content {
+        width: 100%;
+      }
+
+      .short-itinerary-inner .tabs ul li a {
+        padding: 9px 4px;
+        font-size: 12px;
+        margin-right: 7px;
+      }
+
+      .short-itinerary-inner .tabs ul li.ui-state-active a {
+        padding: 9px 4px;
+        font-size: 12px;
+        margin-right: 7px;
+      }
+
+      .exclusions-full {
+        max-height: 152px;
+      }
+
+      .exclusions {
+        padding: 55px 21px 30px;
+      }
+
+      .exclusions ul li {
+        font-size: 13px;
+      }
+
+      .inclusions {
+        padding: 50px 11px 31px;
+      }
+
+      section.why-adventourist {
+        padding-bottom: 0;
+      }
+
+      .img-gallery-magnific {
+        padding-top: 0;
+      }
+
+      section.popup-slider {
+        padding-bottom: 0;
+      }
+
+      .travel-experts-inner-text {
+        margin-top: -20px;
+        padding: 10px 0;
+      }
+
+      .travel-experts-inner {
+        padding: 0 10px;
+      }
+
+      .travel-experts-inner-text h3 {
+        font-size: 19px;
+      }
+
+      .travel-experts-inner-text p {
+        font-size: 13px;
+        margin-top: 4px;
+      }
+
+      .nav-bar {
+        width: 100% !important;
+        display: none;
+        margin-top: 13px;
+        order: 3;
+      }
+
+      .nav-bar ul {
+        width: 100% !important;
+        display: block;
+        border: 1px solid #0003;
+        border-radius: 8px;
+        padding: 5px;
+        top: 10px;
+        background: #ffff;
+      }
+
+      .nav-bar ul li a {
+        width: 100%;
+        padding: 5px 10px;
+      }
+
+      .humberger-menu-cvr {
+        display: block;
+      }
+
+      .humberger-menu span {
+        width: 25px !important;
+        height: 2px;
+        background: #434343;
+        display: block;
+      }
+
+      .humberger-menu {
+        display: block;
+        padding: 0;
+        width: 22px;
+      }
+
+      .humberger-menu.active {
+        top: 37px;
+      }
+
+      .enquire-form {
+        width: 100%;
+        position: static;
+      }
+
+      .tabs-4-part {
+        width: 100%;
+      }
+
+      .tabs-4-part h2 {
+        font-size: 25px;
+        text-align: center;
+      }
+
+      .imgbox-lg {
+        width: 65% !important;
+        max-width: 65% !important;
+      }
+
+      .imgbox-md {
+        width: 35% !important;
+        max-width: 35%;
+      }
+
+      .magnific-img-cvr.imgbox-md {
+        width: 50% !important;
+        max-width: 50% !important;
+      }
+
+      .popup-slider-last-part.imgbox-md {
+        width: 50% !important;
+        max-width: 50% !important;
+      }
+
+      .popup-slider-middle-part.imgbox-md>div:first-child img {
+        height: calc(100% - 22px);
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .popup-slider-middle-part.imgbox-md>div:first-child>a {
+        height: 100%;
+      }
+
+      header.header {
+        padding: 28px 0;
+      }
+    }
+
+    @media (max-width: 767px) {
+
+      .question-bx-cvr p {
+        font-size: 15px;
+        padding-left: 19%;
+      }
+
+      ul.slick-dots {
+        left: 50%;
+      }
+
+      .stor-itinery {
+        margin-bottom: 0px;
+      }
+
+      header.header {
+        padding: 28px 0;
+      }
+
+      .short-itinerary-inner .tabs ul {
+        flex-wrap: wrap;
+      }
+
+      .short-itinerary-inner .tabs ul li {
+        width: 100%;
+        margin: 8px 10px;
+        border-bottom: none;
+      }
+
+      .short-itinerary-inner .tabs ul li a {
+        padding: 10px 7px;
+        font-size: 14px;
+        width: 100%;
+      }
+
+      .short-itinerary-inner .tabs ul li.ui-state-active a {
+        padding: 15px 0px;
+        font-size: 14px;
+        margin-bottom: 0px;
+        border-bottom: 1px solid #1e73be;
+      }
+
+      .question-bx-cvr-text h2 {
+        font-size: 14px;
+        margin-right: 23px;
+      }
+
+      .question-bx-cvr-text h4 {
+        font-size: 15px;
+      }
+
+      .question-bx-cvr-text h2:before {
+        width: 10px;
+        height: 10px;
+        left: 43px;
+        top: 5px;
+      }
+
+      .heading {
+        font-size: 27px;
+        margin-bottom: 41px;
+      }
+
+      .question-bx-cvr:before {
+        left: 47px;
+        width: 1px;
+        border: 1px dashed #b6ddff;
+        top: 7px;
+      }
+
+      section.img-gallery-magnific {
+        flex-wrap: wrap;
+      }
+
+      .img-gallery-magnific-inner {
+        width: 100% !important;
+        padding: 0;
+        max-width: 100% !important;
+        /* margin-bottom: 5px; */
+      }
+
+      .imgbox-md {
+        width: 100% !important;
+        max-width: 100%;
+      }
+
+      .magnific-img-cvr.imgbox-md {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .popup-slider-last-part.imgbox-md {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .popup-slider-middle-part.imgbox-md>div:first-child img {
+        height: calc(100% - 4px);
+      }
+
+      .popup-slider-middle-part {
+        width: 100%;
+        padding: 0;
+      }
+
+      .magnific-img-cvr {
+        max-width: initial;
+        padding: 0;
+      }
+
+      .popup-slider-last-part {
+        width: 100%;
+        padding: 0;
+      }
+
+      .popup-slider-last-part .magnific-img a {
+        margin-bottom: 0;
+      }
+
+      .popup-slider-middle-part>div a {
+        padding-bottom: 10px;
+      }
+
+      a.image-popup-vertical-fit {
+        width: 100%;
+        padding-bottom: 4px;
+      }
+
+      .inclusions {
+        width: 100%;
+        margin-bottom: 50px;
+      }
+
+      .exclusions {
+        width: 100%;
+      }
+
+      .best-pricing {
+        width: 50%;
+      }
+
+      section.travel-experts {
+        padding-top: 70px;
+        padding-bottom: 0;
+      }
+
+      .travel-experts-inner {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .enquire-form {
+        width: 100%;
+        position: static;
+      }
+
+      .tabs-4-part {
+        width: 100%;
+      }
+
+      .resort {
+        width: 100%;
+        padding: 0 35px;
+        margin-bottom: 30px;
+      }
+
+      .tabs-4-part h2 {
+        font-size: 26px;
+        text-align: center;
+      }
+
+      .enquire-form .banner-form.banner-box {
+        padding: 24px;
+      }
+
+      button.mfp-close,
+      button.mfp-arrow {
+        opacity: 1 !important;
+      }
+
+      a.register-fix-btn {
+        width: 100%;
+        justify-content: center;
+        right: 0;
+        padding: 9px 0;
+        background: #1a91f8;
+        border-radius: 0;
+      }
+
+      .cl-txt label {
+        color: #ffffff;
+      }
+
+      a.register-fix-btn img {
+        max-width: 37px;
+        display: none;
+      }
+
+      .banner-content h2 {
+        font-size: 27px;
+        text-align: center;
+      }
+
+      .banner-content ul {
+        padding-left: 10px;
+      }
+
+      .short-itinerary-2 {
+        overflow: auto;
+      }
+
+      .short-itinerary-inner .tabs ul li.ui-state-active a {
+        border-bottom: none;
+      }
+
+      .short-itinerary-inner .tabs ul li {
+        margin: 8px 0px 0;
+        border-bottom: none;
+      }
+
+      .short-itinerary-inner .tabs ul li a {
+        border: none;
+        box-shadow: none;
+      }
+
+      .short-itinerary-inner .tabs ul {
+        flex-wrap: nowrap;
+        width: 1318px;
+        border-bottom: 1px solid #1e73be;
+      }
+
+      a.image-popup-vertical-fit {
+        padding-bottom: 7px !important;
+      }
+
+      .popup-slider-middle-part.imgbox-md>div:first-child img {
+        height: 100% !important;
+      }
+    }
+  </style>
 </head>
-<style>
-.error{
-    color: red;
-    font-size: 12px;
-}
 
-</style>
-<body> 
-  <div class="page_block" style="display: none;"></div>
-  <header id="header" class="fixed-top">
+<body>
+
+  <!-- header -->
+  <header class="header">
     <div class="container">
-      <div class="row">
-        <div class="logo col-lg-3">       
-          <a href="https://adventourist.in/" target="_blank"><img src="<?php echo base_url()?>packassets/images/logo.png" alt="" class="img-fluid"></a>
-          <button type="button" class="mobile-nav-toggle d-lg-none"><i><img src="<?php echo base_url()?>packassets/images/bars.png" alt=""></i></button>
+      <div class="wrapper">
+        <div class="logo">
+          <a href="javascript:void(0)"><img src="<?php echo base_url() ?>packassets/images/adventourist-logo.png" alt=""></a>
         </div>
-        <nav class="main-nav col-lg-9 col-md-9 d-none d-lg-block">
+        <div class="nav-bar">
           <ul>
-            <li class="active"><a href="#trip_summary">Trip Summary</a></li>
-            <li><a href="#detailed_itinerary">Detailed Itinerary</a></li>
-            <li><a href="#inclusions_and_exclusions">Inclusions and Exclusions</a></li>
+            <li><a href="#banner" class="active">Home</a></li>
+            <li><a href="#short-itinerary">Itinerary</a></li>
+            <li><a href="#gallary-cvr1">Inclusions & Exclusions</a></li>
+            <li><a href="#popup-slider">Gallery</a></li>
+            <li><a href="#why-adventourist">Why Adventourist? </a></li>
             <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#gallery">Gallery</a></li>  
+            <li><a href="#travel-experts">Talk to us</a></li>
           </ul>
-        </nav> 
-      </div>     
+        </div>
+        <div class="humberger-menu-cvr">
+          <div class="humberger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
     </div>
-  </header> 
-  <div class="container">
-    <div class="row">
-    <div class="col-lg-8 col-md-8">
-        <section id="trip_summary" class="clearfix">  
-          <h1 class="itinerary_title col-lg-12">7 Days in Leh Ladakh for First Timers, Group of Friends, Cousins & Office Colleagues</h1> 
-          <!-- <p class="title_block col-lg-12">for First Timers and Group of Friends / Cousins and Office Colleagues.</p> -->
-          <div class="row custom_row">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-              <div class="itineraries_list">
-                <h2 class="section_title">Trip Summary</h2>
+  </header>
+  <!-- /header -->
+  <!-- main -->
+  <a href="#!" class="register-fix-btn show-btn">
+    <img src="<?php echo base_url() ?>packassets/images/call.png" alt="">
+    <div class="cl-txt">
+      <label>
+        Enquire for Free
+      </label>
+    </div>
+  </a>
+  <main>
+    <!-- banner -->
+    <section class="banner" id="banner">
+      <div class="container">
+        <div class="wrapper">
+          <div class="banner-content banner-box">
+            <h2>Leh Bagpacking Trip 6 Nights and 7 Days</h2>
+            <ul>
+              <li><img src="<?php echo base_url() ?>packassets/images/flag.svg" alt=""><b>Destination:</b> Leh Ladakh </li>
+              <li><img src="<?php echo base_url() ?>packassets/images/star.svg" alt=""><b>Trip category:</b> Adventure </li>
+              <li><img src="<?php echo base_url() ?>packassets/images/airpalne.svg" alt=""><b>Best time to visit:</b> May - Oct
+              </li>
+              <li><img src="<?php echo base_url() ?>packassets/images/calender.svg" alt=""><b>Stay days:</b> 6 Nights and 7 Days
+              </li>
+              <li><img src="<?php echo base_url() ?>packassets/images/tag.svg" alt=""><b>Budget:</b> ₹ 16,499 Per Person onwards
+              </li>
+              <li><img src="<?php echo base_url() ?>packassets/images/waycheck.svg" alt=""> <b>Suitable for:</b> Friends, Families, Solo Travellers
+              </li>
+            </ul>
+          </div>
+          <div class="banner-form banner-box" id="form-3">
+            <form class="stay_middle fixed" id="packageform">
+              <h3>Enquire for Free</h3>
+              <p>Our travel experts will call you, ask all your queries without hesitation.</p>
+              <div class="bnr-input-cover">
+                <input type="text" name="name" class="theme-input" id="f-name" placeholder="Full Name" required>
+              </div>
+              <div class="bnr-input-cover">
+                <input type="email" name="email" class="theme-input" id="email" placeholder="Email" required>
+              </div>
+              <div class="bnr-input-cover">
+                <input type="tel" name="phone" class="theme-input" placeholder="Mobile no" id="mobile" required>
+
+              </div>
+              <div class="bnr-input-cover">
+                <select class="form-control" name="package" id="package">
+                  <option selected="true" disabled="disabled">Choose Package</option>
+                  <option>5N 6D Leh Ladakh</option>
+                  <option>6N 7D Leh Ladakh</option>
+                  <option>Leh Ladakh Customized</option>
+                </select>
+              </div>
+              <div class="wp-update">
+                <input type="checkbox" id="wp" checked><label for="wp">I Agree the Terms &
+                  Conditions.</label>
+              </div>
+
+              <input type="hidden" id="destination" name="destination" value="<?php echo $destination; ?>" />
+              <input type="hidden" id="platform" name="platform" value="<?php echo $platform; ?>" />
+              <input type="hidden" id="campaigntype" name="campaigntype" value="<?php echo $ct; ?>" />
+              <input type="hidden" id="adgroup" name="adgroup" value="<?php echo $ad; ?>" />
+              <button type="button" class="theme-btn" id="savePackage">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /banner -->
+    <!-- short-itinerary -->
+    <section class="short-itinerary" id="short-itinerary">
+      <div class="container">
+        <div class="short-itinerary-title">
+          <h1>Leh Ladakh 6 Nights and 7 Days - Iternary</h1>
+        </div>
+        <div class="short-itinerary-inner">
+          <div id="tabs" class="tabs">
+            <div id="tabs-1">
+              <div class="faq-accodian">
+                <div class="question-bx-cvr">
+                  <div class="wrapper net-cvr active">
+                    <div class="question-bx-cvr-text">
+                      <h2>Day 1</h2>
+                      <h4 class="">Arrive Leh -3505 meters/11567 Feet</h4>
+                    </div>
+                    <span><img src="<?php echo base_url() ?>packassets/images/arrow.png" alt=""></span>
+                  </div>
+                  <p class="active" style="display: block;">
+                    <span style="display: block; margin-bottom:15px;"><b>Travel Time: 20 Mins</b></span>
+                    The journey to paradise starts by arriving at Leh, 3500 meters above sea level. We drive to the hotel and have a wholesome breakfast before 9:30 AM. A half day of rest to start the travel experience with a fresh and zestful mind. A beautiful walk in the evening on the roads of Leh, to absorb the life and culture of the streets. Later in The evening, Explore the Local Market and Visit Shanti Stupa, Post which return to Hotel, Dinner and Overnight In Leh.
+                  </p>
+                </div>
+                <div class="question-bx-cvr">
+                  <div class="wrapper net-cvr">
+                    <div class="question-bx-cvr-text">
+                      <h2>Day 2</h2>
+                      <h4>The Real Leh: Local Sightseeing</h4>
+                    </div>
+                    <span><img src="<?php echo base_url() ?>packassets/images/arrow.png" alt=""></span>
+                  </div>
+                  <p class="active" style="display: none;"><span style="display: block; margin-bottom:15px;"><b>Travel Time: 4 Hours</b></span>
+                    An early start by having breakfast and leaving by 9 AM. Drive to the prestigious Hall of Fame, a museum constructed by the Indian Army and then visit the sacred Spituk Monastery. A beautiful drive towards Magnetic Hill, Pathar Sahib Gurudwara, Hall of Fame, Sham Valley and then to the meeting point of the feisty Zanskar and the Rich Indus ( Sangam Point / Confluence Point). Dinner and Overnight stay at Leh.
+                  </p>
+                </div>
+                <div class="question-bx-cvr">
+                  <div class="wrapper net-cvr">
+                    <div class="question-bx-cvr-text">
+                      <h2>Day 3</h2>
+                      <h4 class="">Exploring the tri-armed valley of Nubra</h4>
+                    </div>
+                    <span><img src="<?php echo base_url() ?>packassets/images/arrow.png" alt=""></span>
+                  </div>
+                  <p class="active" style="display: none;"><span style="display: block; margin-bottom:15px;"><b>Travel Time: 5 Hours</b></span>
+                    After breakfast and a 5-hour drive through the highest motorable road in the world, the Khardungla Pass, we arrive at Nubra, the valley that is surrounded by beautiful villages and tremendous scenery. By afternoon, we arrive at Hunder, take some rest and head towards exploring the villages of the beautiful town of Hunder. Experiencing the district of Diskit and a camel safari through the sand dunes. Dinner and A wholesome stay at the camp.
+                  </p>
+                </div>
+                <div class="question-bx-cvr">
+                  <div class="wrapper net-cvr">
+                    <div class="question-bx-cvr-text">
+                      <h2>Day 4</h2>
+                      <h4 class="">Recapturing moments from history: Turtuk</h4>
+                    </div>
+                    <span><img src="<?php echo base_url() ?>packassets/images/arrow.png" alt=""></span>
+                  </div>
+                  <p class="active" style="display: none;">
+                    <span style="display: block; margin-bottom:15px;"><b>Travel Time: 5 Hours</b></span>
+                    Leave early after breakfast at around 8 am for the day excursion to Turtuk The drive from Nubra to Turtuk is one of the most fascinating and prestigious journeys in Ladakh. A less popular destination, recently opened for travelers to witness the spectacular beauty of the valley. This region is controlled mainly by Ladakh Scouts or a rear department of the Indian Army. Baltistan is a beautiful village with the charming people who once slept in Pakistan and woke up in India the next morning.A full day excursion at Turtuk village, back to the camps Dinner and Overnight at the camp in Nubra Valley.
+
+                  </p>
+                </div>
+                <div class="question-bx-cvr">
+                  <div class="wrapper net-cvr">
+                    <div class="question-bx-cvr-text">
+                      <h2>Day 5</h2>
+                      <h4 class="">Pangong Tso Via Shyok River</h4>
+                    </div>
+                    <span><img src="<?php echo base_url() ?>packassets/images/arrow.png" alt=""></span>
+                  </div>
+                  <p class="active" style="display: none;"><span style="display: block; margin-bottom:15px;"><b>Travel Time: 6 Hours</b></span>
+                    Post breakfast, we drive to Pangong via Shyok valley, a region comprising 2 valleys- Nubra and Shyok. The Nubra joins the Shyok in the region’s heart near Diskit before flowing westwards into Pakistan to eventually join the mighty Indus. Arrive at the highest salt water lake in the world and experience the heights of the lake and let the breeze take in. Dinner and Spend the night at Pangong lake camp.
+                  </p>
+                </div>
+                <div class="question-bx-cvr">
+                  <div class="wrapper net-cvr">
+                    <div class="question-bx-cvr-text">
+                      <h2>Day 6</h2>
+                      <h4 class="">Leh Via Chang-La Pass</h4>
+                    </div>
+                    <span><img src="<?php echo base_url() ?>packassets/images/arrow.png" alt=""></span>
+                  </div>
+                  <p class="active" style="display: none;"><span style="display: block; margin-bottom:15px;"><b>Travel Time: 5 Hours</b></span>
+                    Post Breakfast, Check out from Pangong hotel and drive Towards Leh crossing Chang La Pass, Visit Thiksey Monastery , Shey Palace, A Filmy Visit to the Rancho School, Proceed towards leh, Check in to the hotel. Rest of the day at leisure, Dinner and overnight stay In Leh.
+                  </p>
+                </div>
+                <div class="question-bx-cvr">
+                  <div class="wrapper net-cvr">
+                    <div class="question-bx-cvr-text">
+                      <h2>Day 7</h2>
+                      <h4 class="">Depart from Leh</h4>
+                    </div>
+                    <span><img src="<?php echo base_url() ?>packassets/images/arrow.png" alt=""></span>
+                  </div>
+                  <p class="active" style="display: none;"><span style="display: block; margin-bottom:15px;"><b>Travel Time: 20 Mins</b></span>
+                    Post Breakfast, Check out from the Hotel And Proceed towards Airport for Our Onward Journey. We May Physically Depart But our Hearts will Forever Stay In Leh…
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /short-itinerary -->
+    <!-- gallary-cvr1 -->
+    <section class="gallary-cvr1" id="gallary-cvr1" style="background-color:#fff;">
+      <div class="container">
+        <div class="gallary-cvr">
+          <div class="wrapper">
+            <div class="inclusions">
+              <div class="bag-inclusions">
+                <img src="<?php echo base_url() ?>packassets/images/bag.svg" alt="">
+              </div>
+              <h2>Inclusions</h2>
+              <ul>
+                <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Assistance upon arrival and departure.</li>
+                <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Accommodation on double/ Twin/ Triple basis as per itinerary listed above.</li>
+                <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Accommodation on Breakfast and Dinner basis.</li>
+                <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">All sightseeing by NON AC Innova/ Xylo / Tempo as per above mentioned.</li>
+                <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Environmental fee.</li>
+                <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Oxygen Cylinder.</li>
+                <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Inner line permit.</li>
+              </ul>
+            </div>
+            <div class="exclusions">
+              <div class="exclusions-full">
+                <div class="bag-inclusions">
+                  <img src="<?php echo base_url() ?>packassets/images/down.svg" alt="">
+                </div>
+                <h2>Exclusions</h2>
                 <ul>
-                  <li>                      
-                      <span class="font-weight-500">Destination:</span>
-                      <span>Leh Ladakh</span>
-                  </li>
-                  <li>                    
-                    <span class="font-weight-500">Best time to Visit:</span>
-                    <span>May, June, July, August, Early September</span>
-                  </li>
-                  <li>                      
-                      <span class="font-weight-500">Stay Days:</span>
-                      <span>6 Nights and 7 days</span>
-                  </li>
-                  <li>                      
-                      <span class="font-weight-500">Total Budget:</span>
-                      <span>INR 15,999 Per Traveller Onwards* (6 Travellers)</span>
-                  </li>
-                  <li>                      
-                      <span class="font-weight-500">Suitable For:</span>
-                      <span>College Students, Office Friends & Family.</span>
-                  </li>
+                  <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Any Sightseeing or excursion that is not mentioned in the itinerary.</li>
+                  <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Monument,Guide, Other Expenses not mentioned in inclusion.</li>
+                  <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Any item of personal requirements, such as drinks, laundry, telephone, etc.</li>
+                  <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Any medical or evacuation expenses.</li>
+                  <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Any expenses occur due to natural climate, security and other unexpected reasons.</li>
+                  <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Any type of insurance- personal, medical, travel etc.</li>
+                  <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Any airfares.</li>
+                  <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">Tips.</li>
+                  <li><img src="<?php echo base_url() ?>packassets/images/dot.png" alt="">5% GST.</li>
                 </ul>
               </div>
-            </div><!--/.col-->
-            <div class="col-lg-6 col-md-6 col-sm-6">
-              <div class="itineraries_des">
-                <h2 class="section_title">About Itinerary</h2>
-                <p>This Itinerary is customized by our travel expert Chirag Joshi for first timers and group of 3+ friends, this itinerary covers all must visit places in Leh & Ladakh. Itinerary also designed keeping in mind a relaxed & a non commercial experience for your dream trip to Leh.</p> 
-              </div>
-            </div><!--/.col-->
-          </div><!--/.row-->  
-        </section>  
-  <section id="detailed_itinerary"> 
-        <h3  class="section_title margin-bottom-15px">Itinerary</h3>  
-        <div class="row detailed_itinerary_container">
-          <div class="col-lg-9 col-md-9 col-sm-9"> 
-            <ul>
-              <li class="icon-box">
-                <div class="icon">
-                  Day<br>1
-                </div>
-                <div class="itinerary_right">
-                  <p class="day_title">Arrive in Leh</p>                   
-                  <div>
-                    <span class="title">Activities:</span>
-                    <span class="description">Arrive Kushok Bakula airport Leh - 3500 meters above sea level. Transfer to hotel. Have breakfast at the hotel before 09.30 am and take the day to for acclimatization. Walk around the streets in the evening and shop in the local market.</span>
-                  </div>
-                </div>
-              </li> 
-              <li class="icon-box">
-                <div class="icon">
-                  Day<br>2
-                </div>
-                <div class="itinerary_right">
-                  <p class="day_title">Explore Leh City</p>                   
-                  <div>
-                    <span class="title">Activities:</span>
-                    <span class="description">Leave after break fast Spend this day to explore the Leh City and Monasteries around Leh, Places you will visit today Hall of Fame, Tsemo Castle, Shey Palace, Thicksey ,Pathar Sahib, Spituk Monastery and Magnetic Hill.</span>
-                  </div>
-                </div>
-              </li>
-              <li class="icon-box">
-                <div class="icon">
-                  Day<br>3
-                </div>
-                <div class="itinerary_right">
-                  <p class="day_title">Leave for Nubra Valley Today</p>                   
-                  <div>
-                    <span class="title">Activities:</span>
-                    <span class="description">After breakfast drive to Nubra via Khardungla (Highest Motorable Road in the world,18380 ft). Arrive at Hunder by afternoon, take a rest. Post lunch get ready to explore Diskit, Hunder Villages and Camel Safari in Sand Dunes between Diskit and Hunder Village. Nubra is know to be one of the best places for stargazing.</span>
-                  </div>
-                </div>
-              </li>
-              <li class="icon-box">
-                <div class="icon">
-                  Day<br>4
-                </div>
-                <div class="itinerary_right">
-                  <p class="day_title">Turtuk: Visit the Last Village on Indian Border</p>
-                  <div>
-                    <span class="title">Activities:</span>
-                    <span class="description">One of the most fascinating journeys in Ladakh this is a less popular destination recently opened for tourists, if you have a thirst for a beautiful location, this is the place.</span>
-                  </div>
-                </div>
-              </li>
-              <li class="icon-box">
-                <div class="icon">
-                  Day<br>5
-                </div>
-                <div class="itinerary_right">
-                  <p class="day_title">Leave for Pangong Tso Via Shyok River Route</p>
-                  <div>
-                    <span class="title">Activities:</span>
-                    <span class="description">Drive to Pangong via Shyok valley ,this region actually comprises two valleys: Nubra and Shyok. Both their rivers rise amidst the remote and heavily glaciated peaks and trough of the Karakoram Range. Enjoy the beauty of the lake on the Banks of Pangong Lake while appreciating the changing colors and fascinating high altitude of the lake.Overnight stay at the camp.Overnight at Pangong Lake camp.</span>
-                  </div>
-                </div>
-              </li>
-              <li class="icon-box">
-                <div class="icon">
-                  Day<br>6
-                </div>
-                <div class="itinerary_right">
-                  <p class="day_title">Head back to Leh from Pangong Tso via Chang-la Pass</p>
-                  <div>
-                    <span class="title">Activities:</span>
-                    <span class="description">Rest in Leh, Spend the last night Here, Cherish memories</span>
-                  </div>
-                </div>
-              </li>
-              <li class="icon-box">
-                <div class="icon">
-                  Day<br>7
-                </div>
-                <div class="itinerary_right">
-                  <p class="day_title">Depart from Leh</p>
-                  <div>
-                    <span class="title">Activities:</span>
-                    <span class="description">Warning, Ask your friends to share all the pictures they have taken, before everyone gets busy in their regular schedules.</span>
-                  </div>
-                </div>
-              </li>
-            </ul> 
-          </div><!--/.col--> 
-          <div class="col-lg-3 col-md-3 col-sm-3 background">
-            <img src="<?php echo base_url()?>packassets/images/itinerary.png" class="img-fluid" alt="">
-          </div>
-          <!--/.col-->
-        </div><!--/.row-->  
-  </section> 
 
-  <section id="inclusions_and_exclusions" class="section-bg">
-      <div class="container"> 
-          <h3 class="section_title">Inclusions</h3>   
-          <div class="col-lg-12"> 
-            <ul>
-              <li class="icon-box">
-                Airport Transfers
-              </li>
-              <li class="icon-box">
-                Accommodation on twin sharing basis as per the itinerary
-              </li>
-              <li class="icon-box">
-                6 Breakfast and 6 Dinner
-              </li>
-              <li class="icon-box">
-                Innova/Xylo to 06 pax, 7 pax onwards tempo traveller Maximum (12 seats)
-              </li>
-              <li class="icon-box">
-                Inner Line Permit, Environmental, Wildlife and Red cross Fee
-              </li>
-            </ul> 
-          </div><!--/.col-->
-          <h3 class="section_title">Exclusions</h3>   
-          <div class="col-lg-12"> 
-            <ul>
-              <li class="icon-box">
-                Any Sightseeing or excursion that is not mentioned in the itinerary 
-              </li>
-              <li class="icon-box">
-                Monument, Guide, Other Expenses not mentioned in inclusion
-              </li>
-              <li class="icon-box">
-                Any item of personal requirements, such as drinks, laundry, telephone, etc.
-              </li>
-              <li class="icon-box">
-                Any medical or evacuation expenses
-              </li>
-              <li class="icon-box">
-                Any expenses occur due to natural climate, security and other unexpected reason.
-              </li>
-              <li class="icon-box">
-                Any type of insurance: personal, medical, travel etc.
-              </li>
-              <li class="icon-box">
-                Any airfares.
-              </li>
-              <li class="icon-box">
-                Tips
-              </li>
-              <li class="icon-box">
-                Taxes
-              </li>
-            </ul> 
-          </div><!--/.col-->  
-      </div>
-  </section>
-  <section id="testimonials">
-      <div class="container">  
-        <div class="row">
-        <h3 class="section_title col-lg-12">We Planned Their Trips
-        </h3>    
-          <div class="col-lg-6 col-md-6 col-sm-6 center_sm">
-            <div class="row mb-4">
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <img src="<?php echo base_url()?>packassets/images/aman-rana.jpg" class="testimonial-img" alt="">
-              </div>
-              <div class="col-lg-8 col-md-8 col-sm-8">
-                <h3 class="title">Aman Rana</h3>
-              </div>
-            </div> 
-            <p>
-              <span class="quotes">“</span>Team Adventourist is Amazing, whats makes them stand out that they know the destination in and out, Unlike other travel agents, they travel to these destinations by themselves so their recommended itinerary is the best across. STRONGLY Recommended for First Timers. Trust them and Let them take control over their holiday.<span class="quotes">”</span>
-            </p>
-          </div>    
-          <div class="col-lg-6 col-md-6 col-sm-6 center_sm">
-            <div class="row mb-4">
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <img src="<?php echo base_url()?>packassets/images/sandeep-rathore.jpg" class="testimonial-img" alt="">
-              </div>
-              <div class="col-lg-8 col-md-8 col-sm-8">
-                <h3 class="title">Sandeep Rathore</h3>
-              </div>
-            </div> 
-            <p>
-              <span class="quotes">“</span>Best Itinerary, Best Cost. Astonished to see how they know Leh so well, They are just genuine travellers planning your vacation. Henceforth we only travel via Adventourist.<span class="quotes">”</span>
-            </p>
-          </div> 
-        </div> 
-      </div>
-  </section>
-    <section>
-      <div class="related_product">
-          <h3 class="section_title">Similar Itineraries</h3>
-          <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-              <a class="card_panel similar_itineraries_focus" href="#sidebar_focus">
-                <img src="<?php echo base_url()?>packassets/images/leh-for-break-seekers.jpg" alt="">
-                <p class="ltinerary_title">9 Days in Leh Ladakh</p>
-              </a>
-            </div><!--/.col-->
-            <div class="col-lg-6 col-md-6 col-sm-6">
-               <a class="card_panel similar_itineraries_focus" href="#sidebar_focus">
-                <img src="<?php echo base_url()?>packassets/images/leh-designed.jpg" alt="">
-                <p class="ltinerary_title">Leh Ladakh Customised</p>
-              </a>
-            </div><!--/.col-->
-          </div> 
+            </div>
+          </div>
         </div>
-    </section> 
-    <section id="gallery" class="clearfix"> 
-        <h3 class="section_title">Pictures by Real Travellers</h3>
-        <div class="row text-center">
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="gallery_img">
-              <img src="<?php echo base_url()?>packassets/images/gallery1.jpg" alt="">
-              <!-- <p class="ltinerary_title">Leh for Break Seekers &amp; Wanderers</p> -->
-            </div>
-          </div><!--/.col--> 
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="gallery_img">
-              <img src="<?php echo base_url()?>packassets/images/gallery2.jpg" alt=""> 
-            </div>
-          </div><!--/.col--> 
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="gallery_img">
-              <img src="<?php echo base_url()?>packassets/images/gallery3.jpg" alt=""> 
-            </div>
-          </div><!--/.col-->
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="gallery_img">
-              <img src="<?php echo base_url()?>packassets/images/gallery4.jpg" alt=""> 
-            </div>
-          </div><!--/.col--> 
-      </div><!--/.row--> 
+      </div>
     </section>
-    </div><!--/.col-->
-    <aside class="col-lg-4 col-md-4">
-      <div class="sidebar" id="sidebar_focus">
-        <form class="stay_middle fixed" id="packageform">
-          <h2 class="section_title form_title">Enquire for Free</h2>
-          <p class="sm_title">Our travel experts will call you, ask all your queries without hesitation.</p>
-          <div class="margin-bottom-15px">
-              <input type="text" class="form-control" placeholder="Name*" name="name">
+    <!-- /gallary-cvr1 -->
+    <!-- popup-slider -->
+    <section class="popup-slider" id="popup-slider">
+      <div class="container">
+        <div class="popup-slider-text">
+          <h1>Gallery</h1>
+        </div>
+
+        <p>
+        <section class="img-gallery-magnific">
+          <div class="img-gallery-magnific-inner imgbox-lg">
+            <div class="magnific-img large">
+              <a class="image-popup-vertical-fit" href="img/gallery/adventourist-travel.jpg" title="">
+                <img src="<?php echo base_url() ?>packassets/images/gallery/adventourist-travel.jpg" alt="adventourist travel" />
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
-          <div class="margin-bottom-15px">
-              <input type="email" class="form-control" placeholder="Email*" name="email">
+          <div class="popup-slider-middle-part imgbox-md">
+            <div class="magnific-img medium ">
+              <a class="image-popup-vertical-fit" href="img/gallery/leh-ladakh.jpg" title="">
+                <img src="<?php echo base_url() ?>packassets/images/gallery/leh-ladakh.jpg" alt="leh ladakh trip" />
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="magnific-img medium">
+              <a class="image-popup-vertical-fit" href="img/gallery/leh-monastery-tour.jpg" title="">
+                <img src="<?php echo base_url() ?>packassets/images/gallery/leh-monastery-tour.jpg" alt="leh monastery tour" />
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
-          <div class="margin-bottom-15px">
-              <input type="tel" class="form-control" placeholder="Mobile*" name="phone">
+          <div class="magnific-img-cvr imgbox-md">
+            <div class="magnific-img large">
+              <a class="image-popup-vertical-fit" href="img/gallery/sham-valley.jpg" title="">
+                <img src="<?php echo base_url() ?>packassets/images/gallery/sham-valley.jpg" alt="Sham Valley Trip" />
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
-          <div class="margin-bottom-15px">
-            <select class="form-control" name="package" id="package">
-              <option selected="" disabled="">Choose Package</option>
-              <option value="7 Days in Leh Ladakh">7 Days in Leh Ladakh</option>
-              <option value="9 Days in Leh Ladakh">9 Days in Leh Ladakh</option>
-              <option value="Leh Ladakh Customised">Leh Ladakh Customised</option>
-            </select>
+          <div class="popup-slider-last-part imgbox-md">
+            <div class="magnific-img small">
+              <a class="image-popup-vertical-fit" href="img/gallery/leh-nubra.jpg" title="">
+                <img src="<?php echo base_url() ?>packassets/images/gallery/leh-nubra.jpg" alt="leh nubra trip" />
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+              <a class="image-popup-vertical-fit" href="img/gallery/leh-family-trip.jpg" title="">
+                <img src="<?php echo base_url() ?>packassets/images/gallery/leh-family-trip.jpg" alt="leh family trip" />
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
-          <div class="margin-bottom-15px">
-            <input type="checkbox" name=""> I Agree to the <a href="javascript:void(0);" data-toggle="modal" data-target="#terms">Terms and Conditions</a>
+          <div class="popup-slider-middle-part imgbox-md">
+            <div class="magnific-img medium ">
+              <a class="image-popup-vertical-fit" href="img/gallery/leh-trip.jpg" title="">
+                <img src="<?php echo base_url() ?>packassets/images/gallery/leh-trip.jpg" alt="leh trip" />
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
-          
-                        <input type="hidden" id="destination" name="destination" value="Leh" />
-                       <input type="hidden" id="landing" name="landing" value="Leh" />
-                        <input type="hidden" id="platform" name="platform" value="Facebook" />
-                        <input type="hidden" id="campaigntype" name="campaigntype" value="Remarketing" />
-                        <input type="hidden" id="adgroup" name="adgroup" value="Leh-Lp5" />
-                        
-                        
-                        
-          <div>
-            <button type="button" class="btn btn-primary btn-block h6" id="savePackage">Submit</button>
-          </div> 
-          <div class="alert alert-danger margin-top-10px" style="display:none">
-              <strong>Failure!</strong> Please enter valid details.
-          </div>           
-        </form> 
+          <div class="popup-slider-middle-part imgbox-md">
+            <div class="magnific-img medium ">
+              <a class="image-popup-vertical-fit" href="img/gallery/kargil-trip.jpg" title="">
+                <img src="<?php echo base_url() ?>packassets/images/gallery/kargil-trip.jpg" alt="kargil trip" />
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="popup-slider-middle-part imgbox-md">
+            <div class="magnific-img medium ">
+              <a class="image-popup-vertical-fit" href="img/gallery/turtuk.jpg" title="">
+                <img src="<?php echo base_url() ?>packassets/images/gallery/turtuk.jpg" alt="Turtuk" />
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="popup-slider-middle-part imgbox-md">
+            <div class="magnific-img medium ">
+              <a class="image-popup-vertical-fit" href="img/gallery/leh-group-trip.jpg" title="">
+                <img src="<?php echo base_url() ?>packassets/images/gallery/leh-group-trip.jpg" alt="leh group trip" />
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="popup-slider-middle-part imgbox-md">
+            <div class="magnific-img medium ">
+              <a class="image-popup-vertical-fit" href="img/gallery/vacation-to-leh.jpg" title="">
+                <img src="<?php echo base_url() ?>packassets/images/gallery/vacation-to-leh.jpg" alt="vacation to leh" />
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+        <div class="clear"></div>
+        </p>
+
+
       </div>
-    </aside><!--/.col-->
-  </div><!--/.row-->
-  </div><!--/.container--> 
-
-  <div class="mobile_sticky">
-    <a href="#sidebar_focus">Click Here</a> to Enquire For Free  Now
-  </div>
-  <footer id="footer"> 
-    <div class="container">
-      <div class="copyright">
-        <span class="text-light-green"><img src="https://adventourist.in/assets/images/logo-symbol.png" alt="Travel Itineraries" title="Travel Itineraries"> Adventourist</span>&nbsp;<span>&copy; Copyright <script>document.write(new Date().getFullYear())</script> by Adventourist. All Rights Reserved</span>
-      </div> 
-    </div>
-  </footer> 
-
-<!-- Begin terms modal -->
-<div class="modal fade bd-example-modal-lg" id="terms" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Terms & Conditions</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+    </section>
+    <!-- why-adventourist -->
+    <section class="why-adventourist" id="why-adventourist">
+      <div class="container">
+        <div class="why-adventourist-text">
+          <h2>Why Adventourist?</h2>
+        </div>
+        <div class="why-adventourist-inner-text">
+          <div class="wrapper">
+            <div class="best-pricing">
+              <img src="<?php echo base_url() ?>packassets/images/rupees-symbol.png" alt="">
+              <p>Best pricing</p>
+            </div>
+            <div class="best-pricing">
+              <img src="<?php echo base_url() ?>packassets/images/heart-symbol.png" alt="">
+              <p>100% Honest recommendations</p>
+            </div>
+            <div class="best-pricing">
+              <img src="<?php echo base_url() ?>packassets/images/best-symbol.png" alt="">
+              <p>Best in class on-ground support</p>
+            </div>
+            <div class="best-pricing">
+              <img src="<?php echo base_url() ?>packassets/images/support-symbol.png" alt="">
+              <p>Best itineraries planned by travel experts</p>
+            </div>
+            <div class="best-pricing">
+              <h1 class="h-plus">100 +</h1>
+              <p>Trips planned</p>
+            </div>
+            <div class="best-pricing">
+              <img src="<?php echo base_url() ?>packassets/images/5-start.png" alt="">
+              <p>Star travel company</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-                         <p>Terms of Website Use (Version 1.0, Effective date: 29 th July , 2018)</p> 
-                   <p>Please read these terms and conditions carefully before using this site</p>
-                   <p class="text-large text-dark font-weight-700">Terms of website use</p>
-                   <p>
-                       These terms of use (together with the documents referred to in it) (“Terms”) are the terms
-on which you may make use of our website http://www.Adventourist.in/ (“Website”),
-whether as a guest or a registered user. Use of the Website includes accessing, browsing, or
-registering to use the Website. Please read these Terms carefully before you start to use the
-Website. We recommend that you print a copy of this for future reference.
-                   </p>
-                   <p>By using the Website, you confirm that you accept these Terms and that you agree to
-comply with them.</p>
-<p>If you do not agree to these Terms, you must not use the Website. If you do not agree with
-any amendments made by to these Terms at any time in future, you must stop using the
-Website with immediate effect.</p>
-<p class="text-large text-dark font-weight-700">Other applicable terms</p>
-<p>These Terms refer to and include the following additional terms, which also apply to your
-use of the Website:</p>
-<p>Our Privacy Policy, which sets out the terms on which we process any personal data we
-collect from you, or that you provide to us. By using the Website, you consent to such
-processing and you warrant that all data provided by you is accurate.</p>
-<p>Our Acceptable Use Policy, which sets out the permitted uses and prohibited uses of the
-Website. When using the Website, you must comply with this Acceptable Use Policy.</p>
-<p>Our Cookie Policy, which sets out information about the cookies on the Website.</p>
-<p>Our Advertising Policy, which sets out information about advertising through our Website.</p>
-<p class="text-large text-dark font-weight-700">About us</p>
-<p>The Website is operated by Adventourist is a partnership firm registered in Mumbai at
-1,Madhav Kunj, South Pond Road, Vile Parle West, Mumbai 400056.</p>
-<p>We provide online user platform for people to share and discover travel stories and
-itineraries from travellers and our travel expert, we also plan and sell Trips and Itineraries to
-our users</p>
-<p>Any reference to “you” or “your” refers to you as a user of the Website and the Services and
-any reference to “we”, “our” and “us” shall refer to the Company as the provider of the
-Services.</p>
-<p class="text-large text-dark font-weight-700">Changes to these terms and services</p>
-<p>We may revise these Terms at any time by amending this page. Please check this page from
-time to time to take notice of any changes we made, as they are binding on you.</p>
-<p>We may, without prior notice, change the Services; add or remove functionalities or
-features; stop providing the Services or features of the Services, to you or to users generally;
-or create usage limits for the Services.</p>
-<p class="text-large text-dark font-weight-700">Changes to the website</p>
-<p>We may update the Website from time to time, and may change the Content at any time. In
-these Terms, the term “Content” means any information, text, graphics, or other materials
-uploaded by the users of the Website, including you, and which appears on the Website for
-other users to access. However, please note that any of the Content on the Website may be
-out of date at any given time and we are under no obligation to update it.</p>
-<p>We do not guarantee that the Website, or any Content on it, will be free from errors or
-omissions.</p>
-<p class="text-large text-dark font-weight-700">Accessing the website</p>
-<p>We do not guarantee that your use of the Website, or any Content on it, will always be
-available or be uninterrupted. Access to the Website is permitted on a temporary basis. We
-may suspend, withdraw, discontinue or change all or any part of the Website without
-notice. We will not be liable to you if for any reason the Website is unavailable at any time
-or for any period.</p>
-<p>You are also responsible for ensuring that all persons who access the Website through your
-internet connection are aware of these Terms and other applicable terms and conditions,
-and that they comply with them.</p>
-<p class="text-large text-dark font-weight-700">Your account and password</p>
-<p>If you choose to register with us, an account will be created for your use (“Account”) on the
-Website and you will be provided with required Account Information to enable your access
-to the Account. The term “Account Information” refers to a user identification code,
-password or any other piece of information which may be provided to you as part of our
-security procedures. If you access the Website after logging into any third party website like
-Facebook, twitter or gmail, the login information of such third party account, as the case
-may be, shall be considered as the Account Information. You must always treat Account
-Information as confidential and must not disclose it to any third party. Any access to the
-Website through your Account shall be considered an access by you or on your behalf and
-you shall be solely responsible for any activity carried out in, by or through your Account
-either on the Website or any other Website accessed by you through the Website.</p>
-<p>You represent and warrant that if you are an individual, (i) you are over thirteen years of
-age and (ii)you are of age as required to enter into a binding contract as is prescribed under
-the laws of the country in which you reside, or (iii) that if you are registering on behalf of an
-entity, that you are authorized to enter into, and bind the entity to, these Terms and
-register for the Services, in accordance with the laws of the country in which you reside. Any
-person under the age of eighteen (18) years accessing the Website should do so only under
-parental guidance. If we change the eligibility criteria to be registered with the Website and
-you no longer comply with the new eligibility criteria, as determined by us in our sole
-discretion, you accept that we may close your Account without any liability for us. You are
-solely responsible for ensuring that these Terms are in compliance with all laws, rules and
-regulations applicable to you and the right to access the Services is revoked where these
-Terms or use of the Services is prohibited and, in such circumstances, you agree not to use
-or access the Website or Services in any way.</p>
-<p>We have the right to disable your use of the Account Information or any part of it, whether
-chosen by you or allocated by us, at any time, if in our reasonable opinion you have failed to
-comply with any of the provisions of these Terms.</p>
-<p>If you know or suspect that anyone other than you knows or has unauthorized access to
-your Account Information or any part of it, you must promptly notify us by sending us an e-
-mail at info@adventourist.in. We are not liable for any losses or other consequences of
-unauthorised use of your account.</p>
-<p class="text-large text-dark font-weight-700">User responsibilities</p>
-<p>These Terms govern your behaviour on the Website and set forth your obligations. You
-agree and confirm to the following responsibilities:</p>
-<p>You shall comply with all the obligations set forth in these Terms.</p>
-<p>You will use the Services rendered by us for lawful purposes only and comply with these
-Terms and all applicable laws and regulations while using and transacting on the Website.</p>
-<p>Creation and maintenance of all Content in your account shall be your sole responsibility.</p>
-<p>You are responsible for safeguarding the password that you use as a part of your Account
-Information to access the Services and for any activities or actions under your Account. We
-encourage you to use “strong” passwords preferably using a combination of upper and
-lower case letters, numbers and symbols with your Account. The Company will not be liable
-for any loss or damage arising from your failure to comply with this instruction.</p>
-<p>Provide us with only such information that is true and accurate to the best of your
-knowledge.</p>
-<p class="text-large text-dark font-weight-700">Payment terms</p>
-<p>The Website is made available free of charge.</p>
-<p class="text-large text-dark font-weight-700">Interactive services [note: client to confirm]</p>
-<p>We may from time to time provide interactive services on the Website, including, without
-limitation:</p>
-<p>Chat rooms</p>
-<p>Bulletin boards</p>
-<p>We will do our best to assess any possible risks for users (and in particular, for children)
-from third parties when they use any interactive service provided on the Website, and we 
-will decide in each case whether it is appropriate to use moderation of the relevant service
-(including what kind of moderation to use) in the light of those risks. However, we are under
-no obligation to oversee, monitor or moderate any interactive service we provide on the
-Website, and we expressly exclude our liability for any loss or damage arising from the use
-of any interactive service by a user in contravention of our Content standards, whether the
-service is moderated or not.</p>
-<p>The use of any of our interactive services by a minor is subject to the consent of their parent or guardian. We advise parents who permit their children to use an interactive service that it is important that they communicate with their children about their safety online, as moderation is not fool proof. Minors who are using any interactive service should be made aware of the potential risks to them.</p>
-<p class="text-large text-dark font-weight-700">Intellectual property rights</p>
-<p>We are the owner of the Website. However, the ownership of Content is with the creator of that specific Content. The Company does not have any ownership rights on the Content available on the Website.</p>
-<p>We are the licensee of all copyrights, trademarks, service marks or any other intellectual property in the Content published on the Website. All such rights are reserved.</p>
-<p>You may print off one copy, and may download extracts, of any page(s) from the Website for your personal use and you may draw the attention of others within your organisation to Content posted on the Website.</p>
-<p>You must not modify the paper or digital copies of any materials you have printed off or downloaded in any way, and you must not use any illustrations, photographs, video or audio sequences or any graphics separately from any accompanying text.</p>
-<p>You must not use any part of the Content on the Website for commercial purposes without obtaining a licence to do so from us or our licensors.</p>
-<p>If you print off, copy or download any part of the Website in breach of these Terms, your right to use the Website will cease immediately and you must, at our option, return or destroy any copies of the materials you have made.</p>
-<p class="text-large text-dark font-weight-700">No reliance on information</p>
-<p>The Content on the Website is provided for general information only. It is not intended to amount to advice on which you should rely. You must obtain specialist advice before taking, or refraining from, any action on the basis of the content on the Website.</p>
-<p>We display some content that is not ours. This Content is the sole responsibility of the person/entity who makes it available. We may review Content to determine whether it is illegal or violates our policies, and we may remove or refuse to display Content that we reasonably believe violates our policies or the law. But that does not necessarily mean that we review Content, so please don’t assume that we do.</p>
-<p>We assume no responsibility for the content of websites linked on the Website. Such links should not be interpreted as endorsement by us of those linked websites. We will not be liable for any loss or damage that may arise from your use of them.</p>
-<p>Although we make reasonable efforts to update the information on the Website, we make no representations, warranties or guarantees, whether express or implied, that the Content on the Website is accurate, complete or up-to-date.</p>
-<p class="text-large text-dark font-weight-700">Disclaimer of warranties</p>
-<p>You expressly acknowledge and agree that use of the Services and the Website is at your sole risk. The Services and the Website are provided on an "as is" and "as available" basis. Although we make best efforts to procure high quality Services to all our users, to the fullest extent allowed by law, we expressly disclaim all warranties and conditions of any kind, whether express or implied, including, but not limited to the warranties of merchantability or fitness for a particular purpose. The contents of the Services or the Website may contain bugs, errors, problems or other limitations. We assume no liability or responsibility for any errors or omissions in Content.</p>
-<p>We are not responsible for the Content uploaded by you on the Website. We are not responsible for any direct or indirect damages or losses caused to you, including without limitation, lost profits, business interruption or other loss resulting from use of or reliance in any way on anything available on the Website. It is solely your responsibility to evaluate the accuracy, reliability, completeness and usefulness of Content available on the Website that is used by you.</p>
-<p>We make no warranty that the Services or Website will meet your requirements or that the Services or your access to the Website will be uninterrupted, timely, accurate or reliable; nor do we make any warranty as to any information that may be obtained through the Services or Website. In case there is any defect in any software being used for the provision of the Services, we do not make any warranty that defects in such software will be corrected. You understand and agree that any material and/or data downloaded or otherwise obtained through use of the Services or Website is done at your own discretion and risk and you will be solely responsible for any damage to your computer system or loss of data that results from the download of such material or data.</p>
-<p>No advice or information, whether oral or written, obtained by you from the Services or Website or through the Service(s) or Website shall create any warranty not expressly made herein.</p>
-<p class="text-large text-dark font-weight-700">Viruses</p>
-<p>You will be responsible for introduction of any viruses, trojans, worms, logic bombs or other material which is malicious or technologically harmful. You must not attempt to gain unauthorised access to the Website, the server on which the Website is stored or any server, computer or database connected to the Website. You must not attack the Website via a denial-of-service attack or a distributed denial-of service attack. By breaching this provision, you would commit a criminal offence under the Information Technology Act, 2000. We will report any such breach to the relevant law enforcement authorities and we will co-operate with those authorities by disclosing your identity to them. In the event of such a breach, your right to use the Website will cease immediately.</p>
-<p>We will not be liable for any loss or damage caused by a virus, denial-of-service attack, distributed denial-of-service attack, or other technologically harmful material that may infect your computer equipment, computer programs, data or other proprietary material due to your use of the Website or your downloading of any Content on it, or on any website linked to it.</p>
-<p>You should use your own virus protection software. We cannot and do not guarantee or warrant that files available for downloading from the Website will be free of infection by viruses, worms, Trojan horses or other code that manifest contaminating or destructive properties.</p>
-<p class="text-large text-dark font-weight-700">Limitation of our liability</p>
-<p>To the extent permitted by law, we exclude all conditions, warranties, representations or other terms which may apply to the Website or any Content on it, whether express or implied.</p>
-<p>We will not be liable to any user for any direct, indirect or consequential loss or damage, whether in contract, tort (including negligence), breach of statutory duty, or otherwise, even if foreseeable, arising under or in connection with:</p>
-<p>use of, or inability to use, the Website; or</p>
-<p>use of or reliance on any Content displayed on the Website.</p>
-<p>If you are a business user, please note that in particular, we will not be liable for:</p>
-<p>loss of profits, sales, business, business opportunity or revenue;</p>
-<p>business interruption;</p>
-<p>loss of anticipated savings;</p>
-<p>loss of business opportunity, goodwill or reputation; or</p>
-<p>Please note that we only provide the Website for domestic and private use. You agree not to use the Website for any commercial or business purposes without obtaining a legally valid license to do so in accordance with these Terms.</p>
-<p class="text-large text-dark font-weight-700">Electronic communications</p>
-<p>When you visit this Website or send e-mails to us, you are communicating with us electronically. You consent to receive communications from us electronically. We will communicate with you by e-mail or by posting notices on this Website. You agree that all agreements, notices, disclosures and other communications that we provide to you electronically satisfy any legal requirement that such communications be in writing. You agree that in case there are any changes in any information provided by you to us, including your e-mail address and other contact details, you will be solely responsible to update them regularly. If we send any communication by e-mail, it shall be sent to your e-mail address available on the records created by you on the Website and it shall be deemed to have been received by you once it is reflected as sent in the outbox of our e-mail id. You may cancel your account at any time by sending us an email atinfo@Adventourist.com</p>
-<p class="text-large text-dark font-weight-700">Uploading content to the website </p>
-<p>Whenever you make use of a feature that allows you to upload Content to the Website, or to make contact with other users of the Website, you must comply with the content standards set out in our Acceptable Use Policy. You warrant that any such Content added by you does comply with those standards, and you will be liable to us and indemnify us for any breach of that warranty. You will be responsible for any loss or damage we suffer as a result of your breach of warranty.</p>
-<p>Any Content you upload to the Website will be considered non-confidential and non-proprietary. You retain all of your ownership rights in your Content, but you are required to grant us [and other users of the Website] a limited licence to use, store and copy that Content and to distribute and make it available to third parties. The rights you licence to us are described in the next clause (Rights you licence).</p>
-<p>We also have the right to disclose your identity to any third party who is claiming that any Content posted or uploaded by you to the Website constitutes a violation of their intellectual property rights, or of their right to privacy.</p>
-<p>We will not be responsible, or liable to any third party, for the Content or accuracy of any Content posted by you or any other user of the Website.</p>
-<p>We have the right to remove any posting you make on the Website if, in our opinion, your post does not comply with the content standards set out in our Acceptable Use Policy.</p>
-<p>The views expressed by other users on the Website do not represent our views or values.</p>
-<p class="text-large text-dark font-weight-700">Rights you licence</p>
-<p>By submitting, posting or displaying Content on or through the Service, you grant us a worldwide, non-exclusive, royalty-free license (with the right to sublicense) to use, copy, reproduce, process, adapt, modify, publish, transmit, display and distribute such Content in any and all media or distribution methods (now known or later developed).</p>
-<p>You agree that this license includes the right for us to make your Content available to others for publication, distribution, syndication, or broadcast of such Content on other media and services, subject to these Terms. Such additional uses by us or others may be made with no compensation paid to you with respect to use as mentioned.</p>
-<p>We may modify or adapt your Content in order to transmit, display or distribute it over computer networks and in various media and/or make changes to your Content as are necessary to conform and adapt that Content to any requirements or limitations of any networks, devices, services or media.</p>
-<p>Additionally, by uploading Content to the Website, you warrant, represent and agree that you have the right to grant us the licenses described above.</p>
-<p class="text-large text-dark font-weight-700">Linking to the website</p>
-<p>If you choose to authenticate your account through a third party service, like Twitter or Facebook, you are linking that account to your Account.</p>
+    </section>
+    <!-- /why-adventourist -->
+    <!-- talk-to-expert -->
+    <section class="talk-to-expert bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="tls-exprt">
+              <div class="adv-title-sec">
+                <h3 class="heading">Experience a world-class vacation with adventourist</h3>
+              </div>
 
-<p>You may link to our home page, provided you do so in a way that is fair and legal and does not damage our reputation or take advantage of it.</p>
+            </div>
+          </div>
 
-<p>You must not establish a link in such a way as to suggest any form of association, approval or endorsement on our part where none exists.</p>
+          <div class="col-md-12 text-center">
+            <div class="trip-rt">
+              <a class="clnn" href="#" style="pointer-events: none;">
+                <img src="<?php echo base_url() ?>packassets/images/adventourist-google-reviews.webp" class="Google" alt="">
+                <p>
+                  <img src="<?php echo base_url() ?>packassets/images/star.png" class="star-img" alt=""> <label>4.9</label>
+                </p>
 
-<p>You must not establish a link to the Website in any website that is not owned by you.</p>
+              </a>
+              <a class="clnn ml-40" href="#" style="pointer-events: none;">
+                <img src="<?php echo base_url() ?>packassets/images/adventourist-facebook-reviews.png" class="Google" alt="">
+                <p>
+                  <img src="<?php echo base_url() ?>packassets/images/star.png" class="star-img" alt=""> <label>5</label>
+                </p>
+              </a>
+            </div>
+          </div>
 
-<p>The Website must not be framed on any other site, nor may you create a link to any part of the Website other than the home page.</p>
-
-<p>We reserve the right to withdraw linking permission without notice.</p>
-
-<p>The Website in which you are linking must comply in all respects with the content standards set out in our Acceptable Use Policy.</p>
-
-<p>If you wish to make any use of Content on the Website other than that set out above, please send us an e-mail atinfo@Adventourist.com</p>
-<p class="text-large text-dark font-weight-700">Indemnification</p>
-<p>To the maximum extent permitted by applicable law, you shall indemnify and hold harmless the Company, its owners, licensee, affiliates, subsidiaries, group companies (as applicable) and their respective officers, directors, agents, and employees, from any claim or demand, or actions including reasonable attorneys' fees, made by any third party or penalty imposed due to or arising out of your breach of these Terms, or your violation of any law, rules or regulations or the rights (including infringement of intellectual property rights) of a third party.</p>
-<p class="text-large text-dark font-weight-700">Release and waiver</p>
-
-<p>To the maximum extent permitted by applicable law, you shall indemnify and hold harmless the Company, its owners, licensee, affiliates, subsidiaries, group companies (as applicable) and their respective officers, directors, agents, and employees, from any claim or demand, or actions including reasonable attorneys' fees, made by any third party or penalty imposed due to or arising out of your breach of these Terms, or your violation of any law, rules or regulations or the rights (including infringement of intellectual property rights) of a third party.</p>
-
-<p>To the maximum extent permitted by applicable law, you hereby release and waive all claims against the Company, and its subsidiaries, affiliates, officers, agents, licensors, co-branders or other partners, and employees from any and all liability for claims, damages (actual and/or consequential), costs and expenses (including litigation costs and attorneys' fees) of every kind and nature, arising from or in any way related to your use of our Website. You understand that any fact relating to any matter covered by this release may be found to be other than now believed to be true and you accept and assume the risk of such possible differences in fact. In addition, you expressly waive and relinquish any and all rights and benefits which you may have under any other state or federal statute or common law principle of similar effect, to the fullest extent permitted by law.</p>
-
-<p>If we fail to insist that you perform any of your obligations under these Terms, or if we do not enforce our rights against you, or if we delay in doing so, that will not mean that we have waived our rights against you and will not mean that you do not have to comply with those obligations. If we do waive a default by you, we will only do so in writing, and that will not mean that we will automatically waive any later default by you.</p>
-<p class="text-large text-dark font-weight-700">Applicable law</p>
-<p>Please note that these Terms, its subject matter and its formation, are governed by the laws of the Republic of India. The courts of New Delhi will have exclusive jurisdiction to deal with any dispute arising out of or in connection with these Terms or any other terms and conditions made applicable on you by us and you consent to the jurisdiction and venue of such courts and waive any objection as to inconvenient forum.</p>
-<p class="text-large text-dark font-weight-700">Termination</p>
-<p>We reserve the right to refuse to continue providing you with access to this Website if we discover that you are incompetent to contract by virtue of your age or otherwise under applicable law. This Website is not available to persons whose membership has been suspended or terminated by us for any reason whatsoever. In case, you choose to access this Website from any jurisdiction not governed by the laws of India, you are solely responsible for compliance with local laws of that jurisdiction and all applicable laws.</p>
-<p>https://www.adventourist.in<br>
-Adventourist <br>
-1, Madhav Kunj<br>
-South Pond Road<br>
-Near Jain temple<br>
-Vile Parle West<br>
-Mumbai 400056
-</p>
-<p>If you come across any abuse or violation of these Terms, please report to adventourist.in@gmail.com</p>
-<p class="text-large text-dark font-weight-700">General terms</p>
-<p>Relationship of the Parties: Notwithstanding any provision hereof, for all purposes of the Terms, you and the Company shall be and act independently and not as partner, joint venture, agent, employee or employer of the other. You shall not have any authority to assume or create any obligation for or on behalf of the Company, express or implied, and you shall not attempt to bind us to any contract.</p>
-
-<p>Invalidity of Specific Terms: If any provision of the Terms is found by a court of competent jurisdiction to be invalid, other provisions of such the Terms shall remain in full force and effect.</p>
-<p class="text-large text-dark font-weight-700">Contact us</p>
-<p>For general enquires, complaints and/or giving any feedback, please email to info@adventourist.in</p>
-<p>In case you do not want to continue using our Services and want to deactivate your account with us, please contact is at info@adventourist.in</p>
-<p>If you do not agree with any provision of these Terms and wish to opt out of such provision, please write to us at <a href="mailto:info@advetourist.in" class="font-weight-bold">info@advetourist.in</a> (“Opt-out Request”). You agree that you are not entitled to use this Website or the Services unless your Opt-out Request is accepted by us in writing.</p>
-<p class="text-large text-dark font-weight-700">Thank you for visiting us.</p>        
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-<!-- end terms modal -->
+    </section>
+    <!-- /talk-to-expert -->
+    <!-- testimonials -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="why-adventourist-text">
+          <h2>Testimonials</h2>
+        </div>
+        <div class="testimonials-cvr">
+          <div class="wrapper exp-slider">
+            <div class="testimonials-inner-text">
+              <img src="<?php echo base_url() ?>packassets/images/nilesh-lohade.png" alt="adventourist reviews">
+              <div class="star-img">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+              </div>
+              <p>This was the first time we connected with Adventourist Travel Company, and I must say it wasn't the feeling of a first timer. Mr. Tejendar and Ms. Kajal were so much co-operative, professional though friendly, and highly available through out our journey to Leh-Ladakh.
+                They were always in touch with us, cab drivers, hotel managers, and local company representatives to make sure that things are going smooth for us. They were so accommodating (food arrangement for our kid) that, we didn't face single issue though at few locations we reached late due to traffic. Moreover, they have in person/firsthand experience of locations, so they suggested different food, restaurants, and market places which are really awesome and worthwhile.
+                The drivers they have in Leh are so friendly, humble, and most of it very knowledgeable. Though I was visiting the place second time, we got to know so much minute details and history about the places there.
+                I won't just recommend Adventourist Travel Company 😜, but insist to give it a shot at least once. I guarantee, you will fall in love with them.😍</p>
+              <span>Nilesh Lohade</span>
+            </div>
+            <div class="testimonials-inner-text">
+              <img src="<?php echo base_url() ?>packassets/images/divyam-sharma.png" alt="adventourist reviews">
+              <div class="star-img">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+              </div>
+              <p>Came across their website while searching for a planner for Leh Ladakh. Was very cautious at the start but as conversations happened with Tejender from their team, I got impressed with their transparent and customer obsessed guidance and suggestions. The best travel I have had with any tour planner yet. My family trip to Leh Ladakh was all well curated, thanks to their insights and on ground connections. Can be tested with 100% confidence which generally is the worry of any travel seeker.</p>
+              <span>Divyam Sharma</span>
+            </div>
+            <div class="testimonials-inner-text">
+              <img src="<?php echo base_url() ?>packassets/images/aikata-chahar.png" alt="adventourist reviews">
+              <div class="star-img">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+                <img src="<?php echo base_url() ?>packassets/images/star.png" alt="">
+              </div>
+              <p>A big thank you to Kajal for arranging an amazing trip for us to Leh Ladakh. We were able to visit few non- touristy places & it was awesome.The driver assigned to us was very cooperative. We are recommending Adventourist to everyone as we were so happy with all the arrangements.</p>
+              <span>Aikta Chahar</span>
+            </div>
 
-  <script src="<?php echo base_url()?>packassets/js/jquery.min.js"></script> 
-  <script src="https://adventourist.in//assets/js/project.js"></script> 
-  <script src="<?php echo base_url()?>packassets/js/bootstrap.min.js"></script>
-  <script src="<?php echo base_url()?>packassets/js/easing.min.js"></script>
-  <script src="<?php echo base_url()?>packassets/js/mobile-nav.js"></script> 
-  <script src="<?php echo base_url()?>packassets/js/main.js"></script> 
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /testimonials -->
+    <!-- travel-experts-1 -->
+    <!-- <section class="travel-experts" id="travel-experts">
+      <div class="container">
+        <div class="why-adventourist-text">
+          <h2>Talk to our travel experts</h2>
+        </div>
+        <div class="travel-experts-cvr">
+          <div class="wrapper exp-slider-1">
+            <div class="travel-experts-inner">
+              <img src="<?php echo base_url() ?>packassets/images/tejender-singh.jpg" alt="">
+              <div class="travel-experts-inner-text">
+                <h3>Tejender Singh</h3>
+              </div>
+            </div>
+            <div class="travel-experts-inner">
+              <img src="<?php echo base_url() ?>packassets/images/kajal-mewada.jpg" alt="">
+              <div class="travel-experts-inner-text">
+                <h3>Kajal Mewada</h3>
+              </div>
+            </div>
+            <div class="travel-experts-inner">
+              <img src="<?php echo base_url() ?>packassets/images/minal-joshi.jpg" alt="">
+              <div class="travel-experts-inner-text">
+                <h3>Minal Joshi</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- /travel-experts-1 -->
+    <!-- travel-experts -->
+    <section class="travel-experts">
+      <div class="container">
+        <div class="why-adventourist-text">
+          <h2>Talk to us now</h2>
+        </div>
+        <div class="travel-experts-cvr">
+          <div class="wrapper">
+            <div class="travel-experts-inner">
+              <a class="clnn" href="tel:+919930400694">
+                <img src="<?php echo base_url() ?>packassets/images/phone.png" alt="">
+                <p>+919930400694</p>
+              </a>
+            </div>
+            <div class="travel-experts-inner">
+              <a class="clnn" href="https://api.whatsapp.com/send?phone=919930400694&text=Hey%20there%20can%20you%20help%20me%20plan%20my%20trip">
+                <img src="<?php echo base_url() ?>packassets/images/whatsapp.png" alt="">
+                <p>WhatsApp us now</p>
+              </a>
+            </div>
+            <div class="travel-experts-inner">
+              <a class="clnn" href="mailto:support@adventourist.in">
+                <img src="<?php echo base_url() ?>packassets/images/email.png" alt="">
+                <p class="mb-0">support@adventourist.in</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /travel-experts -->
+  </main>
+  <!-- /main -->
+  <!-- footer -->
+  <footer class="footer">
+    <p>© Copyright 2023 by Adventourist. All rights Reserved.</p>
+  </footer>
+  <!-- /footer -->
+
+
+
+  <!-- js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script>
+    $(document).scroll(function() {
+      let appPosition = $('.short-itinerary').offset().top;
+      if ($(this).scrollTop() > 500) {
+        $('.show-btn').fadeIn(0.2).css("bottom", "20px");
+        if ($(document).width() < 768) {
+          $('.show-btn').fadeIn(0.2).css("bottom", "0px");
+        }
+      } else {
+        $('.show-btn').fadeOut().css("bottom", "-50px");
+      }
+    });
+
+    $('.register-fix-btn').click(function(e) {
+      e.preventDefault();
+      $(document).scrollTop($('#form-3').offset().top - 165);
+    });
+    // $('.read-more').click(function () {
+    //     $(this).fadeOut("fast");
+    //     $('.modal-close-btn').fadeIn('fast');
+    //     $(".exclusions-full").css('max-height', '1600px');
+    // });
+    $('.modal-close-btn').click(function() {
+      $(this).fadeOut("fast");
+      $('.read-more').fadeIn('fast');
+      $(".exclusions-full").css('max-height', '158px');
+    });
+
+
+    $(".nav-bar ul li a").click(function() {
+      if ($(document).width() < 768) {
+        $('.nav-bar').hide('fast');
+        $('.humberger-menu').removeClass('active')
+        $('.humberger-menu').show('fast')
+      }
+      $(".nav-bar ul li a").removeClass("active");
+      $(this).addClass("active");
+    });
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll("section[id]");
+    // Add an event listener listening for scroll
+    $(document).scroll(function() {
+      let scrollY = window.pageYOffset;
+      sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 100;
+        var sectionId = current.getAttribute("id");
+        if (
+          scrollY > sectionTop &&
+          scrollY <= sectionTop + sectionHeight
+        ) {
+          document.querySelector("header a[href*=" + sectionId + "]").classList.add("active");
+        } else {
+          document.querySelector("header a[href*=" + sectionId + "]").classList.remove("active");
+        }
+      });
+    });
+
+    // navbar
+    $('.nav-bar li a').click(function(e) {
+      e.preventDefault();
+      let navTarget = $(this).attr('href');
+      if ($(document).width() < 768) {
+        $(document).scrollTop($(navTarget).position().top - 60);
+      } else {
+        $(document).scrollTop($(navTarget).position().top - 70);
+      }
+    });
+    $(function() {
+      $("#tabs").tabs();
+    });
+    $(".nav-bar ul li a").click(function() {
+      $(".nav-bar ul li a").removeClass("active");
+      $(this).addClass("active");
+    });
+    $(".humberger-menu").click(function() {
+      $('.nav-bar').toggle('fast');
+      $(".humberger-menu").toggleClass("active");
+    });
+
+    $('.net-cvr').click(function() {
+      $(this).next('p').toggle('fast');
+      $(this).toggleClass('active');
+      $('.net-cvr').not(this).removeClass('active').next('p').hide('fast')
+    })
+
+    $(document).ready(function() {
+      $('.image-popup-vertical-fit').magnificPopup({
+        type: 'image',
+        mainClass: 'mfp-with-zoom',
+        gallery: {
+          enabled: true
+        },
+
+        zoom: {
+          enabled: true,
+
+          duration: 300, // duration of the effect, in milliseconds
+          easing: 'ease-in-out', // CSS transition easing function
+
+          opener: function(openerElement) {
+
+            return openerElement.is('img') ? openerElement : openerElement.find('img');
+          }
+        }
+
+      });
+
+    });
+
+
+
+    $('.exp-slider-1').slick({
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      autoplay: false,
+      variableWidth: false,
+      prevArrow: false,
+      nextArrow: false,
+      dots: true,
+      responsive: [{
+          breakpoint: 1440,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+      ],
+      change: function(e, ui) {
+        alert("hello")
+      }
+    });
+
+    $('.exp-slider').slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: false,
+      nextArrow: false,
+      dots: true,
+      responsive: [{
+          breakpoint: 1440,
+          settings: {
+            slidesToShow: 1,
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 1,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ],
+      change: function(e, ui) {
+        alert("hello")
+      }
+    });
+  </script>
+  <script type="text/javascript">
+    var base_url = "<?php echo base_url() ?>";
+  </script>
+  <script src="<?php echo base_url() ?>assets/js/project.js"></script>
 </body>
+
 </html>
